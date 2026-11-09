@@ -1,0 +1,22 @@
+{
+  "name": "1khvled-portfolio",
+  "version": "1.0.0",
+  "description": "Developer portfolio & live showcase of production web applications, quantitative tools, and automations by 1khvled",
+  "private": true,
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "software-engineer",
+    "quant",
+    "fintech",
+    "sports-analytics",
+    "nextjs",
+    "python"
+  ],
+  "author": "Khaled (1khvled)",
+  "license": "MIT"
+}
