@@ -1,13 +1,13 @@
 /**
  * 1KHVLED // VIBE CODER & CREATIVE DESIGNER
- * Optical Glassmorphism UI Engine & Interactive Stage Controller
+ * Frontier AI Model Matrix & Optical Glassmorphism UI Engine
  */
 
 (() => {
   'use strict';
 
   // ====================================================================
-  // 1. DATA REGISTRIES (REAL LOGOS, SNAPSHOTS, DESIGNS)
+  // 1. PRODUCTION PROJECTS REGISTRY (VERIFIED LINKS & REAL ASSETS)
   // ====================================================================
 
   const PROJECTS_DATA = [
@@ -21,8 +21,8 @@
       logo: 'logos/messistats-logo.png',
       logoFallback: 'logos/messistats.svg',
       snapshot: 'projects/messistats-snap.png',
-      liveUrl: 'https://messistats.site',
-      repoUrl: 'https://github.com/1khvled/messistats',
+      liveUrl: 'https://www.messistat.com',
+      repoUrl: 'https://github.com/1khvled/messi-stats',
       description: 'Comprehensive career analytics portal tracking Lionel Messi\'s 850+ official goals, 380+ assists, xG shot maps, and club/country match logs with high-density visual filtering.',
       widgetType: 'messi-duel',
       widgetData: {
@@ -49,7 +49,7 @@
       logoFallback: 'logos/ronaldostats.svg',
       snapshot: 'projects/ronaldostats-snap.png',
       liveUrl: 'https://ronaldomstats-app-no-tme.vercel.app',
-      repoUrl: 'https://github.com/1khvled/ronaldostats',
+      repoUrl: 'https://github.com/1khvled/ronaldo-stats',
       description: 'Real-time performance diagnostic suite tracking Cristiano Ronaldo\'s 910+ all-time goals, clutch conversion rates, penalty metrics, and historical match logs.',
       widgetType: 'ronaldo-duel',
       widgetData: {
@@ -66,15 +66,41 @@
       ]
     },
     {
+      id: 'obsidianwear',
+      name: 'Obsidian Wear',
+      category: 'web-apps',
+      categoryLabel: 'Web Apps & Portals',
+      tag: 'Luxury Streetwear E-Commerce',
+      status: 'Production Live',
+      logo: 'logos/obsidianwear-logo.svg',
+      snapshot: 'projects/obsidianwear-snap.png',
+      liveUrl: 'https://obsidianwearlovable.vercel.app',
+      repoUrl: 'https://github.com/1khvled/obsidianwear-V2-GOOD-VERSION',
+      description: 'Modern luxury streetwear storefront featuring optical dark aesthetics, real-time cart state, high-density apparel lookbooks, and sleek responsive checkout flows.',
+      widgetType: 'obsidian-currency',
+      widgetData: {
+        label: 'Signature Heavyweight Hoodie',
+        value: '89.00 EUR · 22,000 DZD',
+        altValue: 'Limited Release: 50 Units Worldwide',
+        btnText: 'Toggle Availability'
+      },
+      metrics: [
+        'Modern Streetwear Aesthetic',
+        'Real-time Cart State Management',
+        'High-Res Editorial Lookbooks',
+        'Next-Gen Responsive Checkout'
+      ]
+    },
+    {
       id: 'dz-partpicker',
       name: 'DZ-PartPicker',
       category: 'web-apps',
       categoryLabel: 'Web Apps & Portals',
-      tag: 'E-Commerce & Configurator',
+      tag: 'Hardware Configurator',
       status: '200 OK Live',
       logo: 'logos/dz-partpicker-logo.png',
       snapshot: 'projects/dzpartpicker-snap.png',
-      liveUrl: 'https://dzpartpicker.com',
+      liveUrl: 'https://pcbuilder-psi.vercel.app',
       repoUrl: 'https://github.com/1khvled/dz-partpicker',
       description: 'Algeria\'s premier PC hardware compatibility checker and real-time vendor price aggregator across local retailers, calculating exact DZD component totals.',
       widgetType: 'pc-builder',
@@ -121,6 +147,84 @@
       ]
     },
     {
+      id: 'bytek-store',
+      name: 'Bytek Gaming Store',
+      category: 'web-apps',
+      categoryLabel: 'Web Apps & Portals',
+      tag: 'Gaming Hardware E-Commerce',
+      status: 'Production Live',
+      logo: 'logos/bytek-logo.png',
+      snapshot: 'projects/bytek-cart-snap.png',
+      liveUrl: 'https://bytek-byte-cart.vercel.app',
+      repoUrl: 'https://github.com/1khvled/bytek-store-cart',
+      description: 'High-performance gaming peripheral and keyboard storefront featuring real-time cart state, rapid-trigger magnetic hardware selection, and localized Algerian delivery checkout.',
+      widgetType: 'simple-toggle',
+      widgetData: {
+        label: 'Store Inventory',
+        value: 'Rapid-Trigger Keyboards · 8K Mice',
+        altValue: 'Free 58-Wilaya Express Delivery',
+        btnText: 'Toggle Shipping'
+      },
+      metrics: [
+        'Rapid-Trigger HE Magnetic Switch Peripherals',
+        'Reactive Cart & Checkout Matrix',
+        'High-Resolution Hardware Catalog',
+        'Localized Express Shipping'
+      ]
+    },
+    {
+      id: 'fpl-analytics',
+      name: 'FPL Analytics Dashboard',
+      category: 'web-apps',
+      categoryLabel: 'Web Apps & Portals',
+      tag: 'Sports Analytics & Quant Form',
+      status: '200 OK Live',
+      logo: 'logos/fpl-logo.svg',
+      snapshot: 'projects/fpl-snap.png',
+      liveUrl: 'https://fplteams16.vercel.app',
+      repoUrl: 'https://github.com/1khvled/fpl-analytics-dashboard',
+      description: 'Advanced Fantasy Premier League team diagnostics, fixture difficulty matrix, xG/xA form ratings, and optimal transfer rotation algorithms.',
+      widgetType: 'simple-toggle',
+      widgetData: {
+        label: 'Algorithm Engine',
+        value: 'Optimal Transfer Rank: Top 0.5%',
+        altValue: 'Fixture Difficulty Index: 1.4 FDR',
+        btnText: 'Toggle FDR Matrix'
+      },
+      metrics: [
+        'Real-time Premier League API Integration',
+        'Expected Goals (xG) & Assists (xA) Math',
+        'Transfer Rotation Optimizer',
+        'Interactive Team Pitch View'
+      ]
+    },
+    {
+      id: 'koora-clean',
+      name: 'Koora Clean PWA',
+      category: 'web-apps',
+      categoryLabel: 'Web Apps & Portals',
+      tag: 'Streaming Platform & PWA',
+      status: '200 OK Live',
+      logo: 'logos/koora-logo.svg',
+      snapshot: 'projects/kooraclean-snap.png',
+      liveUrl: 'https://koora-clean-amina.vercel.app',
+      repoUrl: 'https://github.com/1khvled/koora-clean',
+      description: 'Ad-free, telemetry-free progressive web app for live football match streaming, featuring zero overlay popups and low-latency HLS multi-bitrate playback.',
+      widgetType: 'simple-toggle',
+      widgetData: {
+        label: 'Stream Telemetry',
+        value: '0 Popups · 1080p60 HLS Stream',
+        altValue: 'Latency: 1.2s · Buffer Health 100%',
+        btnText: 'Toggle Health'
+      },
+      metrics: [
+        'Zero Advertising Overlays',
+        'Adaptive HLS Video Engine',
+        'Full Progressive Web App (PWA) Offline Cache',
+        'Mobile Gesture Controls'
+      ]
+    },
+    {
       id: 'ai-capital',
       name: 'AI Capital Tracker',
       category: 'quant-trading',
@@ -156,7 +260,7 @@
       logo: 'logos/square-algerie-logo.png',
       snapshot: 'projects/squarealgerie-snap.png',
       liveUrl: 'https://squarealgerie.com',
-      repoUrl: 'https://github.com/1khvled/square-rates',
+      repoUrl: 'https://github.com/1khvled/algeria-exchange-rates-api',
       description: 'Algeria\'s real-time informal foreign exchange (Square Port Said) rate tracker and volatility monitor for EUR/DZD, USD/DZD, and CAD/DZD.',
       widgetType: 'currency-ticker',
       widgetData: {
@@ -173,29 +277,29 @@
       ]
     },
     {
-      id: 'bytek',
-      name: 'Bytek Gaming Store & 3D Motion',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'E-Commerce & 3D Motion',
-      status: 'Commercial Live',
-      logo: 'logos/bytek-logo.png',
-      snapshot: 'projects/ednstore-snap.png',
-      liveUrl: 'https://bytekstore.com',
-      repoUrl: 'https://github.com/1khvled/bytek-motion-ad',
-      description: 'Custom gaming hardware storefront and cinematic 3D motion advertisement suite crafted for elite peripherals (Attack Shark, AJAZZ, MAD60).',
-      widgetType: 'motion-switch',
+      id: 'dealscout',
+      name: 'DealScout Engine',
+      category: 'automations',
+      categoryLabel: 'Automations & Bots',
+      tag: 'Autonomous Scraper & Publisher',
+      status: 'Active Automation',
+      logo: 'logos/dealscout-logo.svg',
+      snapshot: 'projects/dealscout-snap.png',
+      liveUrl: 'https://dealscout-green.vercel.app',
+      repoUrl: 'https://github.com/1khvled/dealscout-telegram-deals',
+      description: 'Autonomous multi-channel deal intelligence and price drop scraper tracking hidden coupon discounts and automated multi-channel publishing.',
+      widgetType: 'simple-toggle',
       widgetData: {
-        label: 'Motion Suite',
-        value: '4K 60FPS · 3D Product Choreography',
-        altValue: 'Camera Tracks · Dynamic Lighting',
-        btnText: 'View in Theater Stage'
+        label: 'Scraper Pipeline',
+        value: '5-Min Cron · 1,420 Deals Parsed Daily',
+        altValue: 'Telegram Multi-Channel Webhooks Active',
+        btnText: 'Toggle Webhook Status'
       },
       metrics: [
-        'Custom 3D Product Renders',
-        'Rapid-Trigger HE Magnetic Peripherals',
-        'Fluid Responsive Storefront',
-        'Cinematic Video Ad Pipeline'
+        'Automated Cron Price Monitor',
+        'Telegram Bot Channel Broadcast',
+        'Coupon Stacking Calculator',
+        'Serverless Edge Execution'
       ]
     },
     {
@@ -233,8 +337,8 @@
       status: 'Active Autonomous Bot',
       logo: 'logos/aliexpress-coin-logo.png',
       snapshot: 'projects/ednstore-snap.png',
-      liveUrl: 'https://github.com/1khvled/aliexpress-coins-bot',
-      repoUrl: 'https://github.com/1khvled/aliexpress-coins-bot',
+      liveUrl: 'https://github.com/1khvled/aliexpress-coin-bot',
+      repoUrl: 'https://github.com/1khvled/aliexpress-coin-bot',
       description: 'Autonomous discount finder and daily coin streak claimer automating hidden price reductions and bulk order optimization via headless browser workflows.',
       widgetType: 'simple-toggle',
       widgetData: {
@@ -252,51 +356,11 @@
     }
   ];
 
-  const DESIGNS_DATA = [
-    {
-      id: 'attack-shark-x3',
-      title: 'Attack Shark X3',
-      sub: 'Ultra-lightweight 49g wireless gaming mouse with PixArt 3395 optical sensor.',
-      image: 'designs/attack-shark-x3.png'
-    },
-    {
-      id: 'hyperx-cloud-3',
-      title: 'HyperX Cloud III',
-      sub: 'Cinematic studio 3D render of white & pink tournament headset.',
-      image: 'designs/hyperx-cloud-3.png'
-    },
-    {
-      id: 'mad60-keyboard',
-      title: 'MAD60 Keyboard',
-      sub: '60% rapid-trigger magnetic switch keyboard with custom keycaps and RGB underglow.',
-      image: 'designs/mad60-keyboard.png'
-    },
-    {
-      id: 'ajazz-aj179',
-      title: 'AJAZZ AJ179 Apex',
-      sub: 'Wireless gaming mouse featuring built-in OLED color display and 8K polling receiver.',
-      image: 'designs/ajazz-aj179.png'
-    },
-    {
-      id: 'attack-shark-x68-he',
-      title: 'Attack Shark X68 HE',
-      sub: 'Hall Effect magnetic rapid-trigger keyboard engineered for sub-millimeter actuation.',
-      image: 'designs/attack-shark-x68-he.png'
-    },
-    {
-      id: 'atk-a9-plus',
-      title: 'ATK A9 Plus',
-      sub: 'Ergonomic high-speed wireless mouse tailored for competitive esports play.',
-      image: 'designs/atk-a9-plus.png'
-    }
-  ];
-
   // ====================================================================
   // 2. DOM ELEMENTS & CACHED REFERENCES
   // ====================================================================
 
   const projectsGrid = document.getElementById('projectsGrid');
-  const designsGrid = document.getElementById('designsGrid');
   const orbitDeck = document.getElementById('orbitDeck');
   const filterButtons = document.querySelectorAll('.filter-pill-btn');
   const vibeToast = document.getElementById('vibeToast');
@@ -317,32 +381,8 @@
   const modalLiveLink = document.getElementById('modalLiveLink');
   const modalRepoLink = document.getElementById('modalRepoLink');
 
-  // Video & Motion Theater
-  const motionViewport = document.getElementById('motionViewport');
-  const theaterVideo = document.getElementById('theaterVideo');
-  const theaterTitle = document.getElementById('theaterTitle');
-  const theaterSub = document.getElementById('theaterSub');
-  const theaterPlaybackBar = document.getElementById('theaterPlaybackBar');
-  const btnTheaterPlay = document.getElementById('btnTheaterPlay');
-  const playIcon = document.getElementById('playIcon');
-  const pauseIcon = document.getElementById('pauseIcon');
-  const scrubberTrack = document.getElementById('scrubberTrack');
-  const scrubberFill = document.getElementById('scrubberFill');
-  const theaterTimecode = document.getElementById('theaterTimecode');
-  const btnTheaterMute = document.getElementById('btnTheaterMute');
-  const unmutedIcon = document.getElementById('unmutedIcon');
-  const mutedIcon = document.getElementById('mutedIcon');
-  const moodboardCanvas = document.getElementById('moodboardCanvas');
-  const carousel3dStage = document.getElementById('carousel3dStage');
-  const carouselTrack = document.getElementById('carouselTrack');
-  const btnCarouselPrev = document.getElementById('btnCarouselPrev');
-  const btnCarouselNext = document.getElementById('btnCarouselNext');
-  const modeSwitchButtons = document.querySelectorAll('.mode-switch-btn');
-
   // Active State
   let currentFilter = 'all';
-  let currentMode = 'stage'; // 'stage' | 'moodboard' | 'carousel'
-  let carouselIndex = 0;
   const VIBE_PALETTES = ['obsidian', 'emerald', 'sunset', 'purple'];
   let currentVibe = localStorage.getItem('user_vibe') || 'obsidian';
 
@@ -380,7 +420,6 @@
 
     if (dockVibeName) dockVibeName.textContent = prettyNames[vibe] || 'Obsidian';
 
-    // Highlight active mood tile
     if (vibeMoodButtons) {
       vibeMoodButtons.querySelectorAll('.btn-mood-tile').forEach(btn => {
         if (btn.dataset.vibe === vibe) {
@@ -394,7 +433,6 @@
     }
   }
 
-  // Cycle vibe button in dock
   if (dockVibeToggle) {
     dockVibeToggle.addEventListener('click', () => {
       const nextIdx = (VIBE_PALETTES.indexOf(currentVibe) + 1) % VIBE_PALETTES.length;
@@ -404,7 +442,6 @@
     });
   }
 
-  // Bento mood tiles
   if (vibeMoodButtons) {
     vibeMoodButtons.addEventListener('click', (e) => {
       const btn = e.target.closest('.btn-mood-tile');
@@ -415,7 +452,6 @@
     });
   }
 
-  // Initial vibe
   applyVibe(currentVibe);
 
   // ====================================================================
@@ -428,15 +464,13 @@
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      // Cursor-tracked glint variables
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
 
-      // Gentle 3D perspective tilt
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -5;
-      const rotateY = ((x - centerX) / centerX) * 5;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
     });
@@ -463,7 +497,6 @@
       card.className = 'optical-glass-card specular-glint-surface';
       card.id = `card-${project.id}`;
 
-      // Micro widget markup
       let widgetHtml = '';
       if (project.widgetType === 'pc-builder') {
         const tier = project.widgetData.tiers[project.widgetData.tierIndex];
@@ -505,7 +538,6 @@
       }
 
       card.innerHTML = `
-        <!-- Inner Media Stage: 16px Radius, Concentric to Outer 24px -->
         <div class="inner-media-stage" style="cursor: pointer;" data-action="inspect" data-id="${project.id}">
           <div class="snapshot-top-bar">
             <span class="glass-mini-tag">
@@ -519,10 +551,9 @@
             alt="${project.name} UI Snapshot"
             class="inner-snapshot-img"
             loading="lazy"
-            onerror="this.src='public/designs/attack-shark-x68-he.png'">
+            onerror="this.src='logos/opgg-logo.svg'">
         </div>
 
-        <!-- Card Body Content -->
         <div class="card-body-content">
           <div class="card-header-row">
             <div class="card-logo-wrap">
@@ -530,7 +561,7 @@
                 src="${project.logo}"
                 alt="${project.name} Logo"
                 class="card-brand-logo"
-                onerror="this.src='${project.logoFallback || 'public/logos/opgg-logo.svg'}'">
+                onerror="this.src='${project.logoFallback || 'logos/opgg-logo.svg'}'">
               <div>
                 <h3 class="card-title">${project.name}</h3>
                 <span class="card-category-tag">${project.categoryLabel}</span>
@@ -542,7 +573,6 @@
 
           ${widgetHtml}
 
-          <!-- Footer Actions -->
           <div class="card-footer-actions">
             <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-glass-primary">
               <span>Launch Live</span>
@@ -569,7 +599,6 @@
 
   if (projectsGrid) {
     projectsGrid.addEventListener('click', (e) => {
-      // Inspect craft button or snapshot click
       const inspectBtn = e.target.closest('[data-action="inspect"]');
       if (inspectBtn) {
         const id = inspectBtn.dataset.id;
@@ -577,7 +606,6 @@
         return;
       }
 
-      // Micro-widget interactive actions
       const widgetBtn = e.target.closest('.widget-interactive-btn');
       if (!widgetBtn) return;
 
@@ -643,7 +671,6 @@
       }
 
       if (projectId) {
-        // Find matching project
         const targetCard = document.getElementById(`card-${projectId}`);
         if (targetCard) {
           targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -654,7 +681,6 @@
             targetCard.style.boxShadow = '';
           }, 1800);
         } else {
-          // If filtered out, reset filter first
           const allBtn = document.querySelector('.filter-pill-btn[data-filter="all"]');
           if (allBtn) allBtn.click();
           setTimeout(() => {
@@ -671,240 +697,139 @@
   }
 
   // ====================================================================
-  // 9. AI MOTION GRAPHICS & 3D PRESENTATION STAGE (3 MODES)
+  // 9. FRONTIER AI MODEL MATRIX & INTERACTIVE REASONING LAB
   // ====================================================================
 
-  // Render 3D Design gallery thumbnails
-  function renderDesigns() {
-    if (!designsGrid) return;
-    designsGrid.innerHTML = '';
+  // Micro-tool state handlers inside model cards
+  const modelsGrid = document.getElementById('modelsGrid');
+  if (modelsGrid) {
+    modelsGrid.addEventListener('click', (e) => {
+      const btn = e.target.closest('.widget-interactive-btn');
+      if (!btn) return;
 
-    DESIGNS_DATA.forEach(design => {
-      const thumb = document.createElement('div');
-      thumb.className = 'design-thumb-card specular-glint-surface';
-      thumb.dataset.id = design.id;
-      thumb.innerHTML = `
-        <div class="design-thumb-inner">
-          <img src="${design.image}" alt="${design.title}" class="design-thumb-img" loading="lazy">
-        </div>
-        <div class="design-thumb-caption">${design.title}</div>
-      `;
+      const action = btn.dataset.action;
+      const target = btn.dataset.target;
 
-      thumb.addEventListener('click', () => {
-        selectDesignForStage(design);
-      });
-
-      attachPhysicsToCard(thumb);
-      designsGrid.appendChild(thumb);
-    });
-  }
-
-  function selectDesignForStage(design) {
-    if (theaterTitle) theaterTitle.textContent = `${design.title} — 3D Studio Showcase`;
-    if (theaterSub) theaterSub.textContent = design.sub;
-
-    // Switch to Stage mode if not active
-    switchPresentationMode('stage');
-
-    // Pause video, set poster or display design image
-    if (theaterVideo) {
-      theaterVideo.pause();
-      theaterVideo.poster = design.image;
-      if (playIcon) playIcon.style.display = 'block';
-      if (pauseIcon) pauseIcon.style.display = 'none';
-    }
-
-    showToast(`Loaded ${design.title} into stage viewport`);
-    const stageEl = document.getElementById('motion-design');
-    if (stageEl) stageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  // Switch between the 3 Modes
-  function switchPresentationMode(mode) {
-    currentMode = mode;
-    modeSwitchButtons.forEach(btn => {
-      const isActive = btn.dataset.mode === mode;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
-    });
-
-    if (theaterVideo) theaterVideo.style.display = (mode === 'stage') ? 'block' : 'none';
-    if (theaterPlaybackBar) theaterPlaybackBar.style.display = (mode === 'stage') ? 'flex' : 'none';
-    if (moodboardCanvas) moodboardCanvas.style.display = (mode === 'moodboard') ? 'block' : 'none';
-    if (carousel3dStage) carousel3dStage.style.display = (mode === 'carousel') ? 'flex' : 'none';
-
-    if (mode === 'stage') {
-      if (theaterTitle) theaterTitle.textContent = 'Bytek Motion Ad — 3D Product Commercial';
-      if (theaterSub) theaterSub.textContent = 'Cinematic camera choreography, dynamic product spotlight, and motion branding.';
-    } else if (mode === 'moodboard') {
-      if (theaterTitle) theaterTitle.textContent = 'Interactive 3D Moodboard Canvas';
-      if (theaterSub) theaterSub.textContent = 'Freeform tactile light table. Click and drag items anywhere across the canvas.';
-      initMoodboardDragging();
-    } else if (mode === 'carousel') {
-      if (theaterTitle) theaterTitle.textContent = 'Spatial 3D Perspective Coverflow';
-      if (theaterSub) theaterSub.textContent = 'Hardware acceleration perspective stage. Click next/prev to orbit items.';
-      update3DCarousel();
-    }
-  }
-
-  modeSwitchButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      switchPresentationMode(btn.dataset.mode);
-    });
-  });
-
-  // Video Scrubber & Playback Controls
-  if (btnTheaterPlay && theaterVideo) {
-    btnTheaterPlay.addEventListener('click', () => {
-      if (theaterVideo.paused) {
-        theaterVideo.play();
-        if (playIcon) playIcon.style.display = 'none';
-        if (pauseIcon) pauseIcon.style.display = 'block';
-      } else {
-        theaterVideo.pause();
-        if (playIcon) playIcon.style.display = 'block';
-        if (pauseIcon) pauseIcon.style.display = 'none';
-      }
-    });
-
-    theaterVideo.addEventListener('timeupdate', () => {
-      if (!theaterVideo.duration) return;
-      const progress = (theaterVideo.currentTime / theaterVideo.duration) * 100;
-      if (scrubberFill) scrubberFill.style.width = `${progress}%`;
-
-      const curM = Math.floor(theaterVideo.currentTime / 60);
-      const curS = Math.floor(theaterVideo.currentTime % 60).toString().padStart(2, '0');
-      const durM = Math.floor(theaterVideo.duration / 60) || 0;
-      const durS = Math.floor(theaterVideo.duration % 60 || 0).toString().padStart(2, '0');
-      if (theaterTimecode) theaterTimecode.textContent = `${curM}:${curS} / ${durM}:${durS}`;
-    });
-
-    if (scrubberTrack) {
-      scrubberTrack.addEventListener('click', (e) => {
-        const rect = scrubberTrack.getBoundingClientRect();
-        const clickPos = (e.clientX - rect.left) / rect.width;
-        theaterVideo.currentTime = clickPos * theaterVideo.duration;
-      });
-    }
-
-    if (btnTheaterMute) {
-      btnTheaterMute.addEventListener('click', () => {
-        theaterVideo.muted = !theaterVideo.muted;
-        if (theaterVideo.muted) {
-          if (unmutedIcon) unmutedIcon.style.display = 'none';
-          if (mutedIcon) mutedIcon.style.display = 'block';
-          showToast('Audio muted');
+      if (action === 'toggle-thinking' && target === 'claude') {
+        const readout = document.getElementById('claudeReadout');
+        const isExtended = btn.classList.toggle('active');
+        if (isExtended) {
+          btn.textContent = 'Toggle Standard (0s)';
+          readout.innerHTML = '<span style="color:#f59e0b;">Extended Mode Active:</span> 64,000 token reasoning budget. Internal chain-of-thought verifying DOM tree hydration & CSS containment.';
+          showToast('Claude 3.7: Extended Thinking enabled (64k budget)');
         } else {
-          if (unmutedIcon) unmutedIcon.style.display = 'block';
-          if (mutedIcon) mutedIcon.style.display = 'none';
-          showToast('Audio unmuted');
+          btn.textContent = 'Toggle Extended (64k)';
+          readout.textContent = 'Mode: Standard (0s) · Direct generation for fast UI templates and CSS variable tweaks.';
+          showToast('Claude 3.7: Standard instant mode');
         }
-      });
-    }
-  }
-
-  // Mode 2: Draggable Moodboard Logic
-  let moodboardInitialized = false;
-  function initMoodboardDragging() {
-    if (moodboardInitialized || !moodboardCanvas) return;
-    moodboardInitialized = true;
-
-    const items = moodboardCanvas.querySelectorAll('.moodboard-item');
-    items.forEach(item => {
-      let isDragging = false;
-      let startX = 0, startY = 0;
-      let initialLeft = 0, initialTop = 0;
-
-      const onPointerDown = (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        startY = e.clientY;
-        initialLeft = item.offsetLeft;
-        initialTop = item.offsetTop;
-        item.style.zIndex = '100';
-        item.setPointerCapture(e.pointerId);
-      };
-
-      const onPointerMove = (e) => {
-        if (!isDragging) return;
-        const dx = e.clientX - startX;
-        const dy = e.clientY - startY;
-        item.style.left = `${initialLeft + dx}px`;
-        item.style.top = `${initialTop + dy}px`;
-      };
-
-      const onPointerUp = (e) => {
-        if (!isDragging) return;
-        isDragging = false;
-        item.style.zIndex = '10';
-        item.releasePointerCapture(e.pointerId);
-      };
-
-      item.addEventListener('pointerdown', onPointerDown);
-      item.addEventListener('pointermove', onPointerMove);
-      item.addEventListener('pointerup', onPointerUp);
-      item.addEventListener('pointercancel', onPointerUp);
-    });
-  }
-
-  // Mode 3: 3D Perspective Carousel Logic
-  function build3DCarousel() {
-    if (!carouselTrack) return;
-    carouselTrack.innerHTML = '';
-
-    DESIGNS_DATA.forEach((design, i) => {
-      const card = document.createElement('div');
-      card.className = 'carousel-card specular-glint-surface';
-      card.dataset.index = i;
-      card.innerHTML = `
-        <img src="${design.image}" alt="${design.title}">
-        <div class="carousel-card-title">${design.title}</div>
-      `;
-      carouselTrack.appendChild(card);
-    });
-  }
-
-  function update3DCarousel() {
-    const cards = carouselTrack.querySelectorAll('.carousel-card');
-    const total = cards.length;
-    if (total === 0) return;
-
-    cards.forEach((card, i) => {
-      const offset = (i - carouselIndex + total) % total;
-      // Compute 3D circular positioning
-      if (offset === 0) {
-        card.style.transform = 'translate3d(0, 0, 0) scale(1)';
-        card.style.opacity = '1';
-        card.style.zIndex = '30';
-      } else if (offset === 1) {
-        card.style.transform = 'translate3d(180px, 0, -120px) rotateY(-25deg) scale(0.85)';
-        card.style.opacity = '0.7';
-        card.style.zIndex = '20';
-      } else if (offset === total - 1) {
-        card.style.transform = 'translate3d(-180px, 0, -120px) rotateY(25deg) scale(0.85)';
-        card.style.opacity = '0.7';
-        card.style.zIndex = '20';
-      } else {
-        card.style.transform = 'translate3d(0, 0, -250px) scale(0.6)';
-        card.style.opacity = '0';
-        card.style.zIndex = '10';
+      } else if (action === 'step-quant' && target === 'deepseek') {
+        const readout = document.getElementById('deepseekReadout');
+        const steps = [
+          'Step 1: Yield Inversion Telemetry · Analyzing 2Y/10Y spread derivative ∂y/∂t.',
+          'Step 2: Black-Scholes PDE Solved · Implied Volatility surface calibrated to 16.4%.',
+          'Step 3: Vectorized CUDA Execution · Execution order filled with +18.4 bps alpha.'
+        ];
+        let currentStep = parseInt(btn.dataset.step || '0', 10);
+        currentStep = (currentStep + 1) % steps.length;
+        btn.dataset.step = currentStep;
+        readout.innerHTML = `<span style="color:#60a5fa;">DeepSeek-R1 CoT:</span> ${steps[currentStep]}`;
+        showToast(`DeepSeek-R1: Step ${currentStep + 1}/3 evaluated`);
+      } else if (action === 'scale-context' && target === 'gemini') {
+        const readout = document.getElementById('geminiReadout');
+        const contexts = [
+          'Context: 250k tokens ingested · Searching entire Monorepo codebase in 340ms.',
+          'Context: 1,000,000 tokens ingested · Cross-referencing 14 repositories & PR histories in 520ms.',
+          'Context: 2,000,000 tokens ingested · Max window active. Zero context truncation across all codebase history.'
+        ];
+        let curIdx = parseInt(btn.dataset.scaleIdx || '0', 10);
+        curIdx = (curIdx + 1) % contexts.length;
+        btn.dataset.scaleIdx = curIdx;
+        readout.innerHTML = `<span style="color:#38bdf8;">Gemini 2.0 Ingestion:</span> ${contexts[curIdx]}`;
+        showToast(`Gemini 2.0: Context scaled to ${(curIdx + 1) * 750}K+ tokens`);
+      } else if (action === 'dispatch-swarm' && target === 'muse') {
+        const readout = document.getElementById('museReadout');
+        const isSwarm = btn.classList.toggle('active');
+        if (isSwarm) {
+          btn.textContent = 'Halt Swarm';
+          readout.innerHTML = '<span style="color:#c084fc;">Swarm Active:</span> Worktree 1: UI Refactor · Worktree 2: Integration Tests (PASS) · Worktree 3: PR Reviewer.';
+          showToast('Muse Spark: 3 parallel git worktree agents dispatched');
+        } else {
+          btn.textContent = 'Deploy Swarm Workers';
+          readout.textContent = 'Worktree 1: Builder (Idle) · Worktree 2: Test Runner (Idle)';
+          showToast('Muse Spark: Swarm returned to idle');
+        }
       }
     });
   }
 
-  if (btnCarouselPrev) {
-    btnCarouselPrev.addEventListener('click', () => {
-      const total = DESIGNS_DATA.length;
-      carouselIndex = (carouselIndex - 1 + total) % total;
-      update3DCarousel();
-    });
-  }
+  // Interactive Task Router
+  const routerTaskSelector = document.getElementById('routerTaskSelector');
+  const routerTarget = document.getElementById('routerTarget');
+  const routerStrategy = document.getElementById('routerStrategy');
+  const routerVelocity = document.getElementById('routerVelocity');
 
-  if (btnCarouselNext) {
-    btnCarouselNext.addEventListener('click', () => {
-      const total = DESIGNS_DATA.length;
-      carouselIndex = (carouselIndex + 1) % total;
-      update3DCarousel();
+  const ROUTER_PRESETS = {
+    ui: {
+      model: 'Claude 3.7 Sonnet (Extended Thinking)',
+      color: '#f59e0b',
+      strategy: '64K Token Thinking budget for optical physics & zero visual regressions.',
+      velocity: '10x Developer Multiplier · Zero-Defect Craft',
+      highlightId: 'card-model-claude'
+    },
+    quant: {
+      model: 'DeepSeek-R1 (Reinforcement Learning CoT)',
+      color: '#3b82f6',
+      strategy: 'Large-scale RL reasoning trace solving Nelson-Siegel yield fitting & orderbook skews.',
+      velocity: 'Dense 671B MoE Math Engine · Pure Logic',
+      highlightId: 'card-model-deepseek'
+    },
+    repo: {
+      model: 'Gemini 2.0 Pro (2M+ Token Context)',
+      color: '#38bdf8',
+      strategy: 'Full repository audit without vector chunking. Ingests all 14 projects into single prompt.',
+      velocity: '&lt; 400ms Retrieval · Native Multimodal',
+      highlightId: 'card-model-gemini'
+    },
+    swarm: {
+      model: 'Muse Spark 1.3 (Muse Code Harness)',
+      color: '#c084fc',
+      strategy: 'Autonomous multi-agent execution across isolated git branches with automated test suites.',
+      velocity: 'Parallel Fleet Execution · Zero Human Bottleneck',
+      highlightId: 'card-model-muse'
+    }
+  };
+
+  if (routerTaskSelector) {
+    routerTaskSelector.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn-router-task');
+      if (!btn) return;
+
+      routerTaskSelector.querySelectorAll('.btn-router-task').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const task = btn.dataset.task;
+      const preset = ROUTER_PRESETS[task];
+      if (!preset) return;
+
+      if (routerTarget) {
+        routerTarget.textContent = preset.model;
+        routerTarget.style.color = preset.color;
+      }
+      if (routerStrategy) routerStrategy.textContent = preset.strategy;
+      if (routerVelocity) routerVelocity.textContent = preset.velocity;
+
+      // Glow the corresponding model card
+      const targetCard = document.getElementById(preset.highlightId);
+      if (targetCard) {
+        targetCard.style.borderColor = preset.color;
+        targetCard.style.boxShadow = `0 0 35px -5px ${preset.color}`;
+        setTimeout(() => {
+          targetCard.style.borderColor = '';
+          targetCard.style.boxShadow = '';
+        }, 1600);
+      }
+
+      showToast(`Prompt auto-routed to ${preset.model.split(' ')[0]}`);
     });
   }
 
@@ -943,7 +868,6 @@
       projectTheaterModal.close();
     });
 
-    // Close when clicking modal backdrop
     projectTheaterModal.addEventListener('click', (e) => {
       const rect = projectTheaterModal.getBoundingClientRect();
       const isInDialog = (
@@ -974,9 +898,8 @@
     });
   }
 
-  // Active Nav Link Spy on Scroll
   const navLinks = document.querySelectorAll('.dock-item-btn[data-nav]');
-  const trackedSections = ['showcase', 'motion-design', 'vibe-playground'];
+  const trackedSections = ['showcase', 'models-matrix', 'vibe-playground'];
 
   window.addEventListener('scroll', () => {
     const scrollPos = window.scrollY + 200;
@@ -999,11 +922,6 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     renderProjects('all');
-    renderDesigns();
-    build3DCarousel();
-    update3DCarousel();
-
-    // Attach glint physics to initial static cards
     document.querySelectorAll('.specular-glint-surface').forEach(attachPhysicsToCard);
   });
 
