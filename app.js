@@ -18,9 +18,9 @@
       categoryLabel: 'Web Apps & Portals',
       tag: 'Sports Analytics',
       status: '200 OK Live',
-      logo: 'public/logos/messistats-logo.png',
-      logoFallback: 'public/logos/messistats.svg',
-      snapshot: 'public/projects/messistats-snap.png',
+      logo: 'logos/messistats-logo.png',
+      logoFallback: 'logos/messistats.svg',
+      snapshot: 'projects/messistats-snap.png',
       liveUrl: 'https://messistats.site',
       repoUrl: 'https://github.com/1khvled/messistats',
       description: 'Comprehensive career analytics portal tracking Lionel Messi\'s 850+ official goals, 380+ assists, xG shot maps, and club/country match logs with high-density visual filtering.',
@@ -45,9 +45,9 @@
       categoryLabel: 'Web Apps & Portals',
       tag: 'Sports Analytics',
       status: '200 OK Live',
-      logo: 'public/logos/ronaldostats-logo.png',
-      logoFallback: 'public/logos/ronaldostats.svg',
-      snapshot: 'public/projects/ronaldostats-snap.png',
+      logo: 'logos/ronaldostats-logo.png',
+      logoFallback: 'logos/ronaldostats.svg',
+      snapshot: 'projects/ronaldostats-snap.png',
       liveUrl: 'https://ronaldomstats-app-no-tme.vercel.app',
       repoUrl: 'https://github.com/1khvled/ronaldostats',
       description: 'Real-time performance diagnostic suite tracking Cristiano Ronaldo\'s 910+ all-time goals, clutch conversion rates, penalty metrics, and historical match logs.',
@@ -72,8 +72,8 @@
       categoryLabel: 'Web Apps & Portals',
       tag: 'E-Commerce & Configurator',
       status: '200 OK Live',
-      logo: 'public/logos/dz-partpicker-logo.png',
-      snapshot: 'public/projects/dzpartpicker-snap.png',
+      logo: 'logos/dz-partpicker-logo.png',
+      snapshot: 'projects/dzpartpicker-snap.png',
       liveUrl: 'https://dzpartpicker.com',
       repoUrl: 'https://github.com/1khvled/dz-partpicker',
       description: 'Algeria\'s premier PC hardware compatibility checker and real-time vendor price aggregator across local retailers, calculating exact DZD component totals.',
@@ -101,8 +101,8 @@
       categoryLabel: 'Quant & Trading',
       tag: 'Macro Telemetry & Yield Model',
       status: 'Quant Engine Live',
-      logo: 'public/logos/opgg-logo.svg',
-      snapshot: 'public/projects/macroproptrader-snap.png',
+      logo: 'logos/opgg-logo.svg',
+      snapshot: 'projects/macroproptrader-snap.png',
       liveUrl: 'https://macro-prop-trader.vercel.app',
       repoUrl: 'https://github.com/1khvled/macro-prop-trader',
       description: 'Institutional macroeconomic risk dashboard and sovereign yield curve modeler tracking 2Y/10Y inversion spreads, Fed dot plots, and multi-asset drawdowns.',
@@ -127,8 +127,8 @@
       categoryLabel: 'Quant & Trading',
       tag: 'VC Intelligence',
       status: 'Production Live',
-      logo: 'public/logos/square-algerie-logo.png',
-      snapshot: 'public/projects/aicapitaltracker-snap.png',
+      logo: 'logos/square-algerie-logo.png',
+      snapshot: 'projects/aicapitaltracker-snap.png',
       liveUrl: 'https://aicapitaltracker.vercel.app',
       repoUrl: 'https://github.com/1khvled/ai-capital-tracker',
       description: 'Real-time capital flow intelligence platform monitoring global AI startup funding rounds, compute infrastructure investments, and valuation multiples.',
@@ -153,8 +153,8 @@
       categoryLabel: 'Quant & Trading',
       tag: 'FX Telemetry',
       status: 'Active Feed',
-      logo: 'public/logos/square-algerie-logo.png',
-      snapshot: 'public/projects/squarealgerie-snap.png',
+      logo: 'logos/square-algerie-logo.png',
+      snapshot: 'projects/squarealgerie-snap.png',
       liveUrl: 'https://squarealgerie.com',
       repoUrl: 'https://github.com/1khvled/square-rates',
       description: 'Algeria\'s real-time informal foreign exchange (Square Port Said) rate tracker and volatility monitor for EUR/DZD, USD/DZD, and CAD/DZD.',
@@ -179,8 +179,8 @@
       categoryLabel: 'Web Apps & Portals',
       tag: 'E-Commerce & 3D Motion',
       status: 'Commercial Live',
-      logo: 'public/logos/bytek-logo.png',
-      snapshot: 'public/projects/ednstore-snap.png',
+      logo: 'logos/bytek-logo.png',
+      snapshot: 'projects/ednstore-snap.png',
       liveUrl: 'https://bytekstore.com',
       repoUrl: 'https://github.com/1khvled/bytek-motion-ad',
       description: 'Custom gaming hardware storefront and cinematic 3D motion advertisement suite crafted for elite peripherals (Attack Shark, AJAZZ, MAD60).',
@@ -205,8 +205,8 @@
       categoryLabel: 'Automations & Bots',
       tag: 'Desktop Client & Automation',
       status: 'Open Source',
-      logo: 'public/logos/opgg-logo.svg',
-      snapshot: 'public/projects/medqcm-snap.png',
+      logo: 'logos/opgg-logo.svg',
+      snapshot: 'projects/medqcm-snap.png',
       liveUrl: 'https://github.com/1khvled/open-opgg',
       repoUrl: 'https://github.com/1khvled/open-opgg',
       description: 'Lightweight, privacy-first desktop client and automated rune/build importer for League of Legends, interfacing directly with local LCU client endpoints.',
@@ -231,8 +231,8 @@
       categoryLabel: 'Automations & Bots',
       tag: 'Scraper & Bot Automation',
       status: 'Active Autonomous Bot',
-      logo: 'public/logos/aliexpress-coin-logo.png',
-      snapshot: 'public/projects/ednstore-snap.png',
+      logo: 'logos/aliexpress-coin-logo.png',
+      snapshot: 'projects/ednstore-snap.png',
       liveUrl: 'https://github.com/1khvled/aliexpress-coins-bot',
       repoUrl: 'https://github.com/1khvled/aliexpress-coins-bot',
       description: 'Autonomous discount finder and daily coin streak claimer automating hidden price reductions and bulk order optimization via headless browser workflows.',
@@ -257,37 +257,37 @@
       id: 'attack-shark-x3',
       title: 'Attack Shark X3',
       sub: 'Ultra-lightweight 49g wireless gaming mouse with PixArt 3395 optical sensor.',
-      image: 'public/designs/attack-shark-x3.png'
+      image: 'designs/attack-shark-x3.png'
     },
     {
       id: 'hyperx-cloud-3',
       title: 'HyperX Cloud III',
       sub: 'Cinematic studio 3D render of white & pink tournament headset.',
-      image: 'public/designs/hyperx-cloud-3.png'
+      image: 'designs/hyperx-cloud-3.png'
     },
     {
       id: 'mad60-keyboard',
       title: 'MAD60 Keyboard',
       sub: '60% rapid-trigger magnetic switch keyboard with custom keycaps and RGB underglow.',
-      image: 'public/designs/mad60-keyboard.png'
+      image: 'designs/mad60-keyboard.png'
     },
     {
       id: 'ajazz-aj179',
       title: 'AJAZZ AJ179 Apex',
       sub: 'Wireless gaming mouse featuring built-in OLED color display and 8K polling receiver.',
-      image: 'public/designs/ajazz-aj179.png'
+      image: 'designs/ajazz-aj179.png'
     },
     {
       id: 'attack-shark-x68-he',
       title: 'Attack Shark X68 HE',
       sub: 'Hall Effect magnetic rapid-trigger keyboard engineered for sub-millimeter actuation.',
-      image: 'public/designs/attack-shark-x68-he.png'
+      image: 'designs/attack-shark-x68-he.png'
     },
     {
       id: 'atk-a9-plus',
       title: 'ATK A9 Plus',
       sub: 'Ergonomic high-speed wireless mouse tailored for competitive esports play.',
-      image: 'public/designs/atk-a9-plus.png'
+      image: 'designs/atk-a9-plus.png'
     }
   ];
 

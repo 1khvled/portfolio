@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-vibe="obsidian">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1khvled — Vibe Coder & Creative Designer</title>
+  <meta name="description" content="Portfolio of 1khvled — Vibe Coder & Creative Designer. Vibe Coding for Good: Building production web applications, quantitative tools, automations, and AI motion graphics.">
+  <meta name="author" content="Khaled (1khvled)">
+  <meta name="theme-color" content="#07070A">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="1khvled — Vibe Coder & Creative Designer">
+  <meta property="og:description" content="Vibe Coding for Good: Production web apps, quantitative tools, automations, and AI motion graphics.">
+  <meta property="og:url" content="https://1khvled.vercel.app">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Mechanical Toast Feedback -->
+  <div class="vibe-toast" id="vibeToast" role="status" aria-live="polite"></div>
+
+  <!-- ====================================================================
+       SECTION 0: FLOATING OPTICAL GLASS DOCK (visionOS Pill)
+       ==================================================================== -->
+  <header class="floating-glass-dock" id="floatingDock">
+    <div class="dock-brand-pill">
+      <span class="dock-status-dot" aria-hidden="true"></span>
+      <span>1KHVLED</span>
+    </div>
+
+    <nav class="dock-nav-links" aria-label="Quick Navigation">
+      <a href="#showcase" class="dock-item-btn" data-nav="showcase">Showcase</a>
+      <a href="#motion-design" class="dock-item-btn" data-nav="motion-design">AI Motion & 3D</a>
+      <a href="#vibe-playground" class="dock-item-btn" data-nav="vibe-playground">Playground</a>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 0.4rem;">
+      <button type="button" class="dock-item-btn" id="dockVibeToggle" title="Cycle Vibe Palette" style="padding: 0.45rem 0.75rem;">
+        ✦ <span id="dockVibeName">Obsidian</span>
+      </button>
+      <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="dock-action-btn" title="GitHub Profile">
+        <span>GitHub</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         SECTION 1: HERO & INTERACTIVE LOGO ORBIT STAGE
+         ==================================================================== -->
+    <section class="hero-glass-stage" id="hero">
+      <div class="stage-container">
+        <div class="hero-vibe-pill">
+          <span style="color: var(--vibe-accent);">✦</span>
+          <span>Vibe Coding for Good · Algiers & Global</span>
+        </div>
+
+        <h1 class="hero-headline">
+          1khvled <span class="hero-gradient-text">— Vibe Coder & Creative Designer</span>
+        </h1>
+
+        <p class="hero-subhead">
+          Orchestrating design taste, AI leverage, and code to craft high-impact web apps, quantitative trading systems, smart automations, and cinematic motion graphics.
+        </p>
+
+        <!-- Interactive Logo & Snapshot Orbit Deck -->
+        <div class="interactive-orbit-deck" id="orbitDeck">
+          <button type="button" class="orbit-chip specular-glint-surface" data-filter="all">
+            <span>All Projects</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="messistats">
+            <img src="logos/messistats.svg" alt="MessiStats Logo" class="orbit-chip-icon" onerror="this.src='logos/messistats-logo.png'">
+            <span>MessiStats</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="ronaldostats">
+            <img src="logos/ronaldostats.svg" alt="RonaldoStats Logo" class="orbit-chip-icon" onerror="this.src='logos/ronaldostats-logo.png'">
+            <span>RonaldoStats</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="dz-partpicker">
+            <img src="logos/dz-partpicker-logo.png" alt="DZ-PartPicker Logo" class="orbit-chip-icon">
+            <span>DZ-PartPicker</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="bytek">
+            <img src="logos/bytek-logo.png" alt="Bytek Store Logo" class="orbit-chip-icon">
+            <span>Bytek Motion</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="opgg">
+            <img src="logos/opgg-logo.svg" alt="Open OP.GG Logo" class="orbit-chip-icon">
+            <span>Open OP.GG</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="square-dz">
+            <img src="logos/square-algerie-logo.png" alt="Square Live DZ Logo" class="orbit-chip-icon">
+            <span>Square DZ</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="macro-prop">
+            <span style="font-weight: 800; color: #10b981;">MPT</span>
+            <span>Macro Prop Trader</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 2: OPTICAL GLASS SHOWCASE (CONCENTRIC GEOMETRY)
+         ==================================================================== -->
+    <section class="showcase-stage-section" id="showcase">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Live Applications & Quant Tools</span>
+            </div>
+            <h2 class="section-title">Production Showcase</h2>
+          </div>
+
+          <!-- Optical Filter Dock -->
+          <div class="optical-filter-dock" role="tablist" aria-label="Project Categories">
+            <button type="button" class="filter-pill-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+            <button type="button" class="filter-pill-btn" data-filter="web-apps" role="tab" aria-selected="false">Web Apps & Portals</button>
+            <button type="button" class="filter-pill-btn" data-filter="quant-trading" role="tab" aria-selected="false">Quant & Trading</button>
+            <button type="button" class="filter-pill-btn" data-filter="automations" role="tab" aria-selected="false">Automations & Bots</button>
+          </div>
+        </div>
+
+        <!-- Concentric Optical Glass Cards Grid -->
+        <div class="projects-glass-grid" id="projectsGrid">
+          <!-- Populated dynamically by app.js with real logos, real snapshots & interactive widgets -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 3: AI MOTION GRAPHICS & 3D VISUAL STAGE
+         ==================================================================== -->
+    <section class="motion-presentation-stage" id="motion-design">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Visual Direction & 3D Motion</span>
+            </div>
+            <h2 class="section-title">AI Motion Graphics & Design Stage</h2>
+          </div>
+
+          <!-- 3 Interactive Modes Switcher -->
+          <div class="mode-switch-group" role="tablist" aria-label="Interactive Presentation Modes">
+            <button type="button" class="mode-switch-btn active" data-mode="stage" role="tab" aria-selected="true">
+              ▶ Theater Stage
+            </button>
+            <button type="button" class="mode-switch-btn" data-mode="moodboard" role="tab" aria-selected="false">
+              ✥ Draggable Moodboard
+            </button>
+            <button type="button" class="mode-switch-btn" data-mode="carousel" role="tab" aria-selected="false">
+              ◫ 3D Carousel
+            </button>
+          </div>
+        </div>
+
+        <!-- Theater Shell -->
+        <div class="motion-theater-shell">
+          <!-- Main Viewport -->
+          <div class="motion-viewport" id="motionViewport">
+            <!-- Mode 1: Stage Video Player -->
+            <video
+              id="theaterVideo"
+              class="motion-video-player"
+              src="videos/bytek-motion-ad.mp4"
+              playsinline
+              muted
+              loop
+              preload="metadata"
+              poster="designs/attack-shark-x68-he.png">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Mode 2: Draggable Lightbox / Moodboard Canvas -->
+            <div class="moodboard-canvas" id="moodboardCanvas">
+              <div class="moodboard-item" style="top: 15%; left: 10%; transform: rotate(-4deg);" data-title="Attack Shark X3">
+                <img src="designs/attack-shark-x3.png" alt="Attack Shark X3 Render">
+              </div>
+              <div class="moodboard-item" style="top: 10%; left: 40%; transform: rotate(3deg);" data-title="HyperX Cloud III">
+                <img src="designs/hyperx-cloud-3.png" alt="HyperX Cloud III Render">
+              </div>
+              <div class="moodboard-item" style="top: 25%; left: 70%; transform: rotate(-2deg);" data-title="MAD60 Keyboard">
+                <img src="designs/mad60-keyboard.png" alt="MAD60 Keyboard Render">
+              </div>
+              <div class="moodboard-item" style="top: 55%; left: 20%; transform: rotate(5deg);" data-title="AJAZZ AJ179 Apex">
+                <img src="designs/ajazz-aj179.png" alt="AJAZZ AJ179 Apex Render">
+              </div>
+              <div class="moodboard-item" style="top: 50%; left: 52%; transform: rotate(-5deg);" data-title="Attack Shark X68 HE">
+                <img src="designs/attack-shark-x68-he.png" alt="Attack Shark X68 HE Render">
+              </div>
+              <div class="moodboard-item" style="top: 45%; left: 78%; transform: rotate(2deg);" data-title="ATK A9 Plus">
+                <img src="designs/atk-a9-plus.png" alt="ATK A9 Plus Render">
+              </div>
+              <div class="moodboard-hint">✥ Click & drag items anywhere on the canvas</div>
+            </div>
+
+            <!-- Mode 3: 3D Perspective Carousel -->
+            <div class="carousel-3d-stage" id="carousel3dStage">
+              <div class="carousel-3d-track" id="carouselTrack">
+                <!-- Rendered dynamically by app.js -->
+              </div>
+              <div class="carousel-nav-btns">
+                <button type="button" class="btn-carousel-nav" id="btnCarouselPrev" aria-label="Previous Design">‹</button>
+                <button type="button" class="btn-carousel-nav" id="btnCarouselNext" aria-label="Next Design">›</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Theater Controls Strip -->
+          <div class="theater-controls-strip">
+            <div class="theater-info-block">
+              <div>
+                <h3 class="theater-title" id="theaterTitle">Bytek Motion Ad — 3D Product Commercial</h3>
+                <p class="theater-sub" id="theaterSub">Cinematic camera choreography, dynamic product spotlight, and motion branding.</p>
+              </div>
+            </div>
+
+            <!-- Playback Bar (Visible in Stage Mode) -->
+            <div class="theater-playback-bar" id="theaterPlaybackBar">
+              <button type="button" class="btn-theater-ctrl" id="btnTheaterPlay" aria-label="Play or pause video">
+                <svg id="playIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <svg id="pauseIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="scrubber-track" id="scrubberTrack" role="slider" aria-label="Video scrubber" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="scrubber-fill" id="scrubberFill"></div>
+              </div>
+              <span class="theater-timecode" id="theaterTimecode">00:00 / 00:00</span>
+              <button type="button" class="btn-theater-ctrl" id="btnTheaterMute" aria-label="Toggle mute">
+                <svg id="unmutedIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <svg id="mutedIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Design Renders Gallery Strip -->
+        <div style="margin-bottom: 1rem;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #ffffff; margin-bottom: 0.25rem;">Interactive 3D Product Gallery</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary);">Click any high-resolution 3D asset to preview in theater stage</p>
+        </div>
+        <div class="designs-thumbnail-grid" id="designsGrid">
+          <!-- Populated by app.js with real 3D product renders -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: "VIBE CODING FOR GOOD" BENTO PLAYGROUND
+         ==================================================================== -->
+    <section class="vibe-playground-section" id="vibe-playground">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Philosophy & Orchestration</span>
+            </div>
+            <h2 class="section-title">Vibe Coding for Good</h2>
+          </div>
+        </div>
+
+        <div class="vibe-bento-grid">
+          <!-- Card 1 (Col 8): The Vibe Manifesto -->
+          <div class="vibe-bento-card col-span-8 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">✦</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">The Philosophy</span>
+              </div>
+              <h3 style="font-size: 1.6rem; font-weight: 900; letter-spacing: -0.025em; color: #ffffff; line-height: 1.25; margin-bottom: 1rem;">
+                Coding with High Design Taste, Relentless Curiosity & AI Velocity.
+              </h3>
+              <p style="font-size: 0.9375rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1rem;">
+                I believe software in 2025 and 2026 shouldn’t look like generic SaaS clones or soulless AI-generated templates. I use AI not to be lazy, but to punch 10x above my weight: orchestrating intelligent autonomous loops, rapid prototyping, and precision mathematics while obsessing over micro-interactions, typography, and optical physics.
+              </p>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7;">
+                From sports data platforms used across international derbies to real-time macroeconomic yield diagnostics and community ecommerce tools, every project is built to solve tangible problems and delight real people.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <span class="glass-mini-tag">100% Shipped Code</span>
+              <span class="glass-mini-tag">Zero Placeholder Slop</span>
+              <span class="glass-mini-tag">Production Live</span>
+            </div>
+          </div>
+
+          <!-- Card 2 (Col 4): Tactile Vibe Mood Switcher -->
+          <div class="vibe-bento-card col-span-4 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🎨</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Optical Mood</span>
+              </div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+                Tactile Vibe Switcher
+              </h3>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+                Select a live chromatic refraction preset for this portfolio:
+              </p>
+
+              <div class="vibe-mood-buttons" id="vibeMoodButtons">
+                <button type="button" class="btn-mood-tile" data-vibe="obsidian">
+                  <span class="mood-color-dot" style="background: #38bdf8;"></span>
+                  <span>Obsidian</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="emerald">
+                  <span class="mood-color-dot" style="background: #10b981;"></span>
+                  <span>Emerald</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="sunset">
+                  <span class="mood-color-dot" style="background: #f97316;"></span>
+                  <span>Sunset</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="purple">
+                  <span class="mood-color-dot" style="background: #c084fc;"></span>
+                  <span>Amethyst</span>
+                </button>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+              Instant CSS custom property token swap with zero layout shift.
+            </div>
+          </div>
+
+          <!-- Card 3 (Col 6): The Stack & Orchestration Toolkit -->
+          <div class="vibe-bento-card col-span-6 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">⚡</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Orchestration Stack</span>
+              </div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
+                Tools I Bend to My Will
+              </h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                <span class="glass-mini-tag">TypeScript / JavaScript</span>
+                <span class="glass-mini-tag">Next.js & React 19</span>
+                <span class="glass-mini-tag">Node.js & Express</span>
+                <span class="glass-mini-tag">Python & QuantLib</span>
+                <span class="glass-mini-tag">Claude 3.7 & Gemini 2.5</span>
+                <span class="glass-mini-tag">Playwright Automation</span>
+                <span class="glass-mini-tag">Mol* 3D & WebGL</span>
+                <span class="glass-mini-tag">Tailwind CSS & CSS Grid</span>
+                <span class="glass-mini-tag">Blender & Motion Graphics</span>
+                <span class="glass-mini-tag">Electron & Desktop Apps</span>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8125rem; color: var(--text-secondary);">
+              Always adopting bleeding-edge tooling that compounds creative leverage.
+            </div>
+          </div>
+
+          <!-- Card 4 (Col 6): Direct Dispatch / Connect -->
+          <div class="vibe-bento-card col-span-6 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">📬</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Direct Dispatch</span>
+              </div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+                Let's Build Something Unforgettable
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
+                Open for bespoke web systems, trading interfaces, AI-powered automation pipelines, and high-craft creative collaborations.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <button type="button" class="btn-glass-primary" id="btnCopyEmail" style="justify-content: flex-start; padding: 0.75rem 1.25rem;">
+                  <span>✉ Copy Email:</span>
+                  <span style="color: var(--vibe-accent); font-weight: 800;">1khvled.dev@gmail.com</span>
+                </button>
+                <div style="display: flex; gap: 0.65rem;">
+                  <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
+                    GitHub ↗
+                  </a>
+                  <a href="https://x.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
+                    Twitter / X ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 1.25rem; font-size: 0.75rem; color: var(--text-muted);">
+              Average response time: &lt; 4 hours.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       MODAL THEATER DIALOG (<dialog id="projectTheaterModal">)
+       ==================================================================== -->
+  <dialog id="projectTheaterModal" aria-labelledby="modalProjectTitle">
+    <div class="modal-theater-inner" id="modalInner">
+      <div class="modal-theater-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img id="modalProjectLogo" src="" alt="" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover;">
+          <div>
+            <h3 id="modalProjectTitle" style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">Project Title</h3>
+            <span id="modalProjectCategory" style="font-size: 0.75rem; color: var(--vibe-accent); font-weight: 700;">Category</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-theater" id="btnCloseModal" aria-label="Close dialog">✕</button>
+      </div>
+
+      <div style="border-radius: 14px; overflow: hidden; margin-bottom: 1.25rem; border: var(--glass-inner-border); background: #000000;">
+        <img id="modalProjectImage" src="" alt="High resolution project snapshot" style="width: 100%; max-height: 480px; object-fit: contain;">
+      </div>
+
+      <p id="modalProjectDesc" style="font-size: 0.95rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
+        Project description.
+      </p>
+
+      <div style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; padding: 1rem; border: var(--glass-inner-border); margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.75rem;">Key Architecture & Metrics</h4>
+        <div id="modalProjectMetrics" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem;">
+        <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
+          <span>Launch Live App ↗</span>
+        </a>
+        <a id="modalRepoLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
+          <span>Inspect Source ↗</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ====================================================================
+       VISION FOOTER
+       ==================================================================== -->
+  <footer class="vision-footer">
+    <div class="stage-container">
+      <div class="footer-glass-pill">
+        <span>Designed & vibe-coded by <strong>1khvled</strong></span>
+        <span>•</span>
+        <span>Built with optical glass & zero slop</span>
+        <span>•</span>
+        <span>2026 Production</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
