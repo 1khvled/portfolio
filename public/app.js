@@ -697,7 +697,7 @@
   }
 
   // ====================================================================
-  // 9. FRONTIER AI MODEL MATRIX & INTERACTIVE REASONING LAB
+  // 9. FRONTIER AI MODEL MATRIX & INTERACTIVE REASONING LAB (LATE 2026)
   // ====================================================================
 
   // Micro-tool state handlers inside model cards
@@ -712,51 +712,73 @@
 
       if (action === 'toggle-thinking' && target === 'claude') {
         const readout = document.getElementById('claudeReadout');
-        const isExtended = btn.classList.toggle('active');
-        if (isExtended) {
-          btn.textContent = 'Toggle Standard (0s)';
-          readout.innerHTML = '<span style="color:#f59e0b;">Extended Mode Active:</span> 64,000 token reasoning budget. Internal chain-of-thought verifying DOM tree hydration & CSS containment.';
-          showToast('Claude 3.7: Extended Thinking enabled (64k budget)');
-        } else {
-          btn.textContent = 'Toggle Extended (64k)';
-          readout.textContent = 'Mode: Standard (0s) · Direct generation for fast UI templates and CSS variable tweaks.';
-          showToast('Claude 3.7: Standard instant mode');
-        }
+        const states = [
+          {
+            btn: 'Toggle 64k Extended CoT',
+            text: 'Mode: Standard (0s) · Sub-second execution for rapid UI scaffolding & CSS layout math.',
+            toast: 'Claude Opus 5.5: Standard instant mode'
+          },
+          {
+            btn: 'Toggle Fable 5.1 Deep-Think (128k)',
+            text: '<span style="color:#f59e0b;">Extended CoT (64K):</span> Validating optical physics, concentric radii, and specular glints.',
+            toast: 'Claude Opus 5.5: 64K Extended CoT enabled'
+          },
+          {
+            btn: 'Toggle Standard (0s)',
+            text: '<span style="color:#f59e0b; font-weight:700;">Fable 5.1 Deep-Think (128K):</span> Multi-step architectural compilation, zero regressions, 1M context graph.',
+            toast: 'Claude Fable 5.1: 128K Deep-Thinking active'
+          }
+        ];
+        let idx = parseInt(btn.dataset.thinkIdx || '0', 10);
+        idx = (idx + 1) % states.length;
+        btn.dataset.thinkIdx = idx;
+        btn.textContent = states[idx].btn;
+        readout.innerHTML = states[idx].text;
+        showToast(states[idx].toast);
       } else if (action === 'step-quant' && target === 'deepseek') {
         const readout = document.getElementById('deepseekReadout');
         const steps = [
-          'Step 1: Yield Inversion Telemetry · Analyzing 2Y/10Y spread derivative ∂y/∂t.',
-          'Step 2: Black-Scholes PDE Solved · Implied Volatility surface calibrated to 16.4%.',
-          'Step 3: Vectorized CUDA Execution · Execution order filled with +18.4 bps alpha.'
+          'Step 1: Yield Inversion Telemetry · Analyzing 2Y/10Y spread derivative ∂y/∂t with Causal MoE.',
+          'Step 2: Causal KV Cache Compressed · 94% memory savings; Black-Scholes PDE surface calibrated.',
+          'Step 3: Vectorized CUDA Execution · Order executed with +18.4 bps alpha via 1M open-weights context.'
         ];
         let currentStep = parseInt(btn.dataset.step || '0', 10);
         currentStep = (currentStep + 1) % steps.length;
         btn.dataset.step = currentStep;
-        readout.innerHTML = `<span style="color:#60a5fa;">DeepSeek-R1 CoT:</span> ${steps[currentStep]}`;
-        showToast(`DeepSeek-R1: Step ${currentStep + 1}/3 evaluated`);
+        readout.innerHTML = `<span style="color:#60a5fa;">DeepSeek-V4.1-Pro CoT:</span> ${steps[currentStep]}`;
+        showToast(`DeepSeek-V4.1-Pro: Step ${currentStep + 1}/3 evaluated`);
       } else if (action === 'scale-context' && target === 'gemini') {
         const readout = document.getElementById('geminiReadout');
-        const contexts = [
-          'Context: 250k tokens ingested · Searching entire Monorepo codebase in 340ms.',
-          'Context: 1,000,000 tokens ingested · Cross-referencing 14 repositories & PR histories in 520ms.',
-          'Context: 2,000,000 tokens ingested · Max window active. Zero context truncation across all codebase history.'
+        const levels = [
+          {
+            label: 'Argon Low · 300k tokens ingested · Sub-200ms TTFT across entire workspace.',
+            toast: 'Gemini 4 Argon: Low Thinking (Sub-200ms Flash mode)'
+          },
+          {
+            label: 'Argon Medium · 1,200,000 tokens ingested · Cross-referencing 20 repos with deep semantic linking in 340ms.',
+            toast: 'Gemini 4 Argon: Medium Thinking (1.2M context active)'
+          },
+          {
+            label: 'Argon High · Unified 2,000,000+ tokens active · Full Antigravity pairing & multi-repo architecture synthesis.',
+            toast: 'Gemini 4 Argon: High Thinking (Unified 2M+ Context)'
+          }
         ];
-        let curIdx = parseInt(btn.dataset.scaleIdx || '0', 10);
-        curIdx = (curIdx + 1) % contexts.length;
-        btn.dataset.scaleIdx = curIdx;
-        readout.innerHTML = `<span style="color:#38bdf8;">Gemini 2.0 Ingestion:</span> ${contexts[curIdx]}`;
-        showToast(`Gemini 2.0: Context scaled to ${(curIdx + 1) * 750}K+ tokens`);
+        let curIdx = parseInt(btn.dataset.argonIdx || '0', 10);
+        curIdx = (curIdx + 1) % levels.length;
+        btn.dataset.argonIdx = curIdx;
+        readout.innerHTML = `<span style="color:#38bdf8;">Gemini 4 Reasoning:</span> ${levels[curIdx].label}`;
+        showToast(levels[curIdx].toast);
       } else if (action === 'dispatch-swarm' && target === 'muse') {
         const readout = document.getElementById('museReadout');
         const isSwarm = btn.classList.toggle('active');
         if (isSwarm) {
           btn.textContent = 'Halt Swarm';
-          readout.innerHTML = '<span style="color:#c084fc;">Swarm Active:</span> Worktree 1: UI Refactor · Worktree 2: Integration Tests (PASS) · Worktree 3: PR Reviewer.';
-          showToast('Muse Spark: 3 parallel git worktree agents dispatched');
+          readout.innerHTML = '<span style="color:#c084fc;">Wonder Swarm Active:</span> Worktree 1: Full-Stack Builder · Worktree 2: Visual Regression QA · VM Browser: Active.';
+          showToast('Muse Wonder: Autonomous personal agent swarm dispatched');
         } else {
-          btn.textContent = 'Deploy Swarm Workers';
-          readout.textContent = 'Worktree 1: Builder (Idle) · Worktree 2: Test Runner (Idle)';
-          showToast('Muse Spark: Swarm returned to idle');
+          btn.textContent = 'Deploy Wonder Swarm';
+          readout.textContent = 'Worktree 1: Full-Stack Builder (Idle) · VM Browser QA: Waiting';
+          showToast('Muse Wonder: Swarm returned to idle');
         }
       }
     });
@@ -770,31 +792,31 @@
 
   const ROUTER_PRESETS = {
     ui: {
-      model: 'Claude 3.7 Sonnet (Extended Thinking)',
+      model: 'Claude Opus 5.5 & Fable 5.1 (Pinnacle Agentic Reasoning)',
       color: '#f59e0b',
-      strategy: '64K Token Thinking budget for optical physics & zero visual regressions.',
-      velocity: '10x Developer Multiplier · Zero-Defect Craft',
+      strategy: '128K Token Thinking budget for optical physics, visionOS specular glints & zero regressions.',
+      velocity: 'Pinnacle Craft Multiplier · Flawless Synthesis',
       highlightId: 'card-model-claude'
     },
     quant: {
-      model: 'DeepSeek-R1 (Reinforcement Learning CoT)',
+      model: 'DeepSeek-V4.1-Pro (Causal Enc-Dec MoE)',
       color: '#3b82f6',
-      strategy: 'Large-scale RL reasoning trace solving Nelson-Siegel yield fitting & orderbook skews.',
-      velocity: 'Dense 671B MoE Math Engine · Pure Logic',
+      strategy: 'Causal MoE sparse reasoning trace solving Nelson-Siegel yield fitting at 94% KV compression.',
+      velocity: 'Open-Weights 1M Context · Ultra-Low Latency',
       highlightId: 'card-model-deepseek'
     },
     repo: {
-      model: 'Gemini 2.0 Pro (2M+ Token Context)',
+      model: 'Gemini 4 Argon (Unified 2M Context & Antigravity)',
       color: '#38bdf8',
-      strategy: 'Full repository audit without vector chunking. Ingests all 14 projects into single prompt.',
-      velocity: '&lt; 400ms Retrieval · Native Multimodal',
+      strategy: 'Full 20-repository monorepo cross-referencing without vector chunking. Tunable Argon High thinking.',
+      velocity: 'Native Multimodal · Deep Ecosystem Synergy',
       highlightId: 'card-model-gemini'
     },
     swarm: {
-      model: 'Muse Spark 1.3 (Muse Code Harness)',
+      model: 'Muse Wonder & Spark 1.3 (Meta Superintelligence Labs)',
       color: '#c084fc',
-      strategy: 'Autonomous multi-agent execution across isolated git branches with automated test suites.',
-      velocity: 'Parallel Fleet Execution · Zero Human Bottleneck',
+      strategy: 'Autonomous cloud VM execution coordinating multi-agent Git worktree swarms with browser QA.',
+      velocity: 'Sustained Autonomous Execution · Zero Bottleneck',
       highlightId: 'card-model-muse'
     }
   };
