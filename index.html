@@ -1,566 +1,452 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="carbon">
+<html lang="en" data-vibe="obsidian">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1KHVLED // SYSTEMS SPECIFICATION & PRODUCTION SHOWCASE</title>
-  <meta name="description" content="Technical portfolio and live showcase of production web applications, quantitative tools, and distributed automations by Khaled (1khvled).">
+  <title>1khvled — Vibe Coder & Creative Designer</title>
+  <meta name="description" content="Portfolio of 1khvled — Vibe Coder & Creative Designer. Vibe Coding for Good: Building production web applications, quantitative tools, automations, and AI motion graphics.">
   <meta name="author" content="Khaled (1khvled)">
-  <meta name="theme-color" content="#09090B">
+  <meta name="theme-color" content="#07070A">
 
   <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="1KHVLED // SYSTEMS SPECIFICATION & PRODUCTION SHOWCASE">
-  <meta property="og:description" content="Architectural showcase of production web applications, quantitative tools, and distributed automations.">
+  <meta property="og:title" content="1khvled — Vibe Coder & Creative Designer">
+  <meta property="og:description" content="Vibe Coding for Good: Production web apps, quantitative tools, automations, and AI motion graphics.">
   <meta property="og:url" content="https://1khvled.vercel.app">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◩</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Mechanical Toast Feedback -->
-  <div class="mechanical-toast" id="mechanicalToast" role="status" aria-live="polite"></div>
+  <div class="vibe-toast" id="vibeToast" role="status" aria-live="polite"></div>
 
-  <!-- Outer Swiss Rails Container (Max 1360px, 1px Hairlines) -->
-  <div class="grid-rail-container">
+  <!-- ====================================================================
+       SECTION 0: FLOATING OPTICAL GLASS DOCK (visionOS Pill)
+       ==================================================================== -->
+  <header class="floating-glass-dock" id="floatingDock">
+    <div class="dock-brand-pill">
+      <span class="dock-status-dot" aria-hidden="true"></span>
+      <span>1KHVLED</span>
+    </div>
+
+    <nav class="dock-nav-links" aria-label="Quick Navigation">
+      <a href="#showcase" class="dock-item-btn" data-nav="showcase">Showcase</a>
+      <a href="#motion-design" class="dock-item-btn" data-nav="motion-design">AI Motion & 3D</a>
+      <a href="#vibe-playground" class="dock-item-btn" data-nav="vibe-playground">Playground</a>
+    </nav>
+
+    <div style="display: flex; align-items: center; gap: 0.4rem;">
+      <button type="button" class="dock-item-btn" id="dockVibeToggle" title="Cycle Vibe Palette" style="padding: 0.45rem 0.75rem;">
+        ✦ <span id="dockVibeName">Obsidian</span>
+      </button>
+      <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="dock-action-btn" title="GitHub Profile">
+        <span>GitHub</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         SECTION 1: HERO & INTERACTIVE LOGO ORBIT STAGE
+         ==================================================================== -->
+    <section class="hero-glass-stage" id="hero">
+      <div class="stage-container">
+        <div class="hero-vibe-pill">
+          <span style="color: var(--vibe-accent);">✦</span>
+          <span>Vibe Coding for Good · Algiers & Global</span>
+        </div>
+
+        <h1 class="hero-headline">
+          1khvled <span class="hero-gradient-text">— Vibe Coder & Creative Designer</span>
+        </h1>
+
+        <p class="hero-subhead">
+          Orchestrating design taste, AI leverage, and code to craft high-impact web apps, quantitative trading systems, smart automations, and cinematic motion graphics.
+        </p>
+
+        <!-- Interactive Logo & Snapshot Orbit Deck -->
+        <div class="interactive-orbit-deck" id="orbitDeck">
+          <button type="button" class="orbit-chip specular-glint-surface" data-filter="all">
+            <span>All Projects</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="messistats">
+            <img src="public/logos/messistats.svg" alt="MessiStats Logo" class="orbit-chip-icon" onerror="this.src='public/logos/messistats-logo.png'">
+            <span>MessiStats</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="ronaldostats">
+            <img src="public/logos/ronaldostats.svg" alt="RonaldoStats Logo" class="orbit-chip-icon" onerror="this.src='public/logos/ronaldostats-logo.png'">
+            <span>RonaldoStats</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="dz-partpicker">
+            <img src="public/logos/dz-partpicker-logo.png" alt="DZ-PartPicker Logo" class="orbit-chip-icon">
+            <span>DZ-PartPicker</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="bytek">
+            <img src="public/logos/bytek-logo.png" alt="Bytek Store Logo" class="orbit-chip-icon">
+            <span>Bytek Motion</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="opgg">
+            <img src="public/logos/opgg-logo.svg" alt="Open OP.GG Logo" class="orbit-chip-icon">
+            <span>Open OP.GG</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="square-dz">
+            <img src="public/logos/square-algerie-logo.png" alt="Square Live DZ Logo" class="orbit-chip-icon">
+            <span>Square DZ</span>
+          </button>
+          <button type="button" class="orbit-chip specular-glint-surface" data-project="macro-prop">
+            <span style="font-weight: 800; color: #10b981;">MPT</span>
+            <span>Macro Prop Trader</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!-- ====================================================================
-         SECTION 00: TOP INSTRUMENT BAR (44px Height, 100% Solid Opaque)
+         SECTION 2: OPTICAL GLASS SHOWCASE (CONCENTRIC GEOMETRY)
          ==================================================================== -->
-    <header class="instrument-bar" id="sec-instrument">
-      <div class="instrument-inner">
-        <!-- Identity Moniker -->
-        <div class="instrument-brand">
-          <span style="font-weight: 800;">1KHVLED</span>
-          <span style="color: var(--border-grid);">//</span>
-          <span style="color: var(--text-secondary);">SYS.PORTFOLIO</span>
-          <span class="instrument-status-badge">
-            <span class="signal-led" aria-hidden="true"></span>
-            <span>PRODUCTION ONLINE</span>
-          </span>
+    <section class="showcase-stage-section" id="showcase">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Live Applications & Quant Tools</span>
+            </div>
+            <h2 class="section-title">Production Showcase</h2>
+          </div>
+
+          <!-- Optical Filter Dock -->
+          <div class="optical-filter-dock" role="tablist" aria-label="Project Categories">
+            <button type="button" class="filter-pill-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
+            <button type="button" class="filter-pill-btn" data-filter="web-apps" role="tab" aria-selected="false">Web Apps & Portals</button>
+            <button type="button" class="filter-pill-btn" data-filter="quant-trading" role="tab" aria-selected="false">Quant & Trading</button>
+            <button type="button" class="filter-pill-btn" data-filter="automations" role="tab" aria-selected="false">Automations & Bots</button>
+          </div>
         </div>
 
-        <!-- Section Jump Coordinates -->
-        <nav class="instrument-nav" aria-label="Section Index">
-          <a href="#sec-hero" class="instrument-nav-item">
-            <span>01 INDEX</span>
-            <span class="kbd-hint tabular-num">[1]</span>
-          </a>
-          <a href="#sec-showcase" class="instrument-nav-item">
-            <span>02 SYSTEMS</span>
-            <span class="kbd-hint tabular-num">[2]</span>
-          </a>
-          <a href="#sec-architecture" class="instrument-nav-item">
-            <span>03 QUANT</span>
-            <span class="kbd-hint tabular-num">[3]</span>
-          </a>
-          <a href="#sec-capabilities" class="instrument-nav-item">
-            <span>04 CAPABILITIES</span>
-            <span class="kbd-hint tabular-num">[4]</span>
-          </a>
-          <a href="#sec-dispatch" class="instrument-nav-item">
-            <span>05 DISPATCH</span>
-            <span class="kbd-hint tabular-num">[5]</span>
-          </a>
-        </nav>
-
-        <!-- Controls & Ticking Clock -->
-        <div class="instrument-controls">
-          <span class="clock-display tabular-num" id="clockUtc">00:00:00 UTC</span>
-          <button type="button" class="btn-theme-switch" id="themeSwitchBtn" title="Toggle theme polarity [T]">
-            [THEME: CARBON]
-          </button>
-          <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="instrument-nav-item" style="padding-inline: 0.5rem;" title="GitHub Profile [G]">
-            <span>GH ↗</span>
-          </a>
+        <!-- Concentric Optical Glass Cards Grid -->
+        <div class="projects-glass-grid" id="projectsGrid">
+          <!-- Populated dynamically by app.js with real logos, real snapshots & interactive widgets -->
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- ====================================================================
-           SECTION 01: EDITORIAL & TECHNICAL HERO
-           ==================================================================== -->
-      <section class="hero-section" id="sec-hero" aria-labelledby="hero-heading">
-        <div class="hero-grid">
-          <!-- Left 8 Columns: Editorial Positioning -->
-          <div class="hero-editorial-cell with-crosshair">
-            <div>
-              <div class="coordinate-header">
-                <span class="tabular-num">[01 // ARCHITECTURAL INDEX]</span>
-                <span>LOC: ALGIERS (DZ) / UTC+1</span>
+    <!-- ====================================================================
+         SECTION 3: AI MOTION GRAPHICS & 3D VISUAL STAGE
+         ==================================================================== -->
+    <section class="motion-presentation-stage" id="motion-design">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Visual Direction & 3D Motion</span>
+            </div>
+            <h2 class="section-title">AI Motion Graphics & Design Stage</h2>
+          </div>
+
+          <!-- 3 Interactive Modes Switcher -->
+          <div class="mode-switch-group" role="tablist" aria-label="Interactive Presentation Modes">
+            <button type="button" class="mode-switch-btn active" data-mode="stage" role="tab" aria-selected="true">
+              ▶ Theater Stage
+            </button>
+            <button type="button" class="mode-switch-btn" data-mode="moodboard" role="tab" aria-selected="false">
+              ✥ Draggable Moodboard
+            </button>
+            <button type="button" class="mode-switch-btn" data-mode="carousel" role="tab" aria-selected="false">
+              ◫ 3D Carousel
+            </button>
+          </div>
+        </div>
+
+        <!-- Theater Shell -->
+        <div class="motion-theater-shell">
+          <!-- Main Viewport -->
+          <div class="motion-viewport" id="motionViewport">
+            <!-- Mode 1: Stage Video Player -->
+            <video
+              id="theaterVideo"
+              class="motion-video-player"
+              src="public/videos/bytek-motion-ad.mp4"
+              playsinline
+              muted
+              loop
+              preload="metadata"
+              poster="public/designs/attack-shark-x68-he.png">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Mode 2: Draggable Lightbox / Moodboard Canvas -->
+            <div class="moodboard-canvas" id="moodboardCanvas">
+              <div class="moodboard-item" style="top: 15%; left: 10%; transform: rotate(-4deg);" data-title="Attack Shark X3">
+                <img src="public/designs/attack-shark-x3.png" alt="Attack Shark X3 Render">
               </div>
+              <div class="moodboard-item" style="top: 10%; left: 40%; transform: rotate(3deg);" data-title="HyperX Cloud III">
+                <img src="public/designs/hyperx-cloud-3.png" alt="HyperX Cloud III Render">
+              </div>
+              <div class="moodboard-item" style="top: 25%; left: 70%; transform: rotate(-2deg);" data-title="MAD60 Keyboard">
+                <img src="public/designs/mad60-keyboard.png" alt="MAD60 Keyboard Render">
+              </div>
+              <div class="moodboard-item" style="top: 55%; left: 20%; transform: rotate(5deg);" data-title="AJAZZ AJ179 Apex">
+                <img src="public/designs/ajazz-aj179.png" alt="AJAZZ AJ179 Apex Render">
+              </div>
+              <div class="moodboard-item" style="top: 50%; left: 52%; transform: rotate(-5deg);" data-title="Attack Shark X68 HE">
+                <img src="public/designs/attack-shark-x68-he.png" alt="Attack Shark X68 HE Render">
+              </div>
+              <div class="moodboard-item" style="top: 45%; left: 78%; transform: rotate(2deg);" data-title="ATK A9 Plus">
+                <img src="public/designs/atk-a9-plus.png" alt="ATK A9 Plus Render">
+              </div>
+              <div class="moodboard-hint">✥ Click & drag items anywhere on the canvas</div>
+            </div>
 
-              <h1 class="hero-headline" id="hero-heading">
-                Architecting Deterministic Web Systems, Quantitative Pricing & Autonomous Fleets.
-              </h1>
+            <!-- Mode 3: 3D Perspective Carousel -->
+            <div class="carousel-3d-stage" id="carousel3dStage">
+              <div class="carousel-3d-track" id="carouselTrack">
+                <!-- Rendered dynamically by app.js -->
+              </div>
+              <div class="carousel-nav-btns">
+                <button type="button" class="btn-carousel-nav" id="btnCarouselPrev" aria-label="Previous Design">‹</button>
+                <button type="button" class="btn-carousel-nav" id="btnCarouselNext" aria-label="Next Design">›</button>
+              </div>
+            </div>
+          </div>
 
-              <p class="hero-thesis">
-                Full-stack software engineer and quantitative tools builder. Developing production applications across sports data analytics, macroeconomic yield curve diagnostics, algorithmic market making, and fault-tolerant distributed web scrapers.
+          <!-- Theater Controls Strip -->
+          <div class="theater-controls-strip">
+            <div class="theater-info-block">
+              <div>
+                <h3 class="theater-title" id="theaterTitle">Bytek Motion Ad — 3D Product Commercial</h3>
+                <p class="theater-sub" id="theaterSub">Cinematic camera choreography, dynamic product spotlight, and motion branding.</p>
+              </div>
+            </div>
+
+            <!-- Playback Bar (Visible in Stage Mode) -->
+            <div class="theater-playback-bar" id="theaterPlaybackBar">
+              <button type="button" class="btn-theater-ctrl" id="btnTheaterPlay" aria-label="Play or pause video">
+                <svg id="playIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <svg id="pauseIcon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+              </button>
+              <div class="scrubber-track" id="scrubberTrack" role="slider" aria-label="Video scrubber" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="scrubber-fill" id="scrubberFill"></div>
+              </div>
+              <span class="theater-timecode" id="theaterTimecode">00:00 / 00:00</span>
+              <button type="button" class="btn-theater-ctrl" id="btnTheaterMute" aria-label="Toggle mute">
+                <svg id="unmutedIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                <svg id="mutedIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Design Renders Gallery Strip -->
+        <div style="margin-bottom: 1rem;">
+          <h4 style="font-size: 1rem; font-weight: 800; color: #ffffff; margin-bottom: 0.25rem;">Interactive 3D Product Gallery</h4>
+          <p style="font-size: 0.8125rem; color: var(--text-secondary);">Click any high-resolution 3D asset to preview in theater stage</p>
+        </div>
+        <div class="designs-thumbnail-grid" id="designsGrid">
+          <!-- Populated by app.js with real 3D product renders -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 4: "VIBE CODING FOR GOOD" BENTO PLAYGROUND
+         ==================================================================== -->
+    <section class="vibe-playground-section" id="vibe-playground">
+      <div class="stage-container">
+        <div class="section-intro-bar">
+          <div>
+            <div class="section-badge-pill">
+              <span>✦ Philosophy & Orchestration</span>
+            </div>
+            <h2 class="section-title">Vibe Coding for Good</h2>
+          </div>
+        </div>
+
+        <div class="vibe-bento-grid">
+          <!-- Card 1 (Col 8): The Vibe Manifesto -->
+          <div class="vibe-bento-card col-span-8 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">✦</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">The Philosophy</span>
+              </div>
+              <h3 style="font-size: 1.6rem; font-weight: 900; letter-spacing: -0.025em; color: #ffffff; line-height: 1.25; margin-bottom: 1rem;">
+                Coding with High Design Taste, Relentless Curiosity & AI Velocity.
+              </h3>
+              <p style="font-size: 0.9375rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1rem;">
+                I believe software in 2025 and 2026 shouldn’t look like generic SaaS clones or soulless AI-generated templates. I use AI not to be lazy, but to punch 10x above my weight: orchestrating intelligent autonomous loops, rapid prototyping, and precision mathematics while obsessing over micro-interactions, typography, and optical physics.
+              </p>
+              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7;">
+                From sports data platforms used across international derbies to real-time macroeconomic yield diagnostics and community ecommerce tools, every project is built to solve tangible problems and delight real people.
               </p>
             </div>
-
-            <div class="hero-ctas">
-              <a href="#sec-showcase" class="btn-solid-primary">
-                <span>EXPLORE 14 PRODUCTION SYSTEMS ↓</span>
-              </a>
-              <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-solid-secondary">
-                <span>VIEW GITHUB (1KHVLED) ↗</span>
-              </a>
-              <button type="button" class="btn-solid-secondary" onclick="window.sysEngine.openCommandPalette()">
-                <span>SEARCH PALETTE [/]</span>
-              </button>
+            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <span class="glass-mini-tag">100% Shipped Code</span>
+              <span class="glass-mini-tag">Zero Placeholder Slop</span>
+              <span class="glass-mini-tag">Production Live</span>
             </div>
           </div>
 
-          <!-- Right 4 Columns: System Telemetry Ledger -->
-          <div class="hero-telemetry-cell">
-            <div class="telemetry-header-strip">
-              <span>// SYSTEM TELEMETRY LEDGER</span>
-              <span class="signal-led" style="background-color: var(--signal-amber);"></span>
-            </div>
-            <div class="telemetry-item-row">
-              <div class="telemetry-item-label">Primary Domains</div>
-              <div class="telemetry-item-value">Full-Stack Web / Quantitative Engines / Automations</div>
-            </div>
-            <div class="telemetry-item-row">
-              <div class="telemetry-item-label">Core Runtime & Languages</div>
-              <div class="telemetry-item-value tabular-num">TypeScript, Python 3.12, Node.js 24, AsyncIO, Next.js 15</div>
-            </div>
-            <div class="telemetry-item-row">
-              <div class="telemetry-item-label">Infrastructure & Edge</div>
-              <div class="telemetry-item-value tabular-num">Vercel Global Edge, Cloudflare Workers, Supabase, Linux VPS</div>
-            </div>
-            <div class="telemetry-item-row">
-              <div class="telemetry-item-label">Execution Principles</div>
-              <div class="telemetry-item-value">Low-Latency Execution, Deterministic State, Zero-CLS Hydration</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4-Column Metric Ticker Bar -->
-        <div class="metrics-ledger-grid">
-          <div class="metric-cell">
-            <span class="metric-meta">// PRODUCTION SYSTEMS</span>
-            <div class="metric-readout tabular-num">14</div>
-            <span class="metric-meta">Verified Active Systems</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-meta">// LIVE DEPLOYMENTS</span>
-            <div class="metric-readout tabular-num" style="color: var(--signal-emerald);">08</div>
-            <span class="metric-meta">Zero-Downtime Edge Nodes</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-meta">// QUANTITATIVE FLEETS</span>
-            <div class="metric-readout tabular-num" style="color: var(--signal-amber);">12+</div>
-            <span class="metric-meta">Autonomous Trading Daemons</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-meta">// DATA PROCESSED</span>
-            <div class="metric-readout tabular-num">1.4M+</div>
-            <span class="metric-meta">Match Events & Tick Records</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====================================================================
-           SECTION 02: INTERACTIVE LIVE SHOWCASE MATRIX (CORE UPGRADE)
-           ==================================================================== -->
-      <section class="showcase-section" id="sec-showcase" aria-labelledby="showcase-heading">
-        <!-- Section Header Strip -->
-        <div class="coordinate-header" style="padding: 1.25rem 1.5rem; background-color: var(--bg-elevated); border-bottom: 1px solid var(--border-grid); margin-bottom: 0;">
-          <span class="tabular-num" id="showcase-heading">[02 // PRODUCTION MATRIX & SYSTEMS REGISTRY]</span>
-          <span>FLUSH HAIRLINE GRID // SPEC VIEW</span>
-        </div>
-
-        <!-- Matrix Control Toolbar -->
-        <div class="matrix-toolbar">
-          <!-- Category Tabs -->
-          <div class="matrix-category-group" role="tablist" aria-label="Filter systems by domain">
-            <button type="button" class="matrix-filter-tab active" data-cat="all" role="tab" aria-selected="true">
-              <span>ALL SYSTEMS</span>
-              <span class="tab-count-badge tabular-num">[14]</span>
-            </button>
-            <button type="button" class="matrix-filter-tab" data-cat="webapps" role="tab" aria-selected="false">
-              <span>PRODUCTION WEB APPS</span>
-              <span class="tab-count-badge tabular-num">[06]</span>
-            </button>
-            <button type="button" class="matrix-filter-tab" data-cat="quant" role="tab" aria-selected="false">
-              <span>QUANTITATIVE ENGINES</span>
-              <span class="tab-count-badge tabular-num">[05]</span>
-            </button>
-            <button type="button" class="matrix-filter-tab" data-cat="automation" role="tab" aria-selected="false">
-              <span>AUTOMATIONS & BOTS</span>
-              <span class="tab-count-badge tabular-num">[03]</span>
-            </button>
-          </div>
-
-          <!-- Actions: Search & View Mode Switcher -->
-          <div class="matrix-actions-group">
-            <div class="search-spec-box">
-              <input type="search" id="matrixSearchInput" class="search-spec-input" placeholder="Search systems or stack..." aria-label="Search systems">
-              <span class="search-spec-kbd" aria-hidden="true">/</span>
-            </div>
-
-            <div class="view-switcher-group" role="group" aria-label="View Switcher">
-              <button type="button" class="view-switch-btn active" data-view="grid" title="Switch to Architectural Spec Grid">
-                [GRID VIEW]
-              </button>
-              <button type="button" class="view-switch-btn" data-view="table" title="Switch to Bloomberg Index Table">
-                [TABLE VIEW]
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mode A: Spec Grid Container -->
-        <div id="specGridViewContainer">
-          <div class="spec-grid-container" id="specGrid">
-            <!-- Dynamically populated by app.js -->
-          </div>
-        </div>
-
-        <!-- Mode B: Index Table Container -->
-        <div id="indexTableViewContainer" style="display: none;">
-          <div class="index-table-container">
-            <table class="index-table">
-              <thead>
-                <tr>
-                  <th>SYS_ID</th>
-                  <th>SYSTEM NAME</th>
-                  <th>DOMAIN</th>
-                  <th>CORE STACK</th>
-                  <th>KEY METRIC</th>
-                  <th>DEPLOY STATUS</th>
-                  <th style="text-align: right;">ACTION</th>
-                </tr>
-              </thead>
-              <tbody id="indexTableBody">
-                <!-- Dynamically populated by app.js -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====================================================================
-           SECTION 03: QUANTITATIVE & SYSTEMS ARCHITECTURE SPOTLIGHT
-           ==================================================================== -->
-      <section class="spotlight-section" id="sec-architecture" aria-labelledby="spotlight-heading">
-        <div class="coordinate-header" style="padding: 1.25rem 1.5rem; background-color: var(--bg-elevated); border-bottom: 1px solid var(--border-grid); margin-bottom: 0;">
-          <span class="tabular-num" id="spotlight-heading">[03 // ARCHITECTURE & QUANTITATIVE RIGOR]</span>
-          <span>DETERMINISTIC SYSTEMS TELEMETRY</span>
-        </div>
-
-        <!-- Split-Pane Navigation Tabs -->
-        <div class="spotlight-tabs-bar" role="tablist">
-          <button type="button" class="spotlight-tab-btn active" data-tab="quant" onclick="window.sysEngine.switchSpotlightTab('quant')" role="tab">
-            01 // QUANTITATIVE ENGINE TELEMETRY
-          </button>
-          <button type="button" class="spotlight-tab-btn" data-tab="web" onclick="window.sysEngine.switchSpotlightTab('web')" role="tab">
-            02 // PRODUCTION WEB ARCHITECTURE
-          </button>
-          <button type="button" class="spotlight-tab-btn" data-tab="auto" onclick="window.sysEngine.switchSpotlightTab('auto')" role="tab">
-            03 // AUTOMATION & SCRAPING PIPELINES
-          </button>
-        </div>
-
-        <!-- Content Area -->
-        <div class="spotlight-content-area">
-          <!-- Pane 1: Quantitative Engine Telemetry -->
-          <div class="spotlight-pane active" id="spotlight-quant">
-            <!-- KPI Table -->
-            <div class="kpi-row-grid">
-              <div class="kpi-cell">
-                <span class="kpi-label">SHARPE RATIO</span>
-                <div class="kpi-num tabular-num" style="color: var(--signal-emerald);">2.84</div>
-              </div>
-              <div class="kpi-cell">
-                <span class="kpi-label">MAX DRAWDOWN</span>
-                <div class="kpi-num tabular-num" style="color: var(--signal-amber);">-3.20%</div>
-              </div>
-              <div class="kpi-cell">
-                <span class="kpi-label">PROFIT FACTOR</span>
-                <div class="kpi-num tabular-num">2.18</div>
-              </div>
-              <div class="kpi-cell">
-                <span class="kpi-label">FILL LATENCY</span>
-                <div class="kpi-num tabular-num">11.4ms</div>
-              </div>
-              <div class="kpi-cell">
-                <span class="kpi-label">FILL RATE</span>
-                <div class="kpi-num tabular-num" style="color: var(--signal-emerald);">98.6%</div>
-              </div>
-            </div>
-
-            <!-- Quantitative Modeling Breakdown -->
-            <div class="telemetry-diagram-box">
-              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                // MATHEMATICAL FORMULATION: AVELLANEDA-STOIKOV SPREAD QUOTATION & RESERVATION PRICE
-              </div>
-              <div>Reservation Price Model: r(s, q, t) = s - q * gamma * sigma^2 * (T - t)</div>
-              <div>Optimal Spread Half-Widths: delta_a + delta_b = gamma * sigma^2 * (T - t) + (2/gamma) * ln(1 + gamma/kappa)</div>
-              <div style="margin-top: 0.75rem; color: var(--text-muted);">
-                State Machine: [WEBSOCKET_ORDERBOOK_SYNC] -> [VOLATILITY_ESTIMATOR_GARCH] -> [INVENTORY_SKEW_ADJUST] -> [DISPATCH_LIMIT_QUOTES]
-              </div>
-            </div>
-
-            <!-- SVG 1px Stroke Performance Trajectory -->
-            <div style="border: 1px solid var(--border-grid); padding: 1.5rem; background-color: var(--bg-elevated);">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; font-family: var(--font-mono); font-size: 0.75rem;">
-                <span style="font-weight: 700;">// SIMULATED OUT-OF-SAMPLE CUMULATIVE VOLATILITY PROFILE</span>
-                <span style="color: var(--signal-emerald);">+44.2% CUMULATIVE ALPHA</span>
-              </div>
-              <svg viewBox="0 0 800 120" style="width: 100%; height: 120px; stroke: var(--signal-emerald); fill: none; stroke-width: 1.5px;" aria-label="Cumulative performance curve">
-                <path d="M0,100 L40,94 L80,96 L120,84 L160,80 L200,82 L240,68 L280,62 L320,65 L360,54 L400,48 L440,51 L480,38 L520,32 L560,35 L600,24 L640,21 L680,26 L720,15 L760,11 L800,8" />
-                <line x1="0" y1="100" x2="800" y2="100" style="stroke: var(--border-grid); stroke-dasharray: 4;" />
-              </svg>
-            </div>
-          </div>
-
-          <!-- Pane 2: Production Web Architecture -->
-          <div class="spotlight-pane" id="spotlight-web">
-            <div class="telemetry-diagram-box">
-              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                // PRODUCTION CLIENT/EDGE CACHING ARCHITECTURE (VERCEL + NEXT.JS 15)
-              </div>
-              <div>[USER REQUEST] -> [VERCEL EDGE ROUTER] -> [STALE-WHILE-REVALIDATE CACHE: 300s]</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ [CACHE HIT: &lt;20ms RETURN STATIC PAYLOAD]</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↳ [CACHE STALE: ASYNC BACKGROUND FETCH → REVALIDATE]</div>
-              <div style="margin-top: 1rem; color: var(--text-muted);">
-                Deterministic State: All interactive UI tables and filter states leverage native URL search parameters and binary indexed payloads, ensuring instant shareability without hydration mismatches.
-              </div>
-            </div>
-          </div>
-
-          <!-- Pane 3: Automation Pipelines -->
-          <div class="spotlight-pane" id="spotlight-auto">
-            <div class="telemetry-diagram-box">
-              <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">
-                // DISTRIBUTED TELEGRAM & BROWSER AUTOMATION LIFECYCLE
-              </div>
-              <div>[MTPROTO EVENT STREAM] -> [REGEX PURGE COMPETITOR WATERMARKS] -> [AFFILIATE URL CONVERSION]</div>
-              <div>[HEADLESS PLAYWRIGHT]  -> [CANVAS FINGERPRINT BYPASS]        -> [SESSION COOKIE REFRESH]</div>
-              <div style="margin-top: 1rem; color: var(--text-muted);">
-                Evasion Architecture: Human Gaussian jitter delays (mu=1.4s, sigma=0.35s) paired with encrypted local cookie vaults, delivering 100% daily claiming reliability.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====================================================================
-           SECTION 04: TECHNICAL CAPABILITY SPEC SHEET (NO FAKE BARS)
-           ==================================================================== -->
-      <section class="capability-section" id="sec-capabilities" aria-labelledby="capabilities-heading">
-        <div class="coordinate-header" style="padding: 1.25rem 1.5rem; background-color: var(--bg-elevated); border-bottom: 1px solid var(--border-grid); margin-bottom: 0;">
-          <span class="tabular-num" id="capabilities-heading">[04 // TECHNICAL SPECIFICATION MATRIX]</span>
-          <span>DISCIPLINED SYSTEMS ARSENAL</span>
-        </div>
-
-        <div class="capability-grid">
-          <!-- Col 1: Frontend & Interface Systems -->
-          <div class="capability-card">
-            <div class="capability-index tabular-num">SPEC_01 // FRONTEND</div>
-            <h3 class="capability-title">Interface Systems</h3>
-            <ul class="capability-list">
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Next.js 15, React 19, TypeScript</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>High-Frequency Data Grids & Tables</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Tailwind Architecture & CSS Layers</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Electron Desktop & Local LCU Hooks</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Progressive Web Apps (Offline IndexedDB)</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Tabular Numeric Alignment (tabular-nums)</span></li>
-            </ul>
-          </div>
-
-          <!-- Col 2: Quantitative & Algorithmic -->
-          <div class="capability-card">
-            <div class="capability-index tabular-num">SPEC_02 // QUANTITATIVE</div>
-            <h3 class="capability-title">Financial & Algo</h3>
-            <ul class="capability-list">
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Market Making & Spread Quotation</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Avellaneda-Stoikov Inventory Skew</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Nelson-Siegel Yield Curve Modeling</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>SEC EDGAR XBRL Automated Ingestion</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Altman Z & Piotroski F Forensics</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Monte Carlo & Expected Value Engine</span></li>
-            </ul>
-          </div>
-
-          <!-- Col 3: Backend & Data Infrastructure -->
-          <div class="capability-card">
-            <div class="capability-index tabular-num">SPEC_03 // BACKEND</div>
-            <h3 class="capability-title">Data Infrastructure</h3>
-            <ul class="capability-list">
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Python 3.12, Flask, FastAPI, AsyncIO</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Node.js, Bun, Native ES Modules</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Cloudflare Edge Workers & KV</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>PostgreSQL, Supabase Auth & RLS</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>High-Throughput WebSockets & Telemetry</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Deterministic JSONL State Records</span></li>
-            </ul>
-          </div>
-
-          <!-- Col 4: Automation & Distributed Tooling -->
-          <div class="capability-card">
-            <div class="capability-index tabular-num">SPEC_04 // AUTOMATION</div>
-            <h3 class="capability-title">Automation & Fleets</h3>
-            <ul class="capability-list">
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Headless Chromium (Playwright/Puppeteer)</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Telethon & MTProto Telegram Daemons</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Automated Anti-Bot Fingerprint Evasion</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Pillow Automated Image Normalization</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>GitHub Actions CI/CD Pipeline Cron</span></li>
-              <li class="capability-item"><span class="cap-marker">▹</span><span>Multi-Process Linux VPS Orchestration</span></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ====================================================================
-           SECTION 05: TERMINAL FOOTER & DIRECT DISPATCH
-           ==================================================================== -->
-      <section class="dispatch-section" id="sec-dispatch" aria-labelledby="dispatch-heading">
-        <div class="coordinate-header" style="padding: 1.25rem 1.5rem; background-color: var(--bg-elevated); border-bottom: 1px solid var(--border-grid); margin-bottom: 0;">
-          <span class="tabular-num" id="dispatch-heading">[05 // TERMINAL DISPATCH & DIRECT COMM]</span>
-          <span>COORDINATES & KEYBOARD SHORTCUTS</span>
-        </div>
-
-        <div class="dispatch-grid">
-          <!-- Left Cell: Direct Contacts -->
-          <div class="dispatch-left-cell with-crosshair">
-            <h3 style="font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; margin-bottom: 0.75rem;">
-              Initiate Transmission.
-            </h3>
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 520px;">
-              Available for quantitative engineering contracts, high-performance web architecture, and autonomous system development.
-            </p>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
-              <button type="button" class="btn-solid-primary" onclick="window.sysEngine.copyContactEmail()">
-                <span>COPY EMAIL: KHALEDQBA54@... [CLICK]</span>
-              </button>
-              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="btn-solid-secondary">
-                <span>TELEGRAM HUB ↗</span>
-              </a>
-              <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-solid-secondary">
-                <span>GITHUB / 1KHVLED ↗</span>
-              </a>
-            </div>
-
-            <!-- Keyboard Navigation Legend -->
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); line-height: 1.8;">
-              <div>KEYBOARD NAVIGATION:</div>
-              <div><strong style="color: var(--text-secondary);">[1-5]</strong> Jump to Section &nbsp;·&nbsp; <strong style="color: var(--text-secondary);">[T]</strong> Polarity Toggle &nbsp;·&nbsp; <strong style="color: var(--text-secondary);">[G]</strong> GitHub &nbsp;·&nbsp; <strong style="color: var(--text-secondary);">[/]</strong> Quick Search &nbsp;·&nbsp; <strong style="color: var(--text-secondary);">[ESC]</strong> Close Drawer</div>
-            </div>
-          </div>
-
-          <!-- Right Cell: System Colophon -->
-          <div class="dispatch-right-cell">
+          <!-- Card 2 (Col 4): Tactile Vibe Mood Switcher -->
+          <div class="vibe-bento-card col-span-4 specular-glint-surface">
             <div>
-              <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); margin-bottom: 0.5rem;">
-                // ARCHITECTURAL SPECIFICATION COLOPHON
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">🎨</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Optical Mood</span>
               </div>
-              <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
-                Engineered with Swiss brutalist hairlines and quantitative instrument discipline. Built on a strict 1px solid CSS grid system with zero glassmorphism, zero ambient glows, and tabular-num typography.
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+                Tactile Vibe Switcher
+              </h3>
+              <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+                Select a live chromatic refraction preset for this portfolio:
               </p>
-            </div>
 
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; border-top: 1px solid var(--border-grid); padding-top: 1rem; color: var(--text-muted);">
-              <div>REPOSITORY: <a href="https://github.com/1khvled/portfolio" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); text-decoration: underline;">1khvled/portfolio</a></div>
-              <div>DEPLOYMENT: Vercel Edge Production CDN</div>
-              <div>REVISION: v3.0-SWISS-BRUTALISM</div>
+              <div class="vibe-mood-buttons" id="vibeMoodButtons">
+                <button type="button" class="btn-mood-tile" data-vibe="obsidian">
+                  <span class="mood-color-dot" style="background: #38bdf8;"></span>
+                  <span>Obsidian</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="emerald">
+                  <span class="mood-color-dot" style="background: #10b981;"></span>
+                  <span>Emerald</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="sunset">
+                  <span class="mood-color-dot" style="background: #f97316;"></span>
+                  <span>Sunset</span>
+                </button>
+                <button type="button" class="btn-mood-tile" data-vibe="purple">
+                  <span class="mood-color-dot" style="background: #c084fc;"></span>
+                  <span>Amethyst</span>
+                </button>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
+              Instant CSS custom property token swap with zero layout shift.
+            </div>
+          </div>
+
+          <!-- Card 3 (Col 6): The Stack & Orchestration Toolkit -->
+          <div class="vibe-bento-card col-span-6 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">⚡</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Orchestration Stack</span>
+              </div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
+                Tools I Bend to My Will
+              </h3>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                <span class="glass-mini-tag">TypeScript / JavaScript</span>
+                <span class="glass-mini-tag">Next.js & React 19</span>
+                <span class="glass-mini-tag">Node.js & Express</span>
+                <span class="glass-mini-tag">Python & QuantLib</span>
+                <span class="glass-mini-tag">Claude 3.7 & Gemini 2.5</span>
+                <span class="glass-mini-tag">Playwright Automation</span>
+                <span class="glass-mini-tag">Mol* 3D & WebGL</span>
+                <span class="glass-mini-tag">Tailwind CSS & CSS Grid</span>
+                <span class="glass-mini-tag">Blender & Motion Graphics</span>
+                <span class="glass-mini-tag">Electron & Desktop Apps</span>
+              </div>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8125rem; color: var(--text-secondary);">
+              Always adopting bleeding-edge tooling that compounds creative leverage.
+            </div>
+          </div>
+
+          <!-- Card 4 (Col 6): Direct Dispatch / Connect -->
+          <div class="vibe-bento-card col-span-6 specular-glint-surface">
+            <div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.25rem;">📬</span>
+                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Direct Dispatch</span>
+              </div>
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+                Let's Build Something Unforgettable
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
+                Open for bespoke web systems, trading interfaces, AI-powered automation pipelines, and high-craft creative collaborations.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+                <button type="button" class="btn-glass-primary" id="btnCopyEmail" style="justify-content: flex-start; padding: 0.75rem 1.25rem;">
+                  <span>✉ Copy Email:</span>
+                  <span style="color: var(--vibe-accent); font-weight: 800;">1khvled.dev@gmail.com</span>
+                </button>
+                <div style="display: flex; gap: 0.65rem;">
+                  <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
+                    GitHub ↗
+                  </a>
+                  <a href="https://x.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
+                    Twitter / X ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 1.25rem; font-size: 0.75rem; color: var(--text-muted);">
+              Average response time: &lt; 4 hours.
             </div>
           </div>
         </div>
-
-        <div class="colophon-strip">
-          <span>&copy; 2026 KHALED (1KHVLED). ALL RIGHTS RESERVED.</span>
-          <span class="tabular-num">STABLE RELEASE // NO AI SLOP // 100% SOLID</span>
-        </div>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ====================================================================
-       SLIDE-OVER ARCHITECTURE SPEC DRAWER (<dialog id="specDrawer">)
-       Per modern web guidance: Solid Opaque, overscroll contained
+       MODAL THEATER DIALOG (<dialog id="projectTheaterModal">)
        ==================================================================== -->
-  <dialog id="specDrawer" closedby="any" aria-labelledby="drawerTitle">
-    <div class="drawer-inner">
-      <div class="drawer-header">
-        <span class="tabular-num" id="drawerSysId" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--signal-amber);">
-          SYS-00 // SPECIFICATION
-        </span>
-        <button type="button" class="btn-solid-secondary" style="padding: 0.25rem 0.65rem; font-size: 0.75rem;" onclick="window.sysEngine.closeSpecDrawer()" aria-label="Close drawer">
-          [ESC / CLOSE]
-        </button>
+  <dialog id="projectTheaterModal" aria-labelledby="modalProjectTitle">
+    <div class="modal-theater-inner" id="modalInner">
+      <div class="modal-theater-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img id="modalProjectLogo" src="" alt="" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover;">
+          <div>
+            <h3 id="modalProjectTitle" style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">Project Title</h3>
+            <span id="modalProjectCategory" style="font-size: 0.75rem; color: var(--vibe-accent); font-weight: 700;">Category</span>
+          </div>
+        </div>
+        <button type="button" class="btn-close-theater" id="btnCloseModal" aria-label="Close dialog">✕</button>
       </div>
 
-      <div class="drawer-body">
-        <h2 id="drawerTitle" style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.25rem;">System Title</h2>
-        <p id="drawerTagline" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--text-secondary); margin-bottom: 1.75rem;">System Tagline</p>
+      <div style="border-radius: 14px; overflow: hidden; margin-bottom: 1.25rem; border: var(--glass-inner-border); background: #000000;">
+        <img id="modalProjectImage" src="" alt="High resolution project snapshot" style="width: 100%; max-height: 480px; object-fit: contain;">
+      </div>
 
-        <div style="margin-bottom: 1.75rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
-            // DOMAIN & CLASSIFICATION
-          </div>
-          <div id="drawerDomain" style="font-weight: 600; color: var(--text-primary);">Domain Info</div>
-        </div>
+      <p id="modalProjectDesc" style="font-size: 0.95rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
+        Project description.
+      </p>
 
-        <div style="margin-bottom: 1.75rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
-            // ARCHITECTURE & EXECUTION FLOW
-          </div>
-          <div id="drawerArchitecture" style="color: var(--text-secondary); line-height: 1.6; font-size: 0.875rem;">Architecture Flow</div>
-        </div>
-
-        <div style="margin-bottom: 1.75rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
-            // MATHEMATICAL & DATA FORMULATION
-          </div>
-          <div id="drawerMathModel" style="font-family: var(--font-mono); font-size: 0.8125rem; padding: 0.85rem; background-color: var(--bg-elevated); border: 1px solid var(--border-grid); color: var(--text-primary);">Math Model</div>
-        </div>
-
-        <div style="margin-bottom: 1.75rem;">
-          <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
-            // KEY ARCHITECTURAL TRADEOFFS
-          </div>
-          <div id="drawerTradeoffs" style="color: var(--text-secondary); line-height: 1.6; font-size: 0.875rem;">Tradeoffs</div>
-        </div>
-
-        <div>
-          <div style="font-family: var(--font-mono); font-size: 0.6875rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">
-            // DETAILED SPECIFICATIONS
-          </div>
-          <div id="drawerSpecsList" style="display: grid; grid-template-columns: 1fr; gap: 0.5rem;"></div>
+      <div style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; padding: 1rem; border: var(--glass-inner-border); margin-bottom: 1.5rem;">
+        <h4 style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.75rem;">Key Architecture & Metrics</h4>
+        <div id="modalProjectMetrics" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+          <!-- Injected dynamically -->
         </div>
       </div>
 
-      <div class="drawer-footer">
-        <a href="#" target="_blank" rel="noopener noreferrer" id="drawerLiveBtn" class="btn-solid-primary" style="justify-content: center;">
-          <span>LAUNCH LIVE PLATFORM ↗</span>
+      <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem;">
+        <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
+          <span>Launch Live App ↗</span>
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" id="drawerRepoBtn" class="btn-solid-secondary" style="justify-content: center;">
-          <span>VIEW GITHUB REPO ↗</span>
+        <a id="modalRepoLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
+          <span>Inspect Source ↗</span>
         </a>
       </div>
     </div>
   </dialog>
 
   <!-- ====================================================================
-       COMMAND PALETTE MODAL (<dialog id="commandPalette">)
+       VISION FOOTER
        ==================================================================== -->
-  <dialog id="commandPalette" closedby="any" aria-label="Quick Command Palette">
-    <div class="palette-input-wrap">
-      <span style="font-family: var(--font-mono); color: var(--text-muted);">></span>
-      <input type="search" id="paletteInput" class="palette-input" placeholder="Type system name or id (e.g. 'quant', 'messi', 'binance')..." aria-label="Palette search input">
-      <span style="font-family: var(--font-mono); font-size: 0.625rem; color: var(--text-muted);">[ESC]</span>
+  <footer class="vision-footer">
+    <div class="stage-container">
+      <div class="footer-glass-pill">
+        <span>Designed & vibe-coded by <strong>1khvled</strong></span>
+        <span>•</span>
+        <span>Built with optical glass & zero slop</span>
+        <span>•</span>
+        <span>2026 Production</span>
+      </div>
     </div>
-    <ul class="palette-results-list" id="paletteResultsList">
-      <!-- Dynamically populated -->
-    </ul>
-  </dialog>
+  </footer>
 
   <script src="app.js"></script>
 </body>

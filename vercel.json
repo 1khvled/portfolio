@@ -1,6 +1,12 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/logos/(.*)", "destination": "/public/logos/$1" },
+    { "source": "/projects/(.*)", "destination": "/public/projects/$1" },
+    { "source": "/designs/(.*)", "destination": "/public/designs/$1" },
+    { "source": "/videos/(.*)", "destination": "/public/videos/$1" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -29,6 +35,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|svg|webp|gif|mp4)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
         }
       ]
     }

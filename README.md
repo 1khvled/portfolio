@@ -1,57 +1,69 @@
-# 1KHVLED // SYSTEMS SPECIFICATION & PRODUCTION SHOWCASE
+# 1khvled — Vibe Coder & Creative Designer
 
-[![Production Status](https://img.shields.io/badge/Status-Production_Online-10B981?style=flat-square&labelColor=09090B)](https://1khvled.vercel.app)
-[![Design Language](https://img.shields.io/badge/Design-Swiss_Technical_Brutalism-EDEDEF?style=flat-square&labelColor=09090B)](https://1khvled.vercel.app)
-[![Architecture](https://img.shields.io/badge/Surfaces-100%25_Solid_Opaque-F59E0B?style=flat-square&labelColor=09090B)](https://1khvled.vercel.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-38BDF8?style=flat-square&labelColor=09090B)](https://opensource.org/licenses/MIT)
+[![Production Status](https://img.shields.io/badge/Status-Production_Online-10B981?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
+[![Ethos](https://img.shields.io/badge/Ethos-Vibe_Coding_for_Good-38BDF8?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
+[![Design Craft](https://img.shields.io/badge/Craft-Optical_Glassmorphism-A855F7?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=flat-square&labelColor=07070A)](https://opensource.org/licenses/MIT)
 
-Technical portfolio and live showcase of production web applications, quantitative tools, and distributed automations by **Khaled ([@1khvled](https://github.com/1khvled))**.
+Interactive developer portfolio and live visual showcase by **Khaled ([@1khvled](https://github.com/1khvled))**.
 
-🌐 **Production Platform:** **[https://1khvled.vercel.app](https://1khvled.vercel.app)** *(also aliased at [portfolio-no-tme.vercel.app](https://portfolio-no-tme.vercel.app))*
-
----
-
-## 📐 Design Philosophy: Swiss Technical Brutalism × Quant Instrument
-
-- **Zero AI-Slop & Zero Glassmorphism:** Absolutely zero `backdrop-filter: blur()`, frosted glass, semi-transparent milky cards, or floating ambient purple/cyan blobs. Every surface is 100% solid, crisp, and opaque.
-- **Exposed Architectural Hairlines:** Constructed entirely on a visible `1px solid` hairline grid (`#222226` in Carbon Mode, `#D6D3C9` in Paper Mode) with crosshair corner markers (`+`) and structural section indexing (`[01 // INDEX]`, `[02 // SYSTEMS]`, `[03 // QUANT]`, `[04 // CAPABILITIES]`, `[05 // DISPATCH]`).
-- **Tabular Numeric Discipline:** Mandatory `font-variant-numeric: tabular-nums` and `font-feature-settings: "tnum" 1, "zero" 1` applied across all numbers, metrics, timestamps, and coordinates for millimeter-precise alignment.
-- **Dual-Mode Showcase Matrix:** Instant switching between **Architectural Spec Grid View** (spec strips and technical crop marks) and **Bloomberg-Grade Index Table View**.
-- **Keyboard-First Ergonomics:** Full physical keyboard navigation (`[1-5]` section jumps, `[T]` theme polarity toggle, `[G]` GitHub jump, `[/]` instant command palette search, and `[ESC]` drawer dismiss).
+🌐 **Live Website:** **[https://1khvled.vercel.app](https://1khvled.vercel.app)**
 
 ---
 
-## ⚡ Shipped Systems Registry (14 Verified Systems)
+## ✦ Ethos: "Vibe Coding for Good"
 
-| SYS_ID | System Name | Domain | Core Stack | Key Metric | Deployment |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **SYS-01** | **MessiStats** | Production Web App | Next.js 15 / TS / Recharts | 1,048 Verified Fixtures | [Live Platform ↗](https://www.messistat.com) |
-| **SYS-02** | **RonaldoStats** | Production Web App | Next.js 15 / Tailwind / Edge | 900+ Career Goals | [Live Platform ↗](https://ronaldomstats.site) |
-| **SYS-03** | **Macro Prop Trader** | Quant Engine | Next.js 15 / React 19 / TradingView | 2Y/10Y Yield Inversion | [Live Platform ↗](https://macro-prop-trader.vercel.app) |
-| **SYS-04** | **StockerAI Terminal** | Quant Engine | Python 3.12 / Flask / SEC EDGAR | Altman Z & Piotroski F | [GitHub Source ↗](https://github.com/1khvled/stocker-ai-terminal) |
-| **SYS-05** | **DZ-PartPicker** | Production Web App | Next.js / TypeScript / Tailwind | DZD Market Pricing API | [Live Platform ↗](https://pcbuilder-psi.vercel.app) |
-| **SYS-06** | **Square Live DZ FX** | Quant Engine | TypeScript & Python SDK / Edge | Real-Time Spread Divergence | [Live Platform ↗](https://squarealgerie.com) |
-| **SYS-07** | **AI Capital Tracker** | Quant Engine | Next.js / TypeScript / Charts | GPU CapEx & Clusters | [Live Platform ↗](https://aicapitaltracker.vercel.app) |
-| **SYS-08** | **Binance Market Maker** | Quant Engine | Python 3.12 / AsyncIO / WebSockets | 12 Parallel Daemon Bots | *Active Fleet* |
-| **SYS-09** | **DealScout Engine** | Distributed Automation | Python 3.12 / Telethon / Pillow | 5-Minute Cron Sweep | [Telegram Hub ↗](https://t.me/DzAliexpress0) |
-| **SYS-10** | **AliExpress Coin Bot** | Distributed Automation | Node.js / Playwright / Chromium | 100+ Daily Coins | [Telegram Bot ↗](https://t.me/Alilo07BOT) |
-| **SYS-11** | **Open OP.GG Desktop** | Production Desktop | Electron / Node.js / LCU API | 0% Bloat / Clean-Room | [GitHub Source ↗](https://github.com/1khvled/open-opgg) |
-| **SYS-12** | **MedQCM Platform** | Production Web App | Next.js / React / IndexedDB | 10,000+ Clinical QCMs | [Live Platform ↗](https://khvledqcm.vercel.app) |
-| **SYS-13** | **EDN Prep Store** | Production Web App | HTML5 / CSS3 / ES6 / Edge | 100/100 Lighthouse | [Live Platform ↗](https://edn-store.vercel.app) |
-| **SYS-14** | **Koora Clean PWA** | Distributed Automation | PWA / HLS.js / Service Worker | Zero-Ad Live Stream | [GitHub Source ↗](https://github.com/1khvled/koora-clean) |
+> Coding with high design taste, relentless curiosity, and AI velocity.
+
+Software shouldn't look like generic SaaS clones or soulless AI-generated templates. I use AI not to be lazy, but to punch 10x above my weight: orchestrating autonomous loops, rapid prototyping, and precision mathematics while obsessing over micro-interactions, typography, and optical physics.
+
+From sports data platforms used across international derbies to real-time macroeconomic yield diagnostics and community ecommerce tools, every project is built to solve tangible problems and delight real people.
 
 ---
 
-## 🛠️ Architecture & Specifications
+## 🎨 Optical Glassmorphism (No AI Slop)
 
-```text
-portfolio/
-├── index.html        # Swiss architectural grid layout & semantic sections
-├── styles.css        # Strict Carbon/Paper tokens, hairline borders, tabular-nums
-├── app.js            # Systems registry, dual-mode renderer, keyboard listeners
-├── vercel.json       # Security headers, nosniff, frame protection, edge caching
-└── package.json      # Project specification & scripts
-```
+Built following strict **Apple visionOS / Linear / Raycast optical physics**:
+- **Smoked Obsidian Base Canvas (`#07070A`):** Deep rich canvas with ambient chromatic refraction derived from real project snapshots.
+- **Top-Lit Specular Rim Lighting:** Realistic directional glass highlights (`box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.22), ...`).
+- **Cursor-Tracked Glint:** Real-time pointer tracking generating organic light glints on hover across cards.
+- **Concentric Geometry Discipline:** 24px outer shell radius + 8px padding nested smoothly into 16px inner media stages.
+- **Tactile Vibe Switcher:** Instant live chromatic token switching between Obsidian, Emerald, Sunset, and Amethyst.
+
+---
+
+## ⚡ Highlighted Projects & Live Applications
+
+| Project | Domain | Key Craft & Architecture | Live Link |
+| :--- | :--- | :--- | :--- |
+| **MessiStats** | Sports Analytics | 850+ goals, 380+ assists, xG shot maps, Next.js 14 App Router | [Live Platform ↗](https://messistats.site) |
+| **RonaldoStats** | Sports Analytics | 910+ official goals, clutch conversion analysis, Vercel Edge | [Live Platform ↗](https://ronaldomstats-app-no-tme.vercel.app) |
+| **DZ-PartPicker** | E-Commerce & PC Builder | Algeria's hardware compatibility engine & live DZD price aggregator | [Live Platform ↗](https://dzpartpicker.com) |
+| **Macro Prop Trader** | Quant Telemetry | Sovereign yield curve modeler & 2Y/10Y spread risk simulator | [Live Platform ↗](https://macro-prop-trader.vercel.app) |
+| **Square Live DZ** | FX Telemetry | Real-time Square Port Said informal exchange rate monitor | [Live Platform ↗](https://squarealgerie.com) |
+| **AI Capital Tracker** | VC Intelligence | Global AI startup funding round tracking & GPU cluster CapEx | [Live Platform ↗](https://aicapitaltracker.vercel.app) |
+| **Bytek Gaming Store** | 3D Motion & E-Commerce | Cinematic 3D commercial motion ads & elite gaming peripherals | [Live Platform ↗](https://bytekstore.com) |
+| **Open OP.GG Desktop** | Desktop & Automation | Clean-room LoL client, direct LCU WebSocket integration | [Source Code ↗](https://github.com/1khvled/open-opgg) |
+| **AliExpress Coin Bot** | Automation & Bots | Headless browser automation for daily streaks & discount stacking | [Source Code ↗](https://github.com/1khvled/aliexpress-coins-bot) |
+
+---
+
+## 🎬 AI Motion Graphics & 3D Visual Stage
+
+Features an interactive multi-mode presentation stage:
+1. **▶ Theater Stage:** Cinematic 4K video player with custom timeline scrubber and audio controls for the `Bytek Motion Ad`.
+2. **✥ Draggable Moodboard Canvas:** Tactile freeform light table allowing visitors to drag and rearrange high-res 3D product renders (Attack Shark, HyperX, MAD60, AJAZZ).
+3. **◫ 3D Carousel:** Spatial 3D perspective coverflow deck orbiting products with hardware acceleration.
+
+---
+
+## 🛠️ Tech Stack & Orchestration
+
+- **Frontend & UI:** Vanilla ES6+, Modern CSS (`@layer`, CSS Custom Properties, backdrop filters), HTML5 `<dialog>`.
+- **Motion & 3D:** HTML5 Video, CSS 3D transforms, Pointer Events API, custom drag physics.
+- **Deployment:** Vercel Edge Network, GitHub CI/CD, DNS Caching.
+
+---
 
 ## 📄 License
 
