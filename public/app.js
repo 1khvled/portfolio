@@ -121,32 +121,6 @@
       ]
     },
     {
-      id: 'macro-prop',
-      name: 'Macro Prop Trader',
-      category: 'quant-trading',
-      categoryLabel: 'Quant & Trading',
-      tag: 'Macro Telemetry & Yield Model',
-      status: 'Quant Engine Live',
-      logo: 'logos/opgg-logo.svg',
-      snapshot: 'projects/macroproptrader-snap.png',
-      liveUrl: 'https://macro-prop-trader.vercel.app',
-      repoUrl: 'https://github.com/1khvled/macro-prop-trader',
-      description: 'Institutional macroeconomic risk dashboard and sovereign yield curve modeler tracking 2Y/10Y inversion spreads, Fed dot plots, and multi-asset drawdowns.',
-      widgetType: 'macro-spread',
-      widgetData: {
-        spread: '+18.4 bps',
-        altSpread: '-6.2 bps (Simulated Inversion)',
-        regime: 'Bull Steepener',
-        btnText: 'Simulate Rate Cut (-25bps)'
-      },
-      metrics: [
-        'Nelson-Siegel Yield Fitting',
-        'Live US Treasury Ingestion',
-        'Monte Carlo VaR Analysis',
-        'Vectorized Financial Maths'
-      ]
-    },
-    {
       id: 'bytek-store',
       name: 'Bytek Gaming Store',
       category: 'web-apps',
