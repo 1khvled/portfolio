@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khaled (1khvled) — Full-Stack Developer & Quantitative Systems Builder</title>
-  <meta name="description" content="Portfolio of production web applications, quantitative trading platforms, sports analytics engines, and autonomous scraping bots by 1khvled.">
+  <title>Khaled (1khvled) — Full-Stack Engineer & Quantitative Systems Builder</title>
+  <meta name="description" content="Portfolio of production web applications, quantitative trading platforms, sports analytics engines, and autonomous scraping fleets by 1khvled.">
   <meta name="author" content="Khaled (1khvled)">
-  <meta name="theme-color" content="#090b10">
+  <meta name="theme-color" content="#07090e">
 
   <!-- OpenGraph / Social Meta -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Khaled (1khvled) — Developer & Quant Portfolio">
-  <meta property="og:description" content="Explore live production applications in sports analytics, macro quant trading, local AI terminals, and high-converting automations.">
+  <meta property="og:title" content="Khaled (1khvled) — Full-Stack & Quant Systems Portfolio">
+  <meta property="og:description" content="Explore 14 production systems in sports analytics, macro trading, local AI terminals, and high-frequency automated fleets.">
   <meta property="og:url" content="https://1khvled.vercel.app">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -19,14 +19,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Ambient Glow Effects -->
-  <div class="ambient-glow" aria-hidden="true">
-    <div class="glow-orb-1"></div>
-    <div class="glow-orb-2"></div>
-  </div>
+  <!-- Ambient Grid Background with Mouse Spotlight -->
+  <div class="bg-grid-pattern" aria-hidden="true"></div>
+  <div class="interactive-spotlight" aria-hidden="true"></div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- Skip Link for Accessibility -->
-  <a href="#projects" class="visually-hidden">Skip to project catalog</a>
+  <a href="#projects" class="visually-hidden">Skip to main project catalog</a>
 
   <!-- Header & Navigation -->
   <header class="navbar">
@@ -37,8 +38,16 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary Navigation">
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#bento" class="nav-link">Flagships</a>
+        <a href="#projects" class="nav-link">Catalog</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#skills" class="nav-link">Stack</a>
+
+        <button type="button" class="sound-toggle-btn" id="soundToggle" aria-label="Toggle audio effects">
+          <span>🔇</span>
+          <span>Sound OFF</span>
+        </button>
+
         <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-nav-github">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
           <span>GitHub</span>
@@ -47,28 +56,64 @@
     </div>
   </header>
 
+  <!-- Infinite Live Ticker Marquee -->
+  <aside class="marquee-wrapper" aria-label="Live System Highlights">
+    <div class="marquee-content" aria-hidden="true">
+      <div class="marquee-item"><strong>MessiStats</strong> <span class="marquee-dot"></span> 1,000+ Games Analyzed</div>
+      <div class="marquee-item"><strong>RonaldoStats</strong> <span class="marquee-dot"></span> 900+ Career Goals Indexed</div>
+      <div class="marquee-item"><strong>Macro Prop Trader</strong> <span class="marquee-dot"></span> Real-time Yield Curves</div>
+      <div class="marquee-item"><strong>Binance Fleet</strong> <span class="marquee-dot"></span> 12 Autonomous Market Making Bots</div>
+      <div class="marquee-item"><strong>StockerAI Terminal</strong> <span class="marquee-dot"></span> Bloomberg-Grade Local Screener</div>
+      <div class="marquee-item"><strong>DZ-PartPicker</strong> <span class="marquee-dot"></span> Algerian Hardware Engine</div>
+      <div class="marquee-item"><strong>Square Live DZ</strong> <span class="marquee-dot"></span> Real-Time Informal FX API</div>
+      <div class="marquee-item"><strong>DealScout Engine</strong> <span class="marquee-dot"></span> Multi-Channel Telegram Bot</div>
+      <div class="marquee-item"><strong>MedQCM & EDN Store</strong> <span class="marquee-dot"></span> DFASM Medical Exam Simulators</div>
+      <!-- Duplicate for infinite seamless loop -->
+      <div class="marquee-item"><strong>MessiStats</strong> <span class="marquee-dot"></span> 1,000+ Games Analyzed</div>
+      <div class="marquee-item"><strong>RonaldoStats</strong> <span class="marquee-dot"></span> 900+ Career Goals Indexed</div>
+      <div class="marquee-item"><strong>Macro Prop Trader</strong> <span class="marquee-dot"></span> Real-time Yield Curves</div>
+      <div class="marquee-item"><strong>Binance Fleet</strong> <span class="marquee-dot"></span> 12 Autonomous Market Making Bots</div>
+      <div class="marquee-item"><strong>StockerAI Terminal</strong> <span class="marquee-dot"></span> Bloomberg-Grade Local Screener</div>
+      <div class="marquee-item"><strong>DZ-PartPicker</strong> <span class="marquee-dot"></span> Algerian Hardware Engine</div>
+      <div class="marquee-item"><strong>Square Live DZ</strong> <span class="marquee-dot"></span> Real-Time Informal FX API</div>
+      <div class="marquee-item"><strong>DealScout Engine</strong> <span class="marquee-dot"></span> Multi-Channel Telegram Bot</div>
+      <div class="marquee-item"><strong>MedQCM & EDN Store</strong> <span class="marquee-dot"></span> DFASM Medical Exam Simulators</div>
+    </div>
+  </aside>
+
   <main>
     <!-- Hero Section -->
     <section class="hero container">
-      <div class="hero-pill">
-        <span class="hero-pill-dot" aria-hidden="true"></span>
-        <span>Full-Stack Engineer & Quantitative Builder</span>
+      <div class="hero-pill-badge">
+        <span class="hero-pulse-dot" aria-hidden="true"></span>
+        <span>Available for Quant & Full-Stack Systems</span>
       </div>
 
       <h1 class="hero-title">
-        <span class="hero-title-gradient">Architecting Production Systems</span><br>
-        <span class="hero-title-accent">From High-Yield Web to Quant Terminals</span>
+        <span class="hero-gradient-text">Architecting Production Systems</span><br>
+        <span class="hero-neon-text">From High-Yield Web to Quant Fleets</span>
       </h1>
 
       <p class="hero-subtitle">
-        Specializing in high-performance web applications, sports data intelligence, financial trading infrastructure, and autonomous distributed scraping fleets.
+        I build high-frequency quant terminals, sports data visualizers, localized market-making engines, and distributed headless scrapers with relentless attention to speed and precision.
       </p>
 
-      <!-- Key Metrics Counter -->
+      <div class="hero-actions">
+        <a href="#bento" class="btn-hero-primary">
+          <span>Explore Featured Flagships</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#terminal" class="btn-hero-secondary">
+          <span>Launch CLI Terminal</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-value" id="totalProjectsCount">14</div>
-          <div class="stat-label">Shipped Systems</div>
+          <div class="stat-label">Production Systems</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">8</div>
@@ -76,26 +121,207 @@
         </div>
         <div class="stat-card">
           <div class="stat-value">12+</div>
-          <div class="stat-label">Production Bots & APIs</div>
+          <div class="stat-label">Autonomous Bots & APIs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">Edge</div>
-          <div class="stat-label">Global CDN Performance</div>
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Edge CDN Performance</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Bento Grid Section: Featured Masterpieces -->
+    <section class="bento-section container" id="bento" aria-labelledby="bento-heading">
+      <div class="bento-header">
+        <div>
+          <div class="bento-heading-badge">Spotlight Portfolio</div>
+          <h2 class="section-title" id="bento-heading" style="text-align: left; font-size: 1.85rem; margin-top: 0.35rem;">Featured Engineering Flagships</h2>
+        </div>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Bento 1: Sports Analytics (MessiStats vs RonaldoStats) -->
+        <article class="bento-card bento-col-8">
+          <div>
+            <div class="mac-mockup-header">
+              <span class="mac-dot mac-dot-red" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-yellow" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-green" aria-hidden="true"></span>
+              <span class="mac-title-text">sports-analytics-suite // production</span>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;">
+              <span class="project-category-badge cat-sports">Sports Analytics Flagship</span>
+              <div style="display: flex; gap: 0.4rem;">
+                <button type="button" class="tab-btn active" id="btnGoatMessi" onclick="window.switchGoatPreview('messi')">Messi (messistat.com)</button>
+                <button type="button" class="tab-btn" id="btnGoatRonaldo" onclick="window.switchGoatPreview('ronaldo')">Ronaldo (ronaldomstats.site)</button>
+              </div>
+            </div>
+
+            <h3 class="project-title" id="goatName" style="font-size: 1.6rem;">Lionel Messi Career Engine</h3>
+            <p class="project-desc">
+              High-performance historical sports databases tracking every goal, assist, expected goals (xG), and pitch heatmap distribution with sub-second lookups.
+            </p>
+
+            <div class="bento-interactive-preview">
+              <div class="bento-stat-chip">
+                <div class="bento-chip-num" id="goatGoals">840+</div>
+                <div class="bento-chip-name">Career Goals</div>
+              </div>
+              <div class="bento-stat-chip">
+                <div class="bento-chip-num" id="goatAssists">380+</div>
+                <div class="bento-chip-name">Assists</div>
+              </div>
+              <div class="bento-stat-chip">
+                <div class="bento-chip-num" id="goatTrophies">46</div>
+                <div class="bento-chip-name">Major Trophies</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="tech-tags">
+              <span class="tech-tag">Next.js 15</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Recharts</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Edge Runtime</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://www.messistat.com" target="_blank" rel="noopener noreferrer" class="btn-live" id="goatLiveBtn">
+                <span>Launch Live Site</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button type="button" class="btn-inspect" onclick="window.portfolioApp.openModal('messistat')">Deep Dive</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bento 2: FinTech & Quant Intelligence -->
+        <article class="bento-card bento-col-4">
+          <div>
+            <div class="mac-mockup-header">
+              <span class="mac-dot mac-dot-red" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-yellow" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-green" aria-hidden="true"></span>
+              <span class="mac-title-text">quant-desk // live</span>
+            </div>
+
+            <span class="project-category-badge cat-fintech" style="margin-bottom: 0.75rem;">Quant & Macro</span>
+            <h3 class="project-title" style="font-size: 1.4rem;">Macro Prop Trader</h3>
+            <p class="project-desc">
+              Institutional terminal modeling US Treasury yield curve shifts, central bank rate curves, and multi-asset risk premiums in real-time.
+            </p>
+
+            <div class="bento-interactive-preview" style="grid-template-columns: 1fr 1fr;">
+              <div class="bento-stat-chip">
+                <div class="bento-chip-num" style="color: #10b981;">+14 bps</div>
+                <div class="bento-chip-name">2Y/10Y Spread</div>
+              </div>
+              <div class="bento-stat-chip">
+                <div class="bento-chip-num" style="color: #38bdf8;">FED 4.5%</div>
+                <div class="bento-chip-name">Policy Rate</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="tech-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TradingView</span>
+              <span class="tech-tag">Quant Models</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://macro-prop-trader.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live">
+                <span>Launch Desk</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button type="button" class="btn-inspect" onclick="window.portfolioApp.openModal('macro-prop-trader')">Inspect</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bento 3: DZ-PartPicker Engine -->
+        <article class="bento-card bento-col-6">
+          <div>
+            <div class="mac-mockup-header">
+              <span class="mac-dot mac-dot-red" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-yellow" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-green" aria-hidden="true"></span>
+              <span class="mac-title-text">hardware-engine // dzd-market</span>
+            </div>
+
+            <span class="project-category-badge cat-webapps" style="margin-bottom: 0.75rem;">E-Commerce & Hardware</span>
+            <h3 class="project-title" style="font-size: 1.4rem;">DZ-PartPicker</h3>
+            <p class="project-desc">
+              Hardware compatibility engine designed for Algerian gamers. Algorithmic motherboard socket matching, PSU wattage budgeting, and live DZD market pricing.
+            </p>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="tech-tags">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">Compatibility Algorithm</span>
+              <span class="tech-tag">DZD Pricing</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://pcbuilder-psi.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-live">
+                <span>Launch Builder</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button type="button" class="btn-inspect" onclick="window.portfolioApp.openModal('dz-partpicker')">Inspect</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bento 4: Autonomous Fleet & Automations -->
+        <article class="bento-card bento-col-6">
+          <div>
+            <div class="mac-mockup-header">
+              <span class="mac-dot mac-dot-red" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-yellow" aria-hidden="true"></span>
+              <span class="mac-dot mac-dot-green" aria-hidden="true"></span>
+              <span class="mac-title-text">distributed-fleet // active</span>
+            </div>
+
+            <span class="project-category-badge cat-automation" style="margin-bottom: 0.75rem;">Autonomous Fleet</span>
+            <h3 class="project-title" style="font-size: 1.4rem;">Binance Market Maker & DealScout Bots</h3>
+            <p class="project-desc">
+              Production 12-bot prediction market-making fleet with Poisson spread quotation, paired with Telegram deal intelligence engines scraping competitor channels 24/7.
+            </p>
+          </div>
+
+          <div style="margin-top: 1.25rem;">
+            <div class="tech-tags">
+              <span class="tech-tag">Python 3.12</span>
+              <span class="tech-tag">AsyncIO</span>
+              <span class="tech-tag">Playwright</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+            <div class="card-actions">
+              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="btn-live">
+                <span>Telegram Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <button type="button" class="btn-inspect" onclick="window.portfolioApp.openModal('dealscout')">Inspect</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Complete Project Catalog Section -->
     <section class="container" id="projects" aria-labelledby="projects-heading">
-      <div class="visually-hidden">
-        <h2 id="projects-heading">Project Catalog</h2>
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <div class="section-badge">Full Ecosystem</div>
+        <h2 class="section-title" id="projects-heading">All 14 Shipped Systems</h2>
       </div>
 
       <!-- Filter Controls & Search -->
       <div class="filter-section">
         <div class="filter-bar">
           <div class="category-tabs" role="tablist" aria-label="Filter projects by category">
-            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-category="all">All Projects</button>
+            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-category="all">All Systems</button>
             <button type="button" class="tab-btn" role="tab" aria-selected="false" data-category="fintech">FinTech & Quant</button>
             <button type="button" class="tab-btn" role="tab" aria-selected="false" data-category="sports">Sports Analytics</button>
             <button type="button" class="tab-btn" role="tab" aria-selected="false" data-category="webapps">Web Platforms</button>
@@ -104,7 +330,8 @@
 
           <div class="search-wrapper">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="search" id="searchInput" class="search-input" placeholder="Search by name, stack, or topic..." aria-label="Search projects">
+            <input type="search" id="searchInput" class="search-input" placeholder="Search by name, tech, or keywords..." aria-label="Search projects">
+            <span class="search-kbd-shortcut" aria-hidden="true">/</span>
           </div>
         </div>
       </div>
@@ -115,19 +342,56 @@
       </div>
     </section>
 
+    <!-- Interactive Developer CLI Terminal Section -->
+    <section class="terminal-section container" id="terminal" aria-labelledby="terminal-heading">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <div class="section-badge">Developer Console</div>
+        <h2 class="section-title" id="terminal-heading">Interactive Systems Terminal</h2>
+      </div>
+
+      <div class="terminal-box">
+        <div class="terminal-header">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span class="mac-dot mac-dot-red" aria-hidden="true"></span>
+            <span class="mac-dot mac-dot-yellow" aria-hidden="true"></span>
+            <span class="mac-dot mac-dot-green" aria-hidden="true"></span>
+            <span class="mac-title-text">bash - 1khvled@edge-cluster:~ (interactive)</span>
+          </div>
+          <span style="font-size: 0.75rem; color: var(--accent-cyan); font-family: ui-monospace, monospace;">STATUS: CONNECTED</span>
+        </div>
+
+        <div class="terminal-body" id="terminalBody">
+          <div id="terminalOutput"></div>
+          <div class="terminal-prompt-line">
+            <span class="terminal-prompt-user">guest@1khvled</span>:<span class="terminal-prompt-dir">~</span>$&nbsp;
+            <input type="text" id="terminalInput" class="terminal-input" placeholder="type 'help' or click quick pills..." aria-label="Terminal command input">
+          </div>
+          <div class="terminal-quick-cmds">
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Quick Commands:</span>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('bio')">cat bio</button>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('stack')">show stack</button>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('systems')">list systems</button>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('ping')">ping latency</button>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('contact')">contact info</button>
+            <button type="button" class="cmd-pill" onclick="window.runQuickCommand('clear')">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills & Technology Matrix -->
     <section class="skills-section" id="skills" aria-labelledby="skills-heading">
       <div class="container">
         <div class="section-header">
-          <div class="section-badge">Core Competencies</div>
-          <h2 class="section-title" id="skills-heading">Technical Capabilities</h2>
+          <div class="section-badge">Technical Arsenal</div>
+          <h2 class="section-title" id="skills-heading">Engineering & Architecture Matrix</h2>
         </div>
 
         <div class="skills-grid">
           <div class="skill-card">
             <div class="skill-icon" aria-hidden="true">⚡</div>
             <h3 class="skill-title">Frontend Engineering</h3>
-            <p class="skill-items">Next.js 15, React 19, TypeScript, Tailwind CSS, Electron, Progressive Web Apps (PWA), Recharts, Framer Motion, Vanilla ES Modules.</p>
+            <p class="skill-items">Next.js 15, React 19, TypeScript, Tailwind CSS, Electron, Progressive Web Apps (PWA), Recharts, Framer Motion, Vanilla ES Modules, Web Audio API.</p>
           </div>
 
           <div class="skill-card">
@@ -139,7 +403,7 @@
           <div class="skill-card">
             <div class="skill-icon" aria-hidden="true">⚙️</div>
             <h3 class="skill-title">Backend & APIs</h3>
-            <p class="skill-items">Python, Flask, FastAPI, Node.js, WebSockets, AsyncIO, REST/GraphQL, Edge Functions, SQLite, Redis / Memory Cache.</p>
+            <p class="skill-items">Python 3.12, Flask, FastAPI, Node.js, WebSockets, AsyncIO, REST/GraphQL, Edge Functions, SQLite, Redis / Memory Cache, Cloudflare Workers.</p>
           </div>
 
           <div class="skill-card">
@@ -152,6 +416,43 @@
     </section>
   </main>
 
+  <!-- Deep Dive Accessible Modal Dialog (per modern web guidance) -->
+  <dialog id="projectModal" aria-labelledby="modalTitle" closedby="any">
+    <div class="modal-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span id="modalCategory" class="project-category-badge cat-fintech">Category</span>
+      </div>
+      <button type="button" class="btn-close-modal" onclick="window.portfolioApp.closeModal()" aria-label="Close dialog">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <h2 id="modalTitle" style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.35rem; color: #ffffff;">Project Title</h2>
+    <p id="modalTagline" style="font-size: 0.95rem; font-weight: 600; color: var(--accent-cyan); margin-bottom: 1.25rem;">Project Tagline</p>
+
+    <p id="modalDesc" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; font-size: 0.95rem;"></p>
+
+    <div style="margin-bottom: 1.5rem;">
+      <h3 style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: 0.75rem;">Technical Highlights</h3>
+      <ul id="modalHighlights" style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--text-secondary);"></ul>
+    </div>
+
+    <div style="margin-bottom: 1.75rem;">
+      <h3 style="font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #ffffff; margin-bottom: 0.75rem;">Tech Stack</h3>
+      <div id="modalTags" class="tech-tags"></div>
+    </div>
+
+    <div class="card-actions" style="margin-top: 1rem;">
+      <a href="#" target="_blank" rel="noopener noreferrer" id="modalLiveBtn" class="btn-live">
+        <span>Launch Production Site</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer" id="modalRepoBtn" class="btn-icon-link" aria-label="View source repository">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+      </a>
+    </div>
+  </dialog>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
@@ -162,7 +463,7 @@
         <span style="color: var(--border-subtle);">&bull;</span>
         <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="nav-link">Square Live DZ</a>
       </div>
-      <p class="footer-copy">&copy; 2026 Khaled (1khvled). Built with clean web standards & deployed globally on Vercel Edge.</p>
+      <p class="footer-copy">&copy; 2026 Khaled (1khvled). Designed with clean web standards & deployed on Vercel Edge.</p>
     </div>
   </footer>
 
