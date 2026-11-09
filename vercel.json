@@ -1,12 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/logos/(.*)", "destination": "/public/logos/$1" },
-    { "source": "/projects/(.*)", "destination": "/public/projects/$1" },
-    { "source": "/designs/(.*)", "destination": "/public/designs/$1" },
-    { "source": "/videos/(.*)", "destination": "/public/videos/$1" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
