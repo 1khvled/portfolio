@@ -1,74 +1,62 @@
-# 1khvled — Vibe Coder & Creative Designer
+# 1khvled — Portfolio
 
-[![Production Status](https://img.shields.io/badge/Status-Production_Online-10B981?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
-[![Ethos](https://img.shields.io/badge/Ethos-Vibe_Coding_for_Good-38BDF8?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
-[![Design Craft](https://img.shields.io/badge/Craft-Optical_Glassmorphism-A855F7?style=flat-square&labelColor=07070A)](https://1khvled.vercel.app)
-[![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=flat-square&labelColor=07070A)](https://opensource.org/licenses/MIT)
+The personal site of **Khaled ([@1khvled](https://github.com/1khvled))**, a product engineer in Algiers, Algeria.
 
-Interactive developer portfolio and live visual showcase by **Khaled ([@1khvled](https://github.com/1khvled))**.
+**Live:** [1khvled.vercel.app](https://1khvled.vercel.app)
 
-🌐 **Live Website:** **[https://1khvled.vercel.app](https://1khvled.vercel.app)**
+## What this is
 
----
+A hand-written static site: one HTML document, one stylesheet, one JavaScript file. No framework, no build step, no analytics, no third-party requests.
 
-## ✦ Ethos: "Vibe Coding for Good"
+- Selected work with per-project case studies in a native `<dialog>`
+- Real screenshots, optimised to WebP at two widths
+- Self-hosted fonts (Instrument Sans, Instrument Serif, JetBrains Mono)
+- Light editorial design: warm paper, near-black ink, one signal accent
+- Responsive from 320px up, keyboard navigable, reduced-motion aware
 
-> Coding with high design taste, relentless curiosity, and frontier AI velocity.
+## Structure
 
-Software shouldn't look like generic SaaS clones or soulless AI-generated templates. I orchestrate late-2026 state-of-the-art frontier reasoning models to punch 10x above my weight: **Claude Opus 5.5 & Fable 5.1** (Anthropic), **DeepSeek-V4.1-Pro** (DeepSeek), **Gemini 4 Argon & 3.8 Flash** (Google DeepMind), and **Muse Wonder & Muse Spark 1.3** (Meta Superintelligence Labs) while obsessing over micro-interactions, typography, and optical physics.
+```
+public/
+  index.html      # markup, content, meta tags and JSON-LD
+  styles.css      # design system and responsive rules
+  app.js          # case studies, mobile menu, clock, copy-email
+  404.html        # not-found page
+  favicon.svg
+  og.png          # 1200x630 social card
+  projects/       # project screenshots (WebP, 1400w and 800w)
+  fonts/          # four self-hosted latin woff2 files
+  robots.txt
+  sitemap.xml
+vercel.json       # static output, caching and security headers
+```
 
-From sports data platforms used across international derbies to real-time macroeconomic yield diagnostics, luxury streetwear portals, and community ecommerce tools, every project is built to solve tangible problems and delight real people.
+## Run locally
 
----
+Any static file server will do:
 
-## 🎨 Optical Glassmorphism (No AI Slop)
+```bash
+npx serve public
+# or
+python -m http.server 8000 --directory public
+```
 
-Built following strict **Apple visionOS / Linear / Raycast optical physics**:
-- **Smoked Obsidian Base Canvas (`#07070A`):** Deep rich canvas with organic chromatic refraction.
-- **Top-Lit Specular Rim Lighting:** Realistic directional glass highlights (`box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.22), ...`).
-- **Cursor-Tracked Glint:** Real-time pointer tracking generating organic light glints on hover across cards.
-- **Concentric Geometry Discipline:** 24px outer shell radius + 8px padding nested smoothly into 16px inner media stages.
-- **Tactile Vibe Switcher:** Instant live chromatic token switching between Obsidian, Emerald, Sunset, and Amethyst.
+Then open `http://localhost:3000` (or the port the server prints).
 
----
+## Deploy
 
-## ⚡ Highlighted Projects & Live Applications
+Deployed on Vercel with `public` as the output directory. From the repository root:
 
-| Project | Domain | Key Craft & Architecture | Live Platform | Repository |
-| :--- | :--- | :--- | :--- | :--- |
-| **MessiStats** | Sports Analytics | 850+ goals, 380+ assists, xG shot maps, Next.js 14 App Router | [messistat.com ↗](https://www.messistat.com) | [1khvled/messi-stats ↗](https://github.com/1khvled/messi-stats) |
-| **RonaldoStats** | Sports Analytics | 910+ official goals, clutch conversion analysis, Vercel Edge | [ronaldomstats-app ↗](https://ronaldomstats-app-no-tme.vercel.app) | [1khvled/ronaldo-stats ↗](https://github.com/1khvled/ronaldo-stats) |
-| **Obsidian Wear** | Luxury E-Commerce | Dark luxury streetwear storefront, reactive cart & lookbooks | [obsidianwearlovable ↗](https://obsidianwearlovable.vercel.app) | [1khvled/obsidianwear ↗](https://github.com/1khvled/obsidianwear-V2-GOOD-VERSION) |
-| **DZ-PartPicker** | Hardware Configurator | Algeria's hardware compatibility engine & live DZD aggregator | [pcbuilder-psi ↗](https://pcbuilder-psi.vercel.app) | [1khvled/dz-partpicker ↗](https://github.com/1khvled/dz-partpicker) |
-| **Bytek Gaming Store** | Hardware E-Commerce | Rapid-trigger magnetic peripherals storefront with Algerian checkout | [bytek-byte-cart ↗](https://bytek-byte-cart.vercel.app) | [1khvled/bytek-store-cart ↗](https://github.com/1khvled/bytek-store-cart) |
-| **FPL Analytics** | Sports Analytics | Fantasy Premier League fixture difficulty matrix & transfer math | [fplteams16 ↗](https://fplteams16.vercel.app) | [1khvled/fpl-analytics ↗](https://github.com/1khvled/fpl-analytics-dashboard) |
-| **Koora Clean PWA** | Clean Streaming PWA | Ad-free, telemetry-free football streaming PWA with HLS playback | [koora-clean-amina ↗](https://koora-clean-amina.vercel.app) | [1khvled/koora-clean ↗](https://github.com/1khvled/koora-clean) |
-| **AI Capital Tracker** | VC Intelligence | Global AI startup funding round tracking & GPU cluster CapEx | [aicapitaltracker ↗](https://aicapitaltracker.vercel.app) | [1khvled/ai-capital-tracker ↗](https://github.com/1khvled/ai-capital-tracker) |
-| **Square Live DZ** | FX Telemetry | Real-time Square Port Said informal exchange rate monitor | [squarealgerie.com ↗](https://squarealgerie.com) | [1khvled/square-rates ↗](https://github.com/1khvled/algeria-exchange-rates-api) |
-| **DealScout Engine** | Autonomous Automation | 5-min cron price drop scraper & Telegram multi-channel publisher | [dealscout-green ↗](https://dealscout-green.vercel.app) | [1khvled/dealscout ↗](https://github.com/1khvled/dealscout-telegram-deals) |
-| **Open OP.GG Desktop** | Desktop & Automation | Clean-room LoL companion, direct local LCU WebSocket hook | [open-opgg ↗](https://github.com/1khvled/open-opgg) | [1khvled/open-opgg ↗](https://github.com/1khvled/open-opgg) |
-| **AliExpress Coin Bot** | Automation & Bots | Headless browser automation for daily streaks & discount stacking | [aliexpress-coin-bot ↗](https://github.com/1khvled/aliexpress-coin-bot) | [1khvled/aliexpress-coin-bot ↗](https://github.com/1khvled/aliexpress-coin-bot) |
+```bash
+npm run deploy
+```
 
----
+## Notes
 
-## 🧠 Frontier AI Model Matrix & Reasoning Lab (Late 2026)
+- Project links point to the real, live products; private repositories are labelled "Private source" instead of linking nowhere.
+- The contact address is `1khvled.dev@gmail.com`.
+- No cookies, no tracking scripts, no external font or CDN requests.
 
-Features an interactive showcase of the cutting-edge 2026 reasoning intelligences I orchestrate:
-1. **Claude Opus 5.5 & Fable 5.1 (Anthropic):** Pinnacle long-horizon agentic reasoning models featuring native 1M context windows, 128K max output tokens, and tunable chain-of-thought budgets for optical physics, zero-defect design systems, and autonomous multi-file workflows.
-2. **DeepSeek-V4.1-Pro & V4.1-Flash (DeepSeek):** Open-weights frontier disruptor with a Causal Encoder–Decoder architecture, sparse MoE, and 94% KV-cache compression, excelling in mathematical proofs, PDE yield curve calibration, and high-frequency trading bot execution.
-3. **Gemini 4 Argon & 3.8 Flash (Google DeepMind):** Pinnacle frontier reasoning with tunable thinking levels (Low/Med/High), unified 2M+ context window, native audio/visual cross-attention, and deep Antigravity agentic pairing.
-4. **Muse Wonder & Muse Spark 1.3 (Meta Superintelligence Labs):** Personal and developer agent ecosystem featuring visual chain-of-thought reasoning, 1M context, and autonomous cloud VM execution coordinating multi-agent Git worktree swarms with full browser control.
+## License
 
----
-
-## 🛠️ Tech Stack & Orchestration
-
-- **Frontend & UI:** Vanilla ES6+, Modern CSS (`@layer`, CSS Custom Properties, backdrop filters), HTML5 `<dialog>`.
-- **Reasoning Engines (2026):** Claude Opus 5.5 / Fable 5.1, DeepSeek-V4.1-Pro, Gemini 4 Argon, Muse Wonder / Muse Spark 1.3.
-- **Deployment:** Vercel Edge Network, GitHub Actions CI/CD.
-
----
-
-## 📄 License
-
-Distributed under the MIT License. Copyright &copy; 2026 Khaled ([@1khvled](https://github.com/1khvled)).
+MIT for the code in this repository. Screenshots, copy and personal content belong to Khaled.

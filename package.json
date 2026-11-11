@@ -1,21 +1,18 @@
 {
   "name": "1khvled-portfolio",
-  "version": "1.0.0",
-  "description": "Developer portfolio & live showcase of production web applications, quantitative tools, and automations by 1khvled",
+  "version": "2.0.0",
+  "description": "Portfolio of Khaled (1khvled) — product engineer in Algiers. Static HTML, CSS and vanilla JavaScript.",
   "private": true,
   "scripts": {
-    "start": "serve .",
+    "start": "npx serve public",
     "deploy": "vercel --prod"
   },
   "keywords": [
     "portfolio",
-    "developer",
-    "software-engineer",
-    "quant",
-    "fintech",
-    "sports-analytics",
-    "nextjs",
-    "python"
+    "product-engineering",
+    "front-end",
+    "data-visualisation",
+    "algiers"
   ],
   "author": "Khaled (1khvled)",
   "license": "MIT"

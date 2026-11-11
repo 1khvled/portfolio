@@ -1,659 +1,542 @@
 <!DOCTYPE html>
-<html lang="en" data-vibe="obsidian">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1khvled — Vibe Coder & Creative Designer</title>
-  <meta name="description" content="Portfolio of 1khvled — Vibe Coder & Creative Designer. Vibe Coding for Good: Building production web applications, quantitative tools, automations, and frontier AI model orchestration.">
-  <meta name="author" content="Khaled (1khvled)">
-  <meta name="theme-color" content="#07070A">
+  <title>Khaled — Product Engineer in Algiers</title>
+  <meta name="description" content="Khaled (1khvled) is a product engineer in Algiers building data-heavy web products: football analytics, hardware pricing, currency rates, commerce and developer tools.">
+  <meta name="author" content="Khaled">
+  <meta name="theme-color" content="#F3EEE4">
+  <link rel="canonical" href="https://1khvled.vercel.app/">
 
-  <!-- OpenGraph Metadata -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="1khvled — Vibe Coder & Creative Designer">
-  <meta property="og:description" content="Vibe Coding for Good: Production web apps, quantitative tools, automations, and frontier AI model orchestration.">
-  <meta property="og:url" content="https://1khvled.vercel.app">
+  <meta property="og:site_name" content="Khaled — 1khvled">
+  <meta property="og:title" content="Khaled — Product Engineer in Algiers">
+  <meta property="og:description" content="Data-heavy web products, designed and shipped end to end: football analytics, hardware pricing, currency rates, commerce and developer tools.">
+  <meta property="og:url" content="https://1khvled.vercel.app/">
+  <meta property="og:image" content="https://1khvled.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Khaled — product engineer in Algiers. Selected work, 2026.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@1khvledd">
+  <meta name="twitter:title" content="Khaled — Product Engineer in Algiers">
+  <meta name="twitter:description" content="Data-heavy web products, designed and shipped end to end.">
+  <meta name="twitter:image" content="https://1khvled.vercel.app/og.png">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Khaled",
+    "alternateName": "1khvled",
+    "url": "https://1khvled.vercel.app/",
+    "image": "https://1khvled.vercel.app/og.png",
+    "jobTitle": "Product Engineer",
+    "email": "mailto:1khvled.dev@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Algiers", "addressCountry": "DZ" },
+    "sameAs": ["https://github.com/1khvled", "https://x.com/1khvledd"],
+    "knowsAbout": ["Product engineering", "Front-end development", "Data visualisation", "TypeScript", "React", "Next.js", "Python", "E-commerce"]
+  }
+  </script>
 </head>
 <body>
-  <!-- Mechanical Toast Feedback -->
-  <div class="vibe-toast" id="vibeToast" role="status" aria-live="polite"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ====================================================================
-       SECTION 0: FLOATING OPTICAL GLASS DOCK (visionOS Pill)
-       ==================================================================== -->
-  <header class="floating-glass-dock" id="floatingDock">
-    <div class="dock-brand-pill">
-      <span class="dock-status-dot" aria-hidden="true"></span>
-      <span>1KHVLED</span>
-    </div>
-
-    <nav class="dock-nav-links" aria-label="Quick Navigation">
-      <a href="#showcase" class="dock-item-btn" data-nav="showcase">Showcase</a>
-      <a href="#models-matrix" class="dock-item-btn" data-nav="models-matrix">AI Models & Lab</a>
-      <a href="#vibe-playground" class="dock-item-btn" data-nav="vibe-playground">Playground</a>
-    </nav>
-
-    <div style="display: flex; align-items: center; gap: 0.4rem;">
-      <button type="button" class="dock-item-btn" id="dockVibeToggle" title="Cycle Vibe Palette" style="padding: 0.45rem 0.75rem;">
-        ✦ <span id="dockVibeName">Obsidian</span>
-      </button>
-      <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="dock-action-btn" title="GitHub Profile">
-        <span>GitHub</span>
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="#top" aria-label="Khaled — back to top">
+        <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="currentColor"/><path d="M7 5.5v13M7 12l6.5-6.5M7 12l6.5 6.5" fill="none" stroke="#F3EEE4" stroke-width="2.3"/><rect x="16.8" y="16.8" width="2.6" height="2.6" fill="#C4442A"/></svg>
+        <span>1khvled</span>
       </a>
+      <nav class="desk-nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="head-cta" href="mailto:1khvled.dev@gmail.com">
+        Get in touch
+        <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg>
+      </a>
+      <button class="menu-btn" type="button" aria-haspopup="dialog" aria-controls="menu-dialog" aria-expanded="false" data-menu-open>
+        Menu
+        <span class="menu-bars" aria-hidden="true"><i></i><i></i></span>
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- ====================================================================
-         SECTION 1: HERO & INTERACTIVE LOGO ORBIT STAGE
-         ==================================================================== -->
-    <section class="hero-glass-stage" id="hero">
-      <div class="stage-container">
-        <div class="hero-vibe-pill">
-          <span style="color: var(--vibe-accent);">✦</span>
-          <span>Vibe Coding for Good · Algiers & Global</span>
+  <dialog id="menu-dialog" class="menu-dialog" aria-label="Site menu">
+    <div class="wrap menu-inner">
+      <div class="menu-top">
+        <span class="brand brand--static">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="currentColor"/><path d="M7 5.5v13M7 12l6.5-6.5M7 12l6.5 6.5" fill="none" stroke="#F3EEE4" stroke-width="2.3"/><rect x="16.8" y="16.8" width="2.6" height="2.6" fill="#C4442A"/></svg>
+          <span>1khvled</span>
+        </span>
+        <button class="menu-close" type="button" data-menu-close>Close <span aria-hidden="true">✕</span></button>
+      </div>
+      <nav class="menu-nav" aria-label="Mobile">
+        <a href="#work"><span>01</span>Work</a>
+        <a href="#more"><span>02</span>More builds</a>
+        <a href="#about"><span>03</span>About</a>
+        <a href="#contact"><span>04</span>Contact</a>
+      </nav>
+      <div class="menu-foot">
+        <a href="mailto:1khvled.dev@gmail.com">1khvled.dev@gmail.com</a>
+        <div>
+          <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://x.com/1khvledd" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow"><span class="tick" aria-hidden="true"></span>Product engineer · Algiers, Algeria</p>
+          <h1>I build <br>software that <br><em>earns its keep.</em></h1>
+          <p class="hero-lede">I'm Khaled, a product engineer in Algiers. I design and ship data-heavy web products — football analytics, hardware pricing, currency rates and storefronts — for markets I know first-hand.</p>
+          <div class="hero-actions">
+            <a class="btn btn--solid" href="#work">See the work <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2v8M2.5 6.5 6 10l3.5-3.5"/></svg></a>
+            <a class="btn-quiet" href="mailto:1khvled.dev@gmail.com">1khvled.dev@gmail.com</a>
+          </div>
         </div>
 
-        <h1 class="hero-headline">
-          1khvled <span class="hero-gradient-text">— Vibe Coder & Creative Designer</span>
-        </h1>
+        <aside class="hero-card" aria-label="At a glance">
+          <div class="hero-card-top">
+            <span>At a glance</span>
+            <span class="mono">v.2026</span>
+          </div>
+          <dl class="fact-list">
+            <div class="fact">
+              <dt>Based</dt>
+              <dd>Algiers, Algeria<br><span class="mono muted">36.75°N, 3.06°E</span></dd>
+            </div>
+            <div class="fact">
+              <dt>Focus</dt>
+              <dd>Product engineering, front-end and data</dd>
+            </div>
+            <div class="fact">
+              <dt>Stack</dt>
+              <dd>TypeScript, React, Next.js, Python</dd>
+            </div>
+            <div class="fact">
+              <dt>Local time</dt>
+              <dd><time class="clock" data-clock>—</time> <span class="mono muted">UTC+1</span></dd>
+            </div>
+          </dl>
+          <p class="hero-card-foot"><span class="dot" aria-hidden="true"></span>Currently building personal products</p>
+        </aside>
+      </div>
+      <div class="wrap hero-foot">
+        <span>Selected work · 2026</span>
+        <a href="#work">Scroll to work <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M6 2v8M2.5 6.5 6 10l3.5-3.5"/></svg></a>
+      </div>
+    </section>
 
-        <p class="hero-subhead">
-          Orchestrating frontier reasoning models (Claude 3.7 / Opus, DeepSeek-R1, Gemini 2.0, Muse Spark) with design craft to ship high-impact web apps, quantitative trading tools, and autonomous fleets.
-        </p>
+    <section class="section work" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">01 / Selected work</p>
+          <h2>Products, not <em>prototypes.</em></h2>
+          <p class="section-intro">Eight builds from the last year — analytics, commerce and tools for markets I use myself. Live links go to the real thing; private source is called out.</p>
+        </div>
 
-        <!-- Interactive Logo & Snapshot Orbit Deck -->
-        <div class="interactive-orbit-deck" id="orbitDeck">
-          <button type="button" class="orbit-chip specular-glint-surface" data-filter="all">
-            <span>All Projects</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="messistats">
-            <img src="logos/messistats.svg" alt="MessiStats Logo" class="orbit-chip-icon" onerror="this.src='logos/messistats-logo.png'">
-            <span>MessiStats</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="ronaldostats">
-            <img src="logos/ronaldostats.svg" alt="RonaldoStats Logo" class="orbit-chip-icon" onerror="this.src='logos/ronaldostats-logo.png'">
-            <span>RonaldoStats</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="obsidianwear">
-            <img src="logos/obsidianwear-logo.svg" alt="Obsidian Wear Logo" class="orbit-chip-icon">
-            <span>Obsidian Wear</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="dz-partpicker">
-            <img src="logos/dz-partpicker-logo.png" alt="DZ-PartPicker Logo" class="orbit-chip-icon">
-            <span>DZ-PartPicker</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="bytek-store">
-            <img src="logos/bytek-logo.png" alt="Bytek Store Logo" class="orbit-chip-icon">
-            <span>Bytek Gaming</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="fpl-analytics">
-            <img src="logos/fpl-logo.svg" alt="FPL Analytics Logo" class="orbit-chip-icon">
-            <span>FPL Analytics</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="koora-clean">
-            <img src="logos/koora-logo.svg" alt="Koora Clean Logo" class="orbit-chip-icon">
-            <span>Koora Clean</span>
-          </button>
-          <button type="button" class="orbit-chip specular-glint-surface" data-project="square-dz">
-            <img src="logos/square-algerie-logo.png" alt="Square Live DZ Logo" class="orbit-chip-icon">
-            <span>Square DZ</span>
-          </button>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-media">
+              <a href="https://www.messistat.com" target="_blank" rel="noopener noreferrer" aria-label="MessiStat live site (opens in a new tab)">
+                <img src="projects/messistat.webp" srcset="projects/messistat-800.webp 800w, projects/messistat.webp 1400w" sizes="(max-width: 900px) 100vw, 58vw" width="1400" height="875" alt="MessiStat homepage showing career totals, season statistics and the latest match" fetchpriority="high">
+              </a>
+              <span class="badge"><span class="dot" aria-hidden="true"></span>Live</span>
+            </div>
+            <div class="feature-copy">
+              <div class="meta-row"><span class="index">01</span><span>2026</span><span>Sports analytics</span></div>
+              <h3>MessiStat</h3>
+              <p class="feature-desc">A complete statistical archive for Lionel Messi — career totals, season-by-season goal logs, milestone trackers and head-to-head comparisons. Static, fast, and built to be read on a phone at half-time.</p>
+              <ul class="tag-list"><li>Vite</li><li>JavaScript</li><li>Static data</li></ul>
+              <div class="link-row">
+                <a class="link-arrow" href="https://www.messistat.com" target="_blank" rel="noopener noreferrer">Live site <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                <button class="link-quiet" type="button" data-case="messistat">Case study</button>
+                <a class="link-quiet" href="https://github.com/1khvled/messi-stats" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature feature--flip">
+            <div class="feature-media">
+              <a href="https://www.bytekstore.shop" target="_blank" rel="noopener noreferrer" aria-label="Bytek Store live site (opens in a new tab)">
+                <img src="projects/bytek-store.webp" srcset="projects/bytek-store-800.webp 800w, projects/bytek-store.webp 1400w" sizes="(max-width: 900px) 100vw, 58vw" width="1400" height="875" alt="Bytek Store homepage featuring a VXE gaming mouse and local pricing in Algerian dinars" loading="lazy">
+              </a>
+              <span class="badge"><span class="dot" aria-hidden="true"></span>Live</span>
+            </div>
+            <div class="feature-copy">
+              <div class="meta-row"><span class="index">02</span><span>2026</span><span>E-commerce</span></div>
+              <h3>Bytek Store</h3>
+              <p class="feature-desc">A storefront for gaming peripherals in Algeria: real inventory, local pricing in dinars, product variants and a cash-on-delivery checkout. Built for a market where the last mile decides the sale.</p>
+              <ul class="tag-list"><li>React</li><li>TypeScript</li><li>Supabase</li><li>Vite</li></ul>
+              <div class="link-row">
+                <a class="link-arrow" href="https://www.bytekstore.shop" target="_blank" rel="noopener noreferrer">Live site <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                <button class="link-quiet" type="button" data-case="bytek">Case study</button>
+                <span class="link-note">Private source</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="project-grid">
+          <article class="card">
+            <a class="card-media" href="https://pcbuilder-psi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="DZ-PartPicker live site (opens in a new tab)">
+              <img src="projects/dz-partpicker-800.webp" srcset="projects/dz-partpicker-800.webp 800w, projects/dz-partpicker.webp 1400w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="500" alt="DZ-PartPicker homepage comparing PC component prices in Algeria" loading="lazy">
+              <span class="badge badge--small"><span class="dot" aria-hidden="true"></span>Live</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">03</span><span>2026</span><span>Hardware</span></div>
+              <h3>DZ-PartPicker</h3>
+              <p>A PC builder that checks what fits before you buy: retailer prices across Algeria, compatibility rules and a build planner in dinars.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>Next.js</li><li>TypeScript</li><li>Supabase</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="dzpartpicker">Case study</button>
+                  <span class="link-note">Private source</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="https://fplteams16.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="FPL Elite live site (opens in a new tab)">
+              <img src="projects/fpl-elite-800.webp" srcset="projects/fpl-elite-800.webp 800w, projects/fpl-elite.webp 1400w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="500" alt="FPL Elite squad view with projected points, formation and power rankings" loading="lazy">
+              <span class="badge badge--small"><span class="dot" aria-hidden="true"></span>Live</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">04</span><span>2026</span><span>Fantasy football</span></div>
+              <h3>FPL Elite</h3>
+              <p>A Fantasy Premier League command centre: team import, three-gameweek projections, transfer what-ifs and template differentials.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>Next.js</li><li>React</li><li>FPL API</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="fpl">Case study</button>
+                  <span class="link-note">Private source</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="https://aicapitaltracker.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="AI Capital Tracker live site (opens in a new tab)">
+              <img src="projects/ai-capital-800.webp" srcset="projects/ai-capital-800.webp 800w, projects/ai-capital.webp 1400w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="500" alt="AI Capital Tracker research dashboard showing a 12-month risk reading and market data" loading="lazy">
+              <span class="badge badge--small"><span class="dot" aria-hidden="true"></span>Live</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">05</span><span>2026</span><span>Markets</span></div>
+              <h3>AI Capital Tracker</h3>
+              <p>A research desk for the AI build-out that turns capex, credit and venture data into a documented 12-month risk reading.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>Next.js</li><li>React</li><li>Tailwind</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="aicapital">Case study</button>
+                  <a class="link-quiet" href="https://github.com/1khvled/ai-capital-tracker" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" aria-label="Square DZ live site (opens in a new tab)">
+              <img src="projects/square-dz-800.webp" srcset="projects/square-dz-800.webp 800w, projects/square-dz.webp 1400w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="500" alt="Square DZ live exchange rates for the euro, dollar and USDT in Algerian dinars" loading="lazy">
+              <span class="badge badge--small"><span class="dot" aria-hidden="true"></span>Live</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">06</span><span>2026</span><span>Fintech</span></div>
+              <h3>Square DZ</h3>
+              <p>Live parallel-market exchange rates for Algiers — official spreads, P2P USDT, gold — with open SDKs for developers.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>Next.js</li><li>TypeScript</li><li>SDK</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="square">Case study</button>
+                  <a class="link-quiet" href="https://github.com/1khvled/algeria-exchange-rates-api" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="https://edn-store.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="EDN Référence live site (opens in a new tab)">
+              <img src="projects/edn-reference-800.webp" srcset="projects/edn-reference-800.webp 800w, projects/edn-reference.webp 1400w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="500" alt="EDN Référence homepage for French medical revision volumes and QCM training" loading="lazy">
+              <span class="badge badge--small"><span class="dot" aria-hidden="true"></span>Live</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">07</span><span>2026</span><span>Education</span></div>
+              <h3>EDN Référence</h3>
+              <p>A storefront and study platform for French medical revision: 28 referentials, a QCM bank and an in-browser reader.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="edn">Case study</button>
+                  <a class="link-quiet" href="https://github.com/1khvled/edn-store" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <a class="card-media" href="https://github.com/1khvled/open-opgg" target="_blank" rel="noopener noreferrer" aria-label="Open OP.GG source repository (opens in a new tab)">
+              <img src="projects/open-opgg-800.webp" srcset="projects/open-opgg-800.webp 800w, projects/open-opgg.webp 1280w" sizes="(max-width: 680px) 100vw, (max-width: 1100px) 50vw, 33vw" width="800" height="450" alt="Open OP.GG desktop app showing champion tier lists, win rates and ban rates" loading="lazy">
+              <span class="badge badge--small">Open source</span>
+            </a>
+            <div class="card-body">
+              <div class="meta-row"><span class="index">08</span><span>2026</span><span>Desktop</span></div>
+              <h3>Open OP.GG</h3>
+              <p>An ad-free, telemetry-free desktop companion for League of Legends: champion tiers, builds, counters and a live in-game HUD.</p>
+              <div class="card-foot">
+                <ul class="tag-list"><li>Electron</li><li>JavaScript</li><li>LCU API</li></ul>
+                <div class="link-row">
+                  <button class="link-quiet" type="button" data-case="opgg">Case study</button>
+                  <a class="link-quiet" href="https://github.com/1khvled/open-opgg" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="work-note">Source links are included for public repositories; products with private source say so. <a href="#more">Five smaller builds below <span aria-hidden="true">↓</span></a></p>
+      </div>
+    </section>
+    <section class="section more" id="more">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">02 / More builds</p>
+          <h2>Smaller builds, <em>same standard.</em></h2>
+          <p class="section-intro">Other things I've shipped, kept smaller on purpose. Each one solved a problem I or someone around me actually had.</p>
+        </div>
+
+        <ol class="more-list">
+          <li class="more-row">
+            <span class="more-index">09</span>
+            <div class="more-main">
+              <h3>RonaldoStats</h3>
+              <p>The same static stats engine as MessiStat, rebuilt for Cristiano Ronaldo: career splits, match logs, trophies and head-to-head pages.</p>
+            </div>
+            <span class="more-stack">Vite · JavaScript</span>
+            <div class="more-links"><a href="https://github.com/1khvled/ronaldo-stats" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
+          </li>
+          <li class="more-row">
+            <span class="more-index">10</span>
+            <div class="more-main">
+              <h3>Koora Clean</h3>
+              <p>An ad-free football match centre and installable PWA with low-latency HLS playback and Arabic, French and English interfaces.</p>
+            </div>
+            <span class="more-stack">JavaScript · PWA · hls.js</span>
+            <div class="more-links"><a href="https://github.com/1khvled/koora-clean" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
+          </li>
+          <li class="more-row">
+            <span class="more-index">11</span>
+            <div class="more-main">
+              <h3>DealScout</h3>
+              <p>A Telegram deal scout that watches multiple channels, detects price drops and publishes affiliate-ready posts, backed by a scheduled Python service.</p>
+            </div>
+            <span class="more-stack">Python · FastAPI · Telethon</span>
+            <div class="more-links">
+              <a href="https://github.com/1khvled/dealscout-telegram-deals" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer">Channel <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a>
+            </div>
+          </li>
+          <li class="more-row">
+            <span class="more-index">12</span>
+            <div class="more-main">
+              <h3>AliExpress Coin Bot</h3>
+              <p>A Telegram bot that collects AliExpress daily coins twice a day through the mobile API, with encrypted sessions and scheduled runs.</p>
+            </div>
+            <span class="more-stack">Node.js · Playwright</span>
+            <div class="more-links"><a href="https://github.com/1khvled/aliexpress-coin-bot" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
+          </li>
+          <li class="more-row">
+            <span class="more-index">13</span>
+            <div class="more-main">
+              <h3>Stocker AI Terminal</h3>
+              <p>A local-first quant terminal: multi-factor screening, DCF, distress scores, scenario labs and AI-assisted research, with Excel and PDF export.</p>
+            </div>
+            <span class="more-stack">Python · Flask · JavaScript</span>
+            <div class="more-links"><a href="https://github.com/1khvled/stocker-ai-terminal" target="_blank" rel="noopener noreferrer">Source <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section capabilities" id="capabilities">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">03 / How I work</p>
+          <h2>Three disciplines, <em>one developer.</em></h2>
+          <p class="section-intro">Research, interface, code and deployment — handled in one place, without a handoff in the middle.</p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap">
+            <span class="cap-num">01</span>
+            <h3>Interfaces</h3>
+            <p>Product UI, design systems, responsive layout, accessibility and the states behind the screen: empty, loading, error, success.</p>
+            <ul>
+              <li>Design systems with real constraints</li>
+              <li>Responsive layouts down to 320px</li>
+              <li>Keyboard and screen-reader paths</li>
+            </ul>
+          </article>
+          <article class="cap">
+            <span class="cap-num">02</span>
+            <h3>Data</h3>
+            <p>Data modelling, API integration, static generation, scraping pipelines and charting. Where the number came from matters as much as how it looks.</p>
+            <ul>
+              <li>Postgres and Supabase data models</li>
+              <li>Build-time data validation</li>
+              <li>Scrapers that fail loudly, not silently</li>
+            </ul>
+          </article>
+          <article class="cap">
+            <span class="cap-num">03</span>
+            <h3>Delivery</h3>
+            <p>SEO, image pipelines, performance budgets and deployment. Shipping is the last 20% that decides whether a product feels finished.</p>
+            <ul>
+              <li>Core Web Vitals budgets</li>
+              <li>Image and font pipelines</li>
+              <li>Preview deploys and clean rollbacks</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="toolkit">
+          <span class="label">Toolkit</span>
+          <ul>
+            <li>TypeScript</li><li>React</li><li>Next.js</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>Python</li><li>Flask</li><li>Supabase</li><li>PostgreSQL</li><li>Playwright</li><li>sharp</li><li>Git</li><li>Vercel</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ====================================================================
-         SECTION 2: OPTICAL GLASS SHOWCASE (CONCENTRIC GEOMETRY)
-         ==================================================================== -->
-    <section class="showcase-stage-section" id="showcase">
-      <div class="stage-container">
-        <div class="section-intro-bar">
-          <div>
-            <div class="section-badge-pill">
-              <span>✦ Live Applications & Quant Tools</span>
-            </div>
-            <h2 class="section-title">Production Showcase</h2>
-          </div>
-
-          <!-- Optical Filter Dock -->
-          <div class="optical-filter-dock" role="tablist" aria-label="Project Categories">
-            <button type="button" class="filter-pill-btn active" data-filter="all" role="tab" aria-selected="true">All Works</button>
-            <button type="button" class="filter-pill-btn" data-filter="web-apps" role="tab" aria-selected="false">Web Apps & Portals</button>
-            <button type="button" class="filter-pill-btn" data-filter="quant-trading" role="tab" aria-selected="false">Quant & Trading</button>
-            <button type="button" class="filter-pill-btn" data-filter="automations" role="tab" aria-selected="false">Automations & Bots</button>
-          </div>
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-head">
+          <p class="label">04 / About</p>
+          <h2>Solo by design,<br><em>end to end</em><br>by necessity.</h2>
         </div>
+        <div class="about-body">
+          <p class="lead">I'm Khaled, a product engineer in Algiers. I started publishing code in 2024 and have spent the time since building products for markets I know first-hand.</p>
+          <p>I work alone, from the first sketch to the deploy. That means I can't hide behind a handoff: the data has to reconcile, the checkout has to work, and the page has to load on a phone with two bars of signal.</p>
+          <p>Most of my products are built for Algeria, which is its own design constraint — French, Arabic and English in the same interface; cash on delivery; prices that move every day; and users who will forgive a plain screen but never a wrong number.</p>
+          <blockquote>“A good product is mostly the unglamorous parts done properly.”</blockquote>
+        </div>
+      </div>
 
-        <!-- Concentric Optical Glass Cards Grid -->
-        <div class="projects-glass-grid" id="projectsGrid">
-          <!-- Populated dynamically by app.js with real logos, real snapshots & interactive widgets -->
+      <div class="wrap principles">
+        <div class="principle">
+          <span>01</span>
+          <p><strong>Correct before clever.</strong> A simple model that reconciles beats a clever one that doesn't.</p>
+        </div>
+        <div class="principle">
+          <span>02</span>
+          <p><strong>Static where possible.</strong> Fewer moving parts, faster pages, lower bills.</p>
+        </div>
+        <div class="principle">
+          <span>03</span>
+          <p><strong>No dark patterns.</strong> No fake urgency, no hidden fees, no retention traps.</p>
         </div>
       </div>
     </section>
-
-    <!-- ====================================================================
-         SECTION 3: FRONTIER AI MODEL MATRIX & REASONING LAB
-         ==================================================================== -->
-    <section class="ai-models-section" id="models-matrix">
-      <div class="stage-container">
-        <div class="section-intro-bar">
-          <div>
-            <div class="section-badge-pill">
-              <span>✦ State-of-the-Art Frontier Intelligence · Late 2026</span>
-            </div>
-            <h2 class="section-title">Frontier AI Model Matrix</h2>
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <p class="label">05 / Contact</p>
+        <div class="contact-grid">
+          <div class="contact-main">
+            <h2>Have something <br><em>worth building?</em></h2>
+            <p class="contact-lede">I'm interested in products with real users and hard data problems. Email is the fastest way to reach me.</p>
           </div>
-          <p style="max-width: 500px; font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
-            Why write code line-by-line when you can orchestrate frontier long-horizon reasoning models and autonomous agent swarms? These are the pinnacle intelligences driving my 2026 development loops:
-          </p>
-        </div>
-
-        <!-- 4 Core Frontier AI Models Grid -->
-        <div class="models-glass-grid" id="modelsGrid">
-          <!-- Card 1: Claude Opus 5.5 & Claude Fable 5.1 -->
-          <article class="model-glass-card specular-glint-surface" data-model="claude" id="card-model-claude">
-            <div>
-              <div class="model-card-header">
-                <div class="model-identity-wrap">
-                  <div class="model-avatar-badge">✦C</div>
-                  <div>
-                    <h3 class="model-name-title">Claude Opus 5.5 & Fable 5.1</h3>
-                    <span class="model-creator-tag">Anthropic · Pinnacle Agentic Reasoning</span>
-                  </div>
-                </div>
-                <span class="glass-mini-tag" style="background: rgba(245, 158, 11, 0.15); border-color: #f59e0b; color: #f59e0b;">
-                  Pinnacle Tier
-                </span>
-              </div>
-
-              <p class="model-description-p">
-                Anthropic's pinnacle long-horizon reasoning flagship. Equipped with a native 1M context window, 128K max output tokens, and tunable chain-of-thought budgets for complex optical physics, zero-defect frontend systems, and autonomous agent orchestration.
-              </p>
-
-              <div class="model-specs-strip">
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Context Window:</span>
-                  <div class="spec-chip-val">1,000,000 Tokens (1M)</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Max Output:</span>
-                  <div class="spec-chip-val">128,000 Tokens (128K)</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Reasoning Engine:</span>
-                  <div class="spec-chip-val">Fable 5.1 CoT Budget</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Primary Role:</span>
-                  <div class="spec-chip-val">Optical UI & Agent Craft</div>
-                </div>
-              </div>
-
-              <!-- Interactive Micro-Tool: Reasoning Budget Simulator -->
-              <div class="model-playground-box">
-                <div class="box-top-row">
-                  <span>Tunable Thinking Budget</span>
-                  <button type="button" class="widget-interactive-btn" data-action="toggle-thinking" data-target="claude">
-                    Toggle Fable Deep-Think
-                  </button>
-                </div>
-                <div class="box-readout" id="claudeReadout">
-                  Mode: Standard (0s) · Sub-second execution for rapid UI scaffolding & CSS layout math.
-                </div>
-              </div>
+          <div class="contact-card">
+            <span class="label">Email</span>
+            <a class="contact-email" href="mailto:1khvled.dev@gmail.com">1khvled.dev@gmail.com</a>
+            <div class="contact-actions">
+              <button class="copy-btn" type="button" data-copy-email>Copy address</button>
+              <span class="copy-status" data-copy-status role="status" aria-live="polite"></span>
             </div>
-
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="glass-mini-tag">Claude Opus 5.5</span>
-              <span class="glass-mini-tag">Fable 5.1 Reasoning</span>
-              <span class="glass-mini-tag">1M Context</span>
-              <span class="glass-mini-tag">128K Output</span>
-            </div>
-          </article>
-
-          <!-- Card 2: DeepSeek-V4.1-Pro & V4.1-Flash -->
-          <article class="model-glass-card specular-glint-surface" data-model="deepseek" id="card-model-deepseek">
-            <div>
-              <div class="model-card-header">
-                <div class="model-identity-wrap">
-                  <div class="model-avatar-badge">⚡V4</div>
-                  <div>
-                    <h3 class="model-name-title">DeepSeek-V4.1-Pro & Flash</h3>
-                    <span class="model-creator-tag">DeepSeek · Causal MoE Architecture</span>
-                  </div>
-                </div>
-                <span class="glass-mini-tag" style="background: rgba(59, 130, 246, 0.15); border-color: #3b82f6; color: #60a5fa;">
-                  Quant & Dense Logic
-                </span>
-              </div>
-
-              <p class="model-description-p">
-                The open-weights frontier disruptor. Utilizes a revolutionary Causal Encoder–Decoder architecture with sparse MoE and 94% KV-cache compression, delivering elite mathematical proofs, PDE yield curve calibration, and high-frequency trading bot execution.
-              </p>
-
-              <div class="model-specs-strip">
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Context Window:</span>
-                  <div class="spec-chip-val">1,000,000 Tokens (1M)</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Architecture:</span>
-                  <div class="spec-chip-val">Causal Enc-Dec MoE</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Efficiency:</span>
-                  <div class="spec-chip-val">94% KV-Cache Savings</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Primary Role:</span>
-                  <div class="spec-chip-val">Quant PDEs & Algos</div>
-                </div>
-              </div>
-
-              <!-- Interactive Micro-Tool: Quant PDE Derivation -->
-              <div class="model-playground-box">
-                <div class="box-top-row">
-                  <span>RL Proof & MoE Stepper</span>
-                  <button type="button" class="widget-interactive-btn" data-action="step-quant" data-target="deepseek">
-                    Next Derivation Step
-                  </button>
-                </div>
-                <div class="box-readout" id="deepseekReadout">
-                  Step 1: Yield Inversion Telemetry · Analyzing 2Y/10Y spread derivative ∂y/∂t with Causal MoE.
-                </div>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="glass-mini-tag">DeepSeek-V4.1-Pro</span>
-              <span class="glass-mini-tag">Causal MoE</span>
-              <span class="glass-mini-tag">Open Weights</span>
-              <span class="glass-mini-tag">94% KV Cache Cut</span>
-            </div>
-          </article>
-
-          <!-- Card 3: Gemini 4 Argon & Gemini 3.8 Flash -->
-          <article class="model-glass-card specular-glint-surface" data-model="gemini" id="card-model-gemini">
-            <div>
-              <div class="model-card-header">
-                <div class="model-identity-wrap">
-                  <div class="model-avatar-badge">♊G4</div>
-                  <div>
-                    <h3 class="model-name-title">Gemini 4 Argon & 3.8 Flash</h3>
-                    <span class="model-creator-tag">Google DeepMind · Frontier Deep-Reasoning</span>
-                  </div>
-                </div>
-                <span class="glass-mini-tag" style="background: rgba(14, 165, 233, 0.15); border-color: #0ea5e9; color: #38bdf8;">
-                  Argon Reasoning
-                </span>
-              </div>
-
-              <p class="model-description-p">
-                Google DeepMind's pinnacle reasoning system. Built with tunable thinking levels (Low/Med/High), native audio/visual cross-attention, and integrated directly into developer workflows (Antigravity) to swallow 20+ codebases with zero vector chunking loss.
-              </p>
-
-              <div class="model-specs-strip">
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Context Window:</span>
-                  <div class="spec-chip-val">2,000,000+ Tokens (2M)</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Reasoning:</span>
-                  <div class="spec-chip-val">Argon Tunable Levels</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Modality:</span>
-                  <div class="spec-chip-val">Native Audio / Video / Code</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Integration:</span>
-                  <div class="spec-chip-val">Antigravity IDE & Pairing</div>
-                </div>
-              </div>
-
-              <!-- Interactive Micro-Tool: Context Ingestion Simulator -->
-              <div class="model-playground-box">
-                <div class="box-top-row">
-                  <span>Thinking & Context Scale</span>
-                  <button type="button" class="widget-interactive-btn" data-action="scale-context" data-target="gemini">
-                    Tune Argon Level
-                  </button>
-                </div>
-                <div class="box-readout" id="geminiReadout">
-                  Argon Low · 300k tokens ingested · Sub-200ms TTFT across entire workspace.
-                </div>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="glass-mini-tag">Gemini 4 Argon</span>
-              <span class="glass-mini-tag">Gemini 3.8 Flash</span>
-              <span class="glass-mini-tag">Unified 2M Context</span>
-              <span class="glass-mini-tag">Antigravity Native</span>
-            </div>
-          </article>
-
-          <!-- Card 4: Muse Wonder & Muse Spark 1.3 -->
-          <article class="model-glass-card specular-glint-surface" data-model="muse" id="card-model-muse">
-            <div>
-              <div class="model-card-header">
-                <div class="model-identity-wrap">
-                  <div class="model-avatar-badge">◫M</div>
-                  <div>
-                    <h3 class="model-name-title">Muse Wonder & Muse Spark 1.3</h3>
-                    <span class="model-creator-tag">Meta Superintelligence Labs · Multimodal Agent</span>
-                  </div>
-                </div>
-                <span class="glass-mini-tag" style="background: rgba(168, 85, 247, 0.15); border-color: #a855f7; color: #c084fc;">
-                  Autonomous Swarms
-                </span>
-              </div>
-
-              <p class="model-description-p">
-                Meta's frontier personal and developer agent ecosystem. Features visual chain-of-thought reasoning, 1M context, and an autonomous cloud VM execution environment coordinating multi-agent Git worktree swarms with full browser control.
-              </p>
-
-              <div class="model-specs-strip">
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Context Window:</span>
-                  <div class="spec-chip-val">1,000,000 Tokens (1M)</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Agent Harness:</span>
-                  <div class="spec-chip-val">Muse Code & VM Browser</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Architecture:</span>
-                  <div class="spec-chip-val">Visual Chain-of-Thought</div>
-                </div>
-                <div class="spec-chip-item">
-                  <span class="spec-chip-label">Execution:</span>
-                  <div class="spec-chip-val">Autonomous Cloud Swarms</div>
-                </div>
-              </div>
-
-              <!-- Interactive Micro-Tool: Swarm Dispatch Simulator -->
-              <div class="model-playground-box">
-                <div class="box-top-row">
-                  <span>Wonder Swarm Dispatcher</span>
-                  <button type="button" class="widget-interactive-btn" data-action="dispatch-swarm" data-target="muse">
-                    Deploy Wonder Swarm
-                  </button>
-                </div>
-                <div class="box-readout" id="museReadout">
-                  Worktree 1: Full-Stack Builder (Idle) · VM Browser QA: Waiting
-                </div>
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <span class="glass-mini-tag">Muse Wonder</span>
-              <span class="glass-mini-tag">Muse Spark 1.3</span>
-              <span class="glass-mini-tag">Visual CoT</span>
-              <span class="glass-mini-tag">Multi-Agent Swarms</span>
-            </div>
-          </article>
-        </div>
-
-        <!-- Interactive AI Model Task Router -->
-        <div class="ai-router-shell">
-          <div class="router-header">
-            <div>
-              <div class="section-badge-pill">
-                <span>✦ Interactive Task Router</span>
-              </div>
-              <h3 style="font-size: 1.5rem; font-weight: 900; color: #ffffff; letter-spacing: -0.025em;">
-                Where Does the Prompt Go?
-              </h3>
-            </div>
-            <p style="font-size: 0.8125rem; color: var(--text-secondary);">
-              Select a task to test 1khvled's automated model dispatch logic:
-            </p>
-          </div>
-
-          <div class="router-task-selector" id="routerTaskSelector">
-            <button type="button" class="btn-router-task active" data-task="ui">
-              ✦ Optical Glass UI & Physics
-            </button>
-            <button type="button" class="btn-router-task" data-task="quant">
-              ⚡ Complex Quant Math & Spread PDE
-            </button>
-            <button type="button" class="btn-router-task" data-task="repo">
-              ♊ 20-Repo Whole-Codebase Ingestion
-            </button>
-            <button type="button" class="btn-router-task" data-task="swarm">
-              ◫ Autonomous Multi-Agent Git Refactor
-            </button>
-          </div>
-
-          <div class="router-telemetry-panel" id="routerTelemetry">
-            <div>
-              <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">ROUTED TARGET</div>
-              <div id="routerTarget" style="font-size: 1.25rem; font-weight: 800; color: #f59e0b; margin-top: 0.25rem;">
-                Claude Opus 5.5 (Tunable Fable CoT)
-              </div>
-            </div>
-            <div>
-              <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">REASONING STRATEGY</div>
-              <div id="routerStrategy" style="font-size: 0.875rem; font-weight: 600; color: #ffffff; margin-top: 0.25rem;">
-                128K Token Thinking budget for optical physics & zero visual regressions.
-              </div>
-            </div>
-            <div>
-              <div style="font-size: 0.75rem; color: var(--text-muted); font-weight: 700;">ESTIMATED VELOCITY</div>
-              <div id="routerVelocity" style="font-size: 0.875rem; font-weight: 700; color: var(--vibe-accent); margin-top: 0.25rem;">
-                Pinnacle Craft Multiplier · Flawless Synthesis
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         SECTION 4: "VIBE CODING FOR GOOD" BENTO PLAYGROUND
-         ==================================================================== -->
-    <section class="vibe-playground-section" id="vibe-playground">
-      <div class="stage-container">
-        <div class="section-intro-bar">
-          <div>
-            <div class="section-badge-pill">
-              <span>✦ Philosophy & Orchestration</span>
-            </div>
-            <h2 class="section-title">Vibe Coding for Good</h2>
-          </div>
-        </div>
-
-        <div class="vibe-bento-grid">
-          <!-- Card 1 (Col 8): The Vibe Manifesto -->
-          <div class="vibe-bento-card col-span-8 specular-glint-surface">
-            <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="font-size: 1.25rem;">✦</span>
-                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">The Philosophy</span>
-              </div>
-              <h3 style="font-size: 1.6rem; font-weight: 900; letter-spacing: -0.025em; color: #ffffff; line-height: 1.25; margin-bottom: 1rem;">
-                Coding with High Design Taste, Relentless Curiosity & Frontier AI Velocity.
-              </h3>
-              <p style="font-size: 0.9375rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1rem;">
-                I believe software in 2026 shouldn’t look like generic SaaS clones or soulless AI-generated templates. I use frontier AI models not to be lazy, but to punch 10x above my weight: orchestrating Claude 3.7, DeepSeek-R1, Gemini 2.0, and Muse Spark while obsessing over micro-interactions, typography, and optical physics.
-              </p>
-              <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.7;">
-                From sports data platforms used across international derbies to real-time macroeconomic yield diagnostics, luxury streetwear portals, and community ecommerce tools, every project is built to solve tangible problems and delight real people.
-              </p>
-            </div>
-            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-              <span class="glass-mini-tag">100% Shipped Code</span>
-              <span class="glass-mini-tag">Zero Placeholder Slop</span>
-              <span class="glass-mini-tag">Production Live</span>
-            </div>
-          </div>
-
-          <!-- Card 2 (Col 4): Tactile Vibe Mood Switcher -->
-          <div class="vibe-bento-card col-span-4 specular-glint-surface">
-            <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="font-size: 1.25rem;">🎨</span>
-                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Optical Mood</span>
-              </div>
-              <h3 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
-                Tactile Vibe Switcher
-              </h3>
-              <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
-                Select a live chromatic refraction preset for this portfolio:
-              </p>
-
-              <div class="vibe-mood-buttons" id="vibeMoodButtons">
-                <button type="button" class="btn-mood-tile" data-vibe="obsidian">
-                  <span class="mood-color-dot" style="background: #38bdf8;"></span>
-                  <span>Obsidian</span>
-                </button>
-                <button type="button" class="btn-mood-tile" data-vibe="emerald">
-                  <span class="mood-color-dot" style="background: #10b981;"></span>
-                  <span>Emerald</span>
-                </button>
-                <button type="button" class="btn-mood-tile" data-vibe="sunset">
-                  <span class="mood-color-dot" style="background: #f97316;"></span>
-                  <span>Sunset</span>
-                </button>
-                <button type="button" class="btn-mood-tile" data-vibe="purple">
-                  <span class="mood-color-dot" style="background: #c084fc;"></span>
-                  <span>Amethyst</span>
-                </button>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-muted);">
-              Instant CSS custom property token swap with zero layout shift.
-            </div>
-          </div>
-
-          <!-- Card 3 (Col 6): The Stack & Orchestration Toolkit -->
-          <div class="vibe-bento-card col-span-6 specular-glint-surface">
-            <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="font-size: 1.25rem;">⚡</span>
-                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Orchestration Stack</span>
-              </div>
-              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem;">
-                Frontier Models & Dev Tools
-              </h3>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
-                <span class="glass-mini-tag">Claude 3.7 Sonnet & Opus</span>
-                <span class="glass-mini-tag">DeepSeek-R1 & V3</span>
-                <span class="glass-mini-tag">Gemini 2.0 Flash & Pro</span>
-                <span class="glass-mini-tag">Muse Spark 1.3 & Muse Code</span>
-                <span class="glass-mini-tag">Next.js 15 & React 19</span>
-                <span class="glass-mini-tag">TypeScript & Node.js</span>
-                <span class="glass-mini-tag">Playwright Automation</span>
-                <span class="glass-mini-tag">Python & QuantLib</span>
-                <span class="glass-mini-tag">Tailwind CSS & CSS Grid</span>
-                <span class="glass-mini-tag">Electron & Desktop Apps</span>
-              </div>
-            </div>
-            <div style="margin-top: 1.5rem; font-size: 0.8125rem; color: var(--text-secondary);">
-              Always adopting bleeding-edge tooling that compounds creative leverage.
-            </div>
-          </div>
-
-          <!-- Card 4 (Col 6): Direct Dispatch / Connect -->
-          <div class="vibe-bento-card col-span-6 specular-glint-surface">
-            <div>
-              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
-                <span style="font-size: 1.25rem;">📬</span>
-                <span style="font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vibe-accent);">Direct Dispatch</span>
-              </div>
-              <h3 style="font-size: 1.3rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
-                Let's Build Something Unforgettable
-              </h3>
-              <p style="font-size: 0.875rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
-                Open for bespoke web systems, trading interfaces, AI-powered automation pipelines, and high-craft creative collaborations.
-              </p>
-              <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-                <button type="button" class="btn-glass-primary" id="btnCopyEmail" style="justify-content: flex-start; padding: 0.75rem 1.25rem;">
-                  <span>✉ Copy Email:</span>
-                  <span style="color: var(--vibe-accent); font-weight: 800;">1khvled.dev@gmail.com</span>
-                </button>
-                <div style="display: flex; gap: 0.65rem;">
-                  <a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
-                    GitHub ↗
-                  </a>
-                  <a href="https://x.com/1khvled" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: 1;">
-                    Twitter / X ↗
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div style="margin-top: 1.25rem; font-size: 0.75rem; color: var(--text-muted);">
-              Average response time: &lt; 4 hours.
-            </div>
+            <dl class="contact-meta">
+              <div><dt>Based</dt><dd>Algiers, Algeria · <time data-clock>—</time> local</dd></div>
+              <div><dt>Elsewhere</dt><dd><a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer">GitHub <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a><a href="https://x.com/1khvledd" target="_blank" rel="noopener noreferrer">X <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5"/></svg></a></dd></div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ====================================================================
-       MODAL THEATER DIALOG (<dialog id="projectTheaterModal">)
-       ==================================================================== -->
-  <dialog id="projectTheaterModal" aria-labelledby="modalProjectTitle">
-    <div class="modal-theater-inner" id="modalInner">
-      <div class="modal-theater-header">
-        <div style="display: flex; align-items: center; gap: 0.75rem;">
-          <img id="modalProjectLogo" src="" alt="" style="width: 32px; height: 32px; border-radius: 8px; object-fit: cover;">
-          <div>
-            <h3 id="modalProjectTitle" style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">Project Title</h3>
-            <span id="modalProjectCategory" style="font-size: 0.75rem; color: var(--vibe-accent); font-weight: 700;">Category</span>
-          </div>
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand brand--static" href="#top" aria-label="Back to top">
+            <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" fill="currentColor"/><path d="M7 5.5v13M7 12l6.5-6.5M7 12l6.5 6.5" fill="none" stroke="#F3EEE4" stroke-width="2.3"/><rect x="16.8" y="16.8" width="2.6" height="2.6" fill="#C4442A"/></svg>
+            <span>1khvled</span>
+          </a>
+          <p>Product engineer in Algiers.<br>Building since 2024.</p>
         </div>
-        <button type="button" class="btn-close-theater" id="btnCloseModal" aria-label="Close dialog">✕</button>
-      </div>
-
-      <div style="border-radius: 14px; overflow: hidden; margin-bottom: 1.25rem; border: var(--glass-inner-border); background: #000000;">
-        <img id="modalProjectImage" src="" alt="High resolution project snapshot" style="width: 100%; max-height: 480px; object-fit: contain;">
-      </div>
-
-      <p id="modalProjectDesc" style="font-size: 0.95rem; color: var(--text-body); line-height: 1.6; margin-bottom: 1.25rem;">
-        Project description.
-      </p>
-
-      <div style="background: rgba(255, 255, 255, 0.04); border-radius: 12px; padding: 1rem; border: var(--glass-inner-border); margin-bottom: 1.5rem;">
-        <h4 style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.75rem;">Key Architecture & Metrics</h4>
-        <div id="modalProjectMetrics" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-          <!-- Injected dynamically -->
+        <nav class="foot-col" aria-label="Index">
+          <h2>Index</h2>
+          <ul>
+            <li><a href="#work">Selected work</a></li>
+            <li><a href="#more">More builds</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="foot-col">
+          <h2>Elsewhere</h2>
+          <ul>
+            <li><a href="https://github.com/1khvled" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://x.com/1khvledd" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+            <li><a href="mailto:1khvled.dev@gmail.com">Email</a></li>
+          </ul>
         </div>
       </div>
-
-      <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem;">
-        <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
-          <span>Launch Live App ↗</span>
-        </a>
-        <a id="modalRepoLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-glass-primary" style="flex: initial; padding: 0.65rem 1.4rem;">
-          <span>Inspect Source ↗</span>
-        </a>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- ====================================================================
-       VISION FOOTER
-       ==================================================================== -->
-  <footer class="vision-footer">
-    <div class="stage-container">
-      <div class="footer-glass-pill">
-        <span>Designed & vibe-coded by <strong>1khvled</strong></span>
-        <span>•</span>
-        <span>Frontier AI orchestration & zero slop</span>
-        <span>•</span>
-        <span>2026 Production</span>
+      <div class="foot-bottom">
+        <span>© 2026 Khaled. All rights reserved.</span>
+        <span>Set in Instrument Sans, Instrument Serif &amp; JetBrains Mono. No analytics, no trackers.</span>
       </div>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <dialog id="case-dialog" class="case-dialog" aria-labelledby="case-title">
+    <div class="case-shell">
+      <header class="case-head">
+        <div class="case-head-top">
+          <span class="case-eyebrow"><span data-case-year></span><span class="case-sep" aria-hidden="true">/</span><span data-case-role></span></span>
+          <button class="case-close" type="button" data-case-close>Close <span aria-hidden="true">✕</span></button>
+        </div>
+        <h2 id="case-title" data-case-title>Case study</h2>
+        <p class="case-brief" data-case-brief></p>
+      </header>
+      <div class="case-body">
+        <div class="case-copy" data-case-copy></div>
+        <aside class="case-aside">
+          <div class="case-block">
+            <span class="label">Stack</span>
+            <ul class="case-stack" data-case-stack></ul>
+          </div>
+          <div class="case-block">
+            <span class="label">Links</span>
+            <div class="case-links" data-case-links></div>
+          </div>
+          <p class="case-note" data-case-note></p>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
 </body>
 </html>

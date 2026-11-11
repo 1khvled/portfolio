@@ -1,924 +1,514 @@
-/**
- * 1KHVLED // VIBE CODER & CREATIVE DESIGNER
- * Frontier AI Model Matrix & Optical Glassmorphism UI Engine
- */
+/* ------------------------------------------------------------------
+   1khvled — portfolio interactions
+   Vanilla JavaScript. No dependencies, no trackers.
+   ------------------------------------------------------------------ */
 
-(() => {
-  'use strict';
+(function () {
+  "use strict";
 
-  // ====================================================================
-  // 1. PRODUCTION PROJECTS REGISTRY (VERIFIED LINKS & REAL ASSETS)
-  // ====================================================================
+  var EMAIL = "1khvled.dev@gmail.com";
 
-  const PROJECTS_DATA = [
-    {
-      id: 'messistats',
-      name: 'MessiStats',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Sports Analytics',
-      status: '200 OK Live',
-      logo: 'logos/messistats-logo.png',
-      logoFallback: 'logos/messistats.svg',
-      snapshot: 'projects/messistats-snap.png',
-      liveUrl: 'https://www.messistat.com',
-      repoUrl: 'https://github.com/1khvled/messi-stats',
-      description: 'Comprehensive career analytics portal tracking Lionel Messi\'s 850+ official goals, 380+ assists, xG shot maps, and club/country match logs with high-density visual filtering.',
-      widgetType: 'messi-duel',
-      widgetData: {
-        label: 'Career Telemetry',
-        value: '850 Goals · 382 Assists',
-        altValue: '1,080 Matches · 0.79 Goal/Game',
-        btnText: 'Toggle Match Ratio'
-      },
-      metrics: [
-        '850+ Career Goals Tracked',
-        'Interactive xG Shot Visualizer',
-        'Next.js 14 App Router',
-        'Sub-second Filter Latency'
-      ]
+  /* ----------------------------------------------------------------
+     Case study content
+     ---------------------------------------------------------------- */
+
+  var PROJECTS = {
+    messistat: {
+      title: "MessiStat",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://www.messistat.com",
+      repo: "https://github.com/1khvled/messi-stats",
+      brief: "A complete statistical archive for Lionel Messi that stays accurate while the record keeps moving.",
+      body: [
+        "MessiStat covers career totals, season-by-season goal logs, competition hubs, milestone trackers and a Messi vs Ronaldo comparator. Every page is generated ahead of time from a single dataset, so the site has no backend and no runtime data fetching.",
+        "The hard part is bookkeeping, not layout. Prebuild scripts reconcile totals across the site, regenerate the sitemap and share images, and fail the build when two pages disagree."
+      ],
+      points: [
+        "Programmatic pages for seasons, competitions and opponents",
+        "One data source with build-time consistency checks",
+        "Static output with no database or API at runtime",
+        "Mobile-first layout built for quick reads"
+      ],
+      stack: ["Vite", "JavaScript", "CSS", "Static data"],
+      note: "Independent project. Not affiliated with Lionel Messi, any club or any league."
     },
-    {
-      id: 'ronaldostats',
-      name: 'RonaldoStats',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Sports Analytics',
-      status: '200 OK Live',
-      logo: 'logos/ronaldostats-logo.png',
-      logoFallback: 'logos/ronaldostats.svg',
-      snapshot: 'projects/ronaldostats-snap.png',
-      liveUrl: 'https://ronaldomstats-app-no-tme.vercel.app',
-      repoUrl: 'https://github.com/1khvled/ronaldo-stats',
-      description: 'Real-time performance diagnostic suite tracking Cristiano Ronaldo\'s 910+ all-time goals, clutch conversion rates, penalty metrics, and historical match logs.',
-      widgetType: 'ronaldo-duel',
-      widgetData: {
-        label: 'Clutch Metric',
-        value: '910 Goals · 135 Int\'l',
-        altValue: '66 Hat-tricks · 165 Penalties',
-        btnText: 'Toggle Hat-tricks'
-      },
-      metrics: [
-        '910+ Verified Official Goals',
-        'Clutch Minutes Distribution',
-        'Vercel Edge Deployed',
-        'Live Responsive Layout'
-      ]
+    bytek: {
+      title: "Bytek Store",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://www.bytekstore.shop",
+      repo: null,
+      brief: "A real storefront for gaming peripherals in Algeria, priced in dinars and built for how people actually buy here.",
+      body: [
+        "Bytek sells gaming mice, keyboards and accessories across Algeria. The storefront handles variants, live stock, local pricing in dinars and a cash-on-delivery checkout — the way most of the market actually buys.",
+        "Behind the shop window is an operations layer: a product catalogue with SEO fields, an image pipeline that generates hundreds of responsive derivatives at build time, and exports for Facebook and IndexNow."
+      ],
+      points: [
+        "Product catalogue with variants, stock states and DZD pricing",
+        "Checkout and order flow built around cash on delivery",
+        "Build-time image derivatives for every product and breakpoint",
+        "Restock radar, verified-defect refunds and new-arrival sorting",
+        "SEO product pages plus Facebook catalogue and IndexNow feeds"
+      ],
+      stack: ["React", "TypeScript", "Vite", "Supabase", "Tailwind CSS"],
+      note: "Source is private. Built and maintained for the store."
     },
-    {
-      id: 'obsidianwear',
-      name: 'Obsidian Wear',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Luxury Streetwear E-Commerce',
-      status: 'Production Live',
-      logo: 'logos/obsidianwear-logo.svg',
-      snapshot: 'projects/obsidianwear-snap.png',
-      liveUrl: 'https://obsidianwearlovable.vercel.app',
-      repoUrl: 'https://github.com/1khvled/obsidianwear-V2-GOOD-VERSION',
-      description: 'Modern luxury streetwear storefront featuring optical dark aesthetics, real-time cart state, high-density apparel lookbooks, and sleek responsive checkout flows.',
-      widgetType: 'obsidian-currency',
-      widgetData: {
-        label: 'Signature Heavyweight Hoodie',
-        value: '89.00 EUR · 22,000 DZD',
-        altValue: 'Limited Release: 50 Units Worldwide',
-        btnText: 'Toggle Availability'
-      },
-      metrics: [
-        'Modern Streetwear Aesthetic',
-        'Real-time Cart State Management',
-        'High-Res Editorial Lookbooks',
-        'Next-Gen Responsive Checkout'
-      ]
+    dzpartpicker: {
+      title: "DZ-PartPicker",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://pcbuilder-psi.vercel.app",
+      repo: null,
+      brief: "A PC builder that checks what fits before you buy, using prices from Algerian retailers.",
+      body: [
+        "DZ-PartPicker compares component prices across Algerian retailers and checks a build for compatibility before anything is bought: CPU socket, memory generation, PSU headroom, GPU length, cooler height and case clearance.",
+        "Listings are ingested from retailer catalogues and reswept on a schedule. Stale products are pruned instead of lingering with old prices, and every build total is calculated in dinars."
+      ],
+      points: [
+        "Compatibility engine spanning CPU, motherboard, memory, GPU, PSU and case",
+        "Retailer ingestion with scheduled resweeps and stale-price pruning",
+        "Build planner with local price totals",
+        "Next.js App Router with Supabase as the data layer"
+      ],
+      stack: ["Next.js", "TypeScript", "Supabase", "Cheerio"],
+      note: "Source is private."
     },
-    {
-      id: 'dz-partpicker',
-      name: 'DZ-PartPicker',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Hardware Configurator',
-      status: '200 OK Live',
-      logo: 'logos/dz-partpicker-logo.png',
-      snapshot: 'projects/dzpartpicker-snap.png',
-      liveUrl: 'https://pcbuilder-psi.vercel.app',
-      repoUrl: 'https://github.com/1khvled/dz-partpicker',
-      description: 'Algeria\'s premier PC hardware compatibility checker and real-time vendor price aggregator across local retailers, calculating exact DZD component totals.',
-      widgetType: 'pc-builder',
-      widgetData: {
-        tierIndex: 1,
-        tiers: [
-          { name: 'Entry 1080p', cost: '85,000 DZD', spec: 'i3 12100F + RX 6600' },
-          { name: 'Mid 1440p', cost: '145,000 DZD', spec: 'i5 13400F + RTX 4060' },
-          { name: 'Beast 4K', cost: '280,000 DZD', spec: 'Ryzen 7 7800X3D + RTX 4075' }
-        ],
-        btnText: 'Cycle Build Tier'
-      },
-      metrics: [
-        'Wattage & Socket Verification',
-        'Live Vendor Price Scraping',
-        'Real DZD Currency Matrix',
-        'Zero-Conflict Part Checker'
-      ]
+    fpl: {
+      title: "FPL Elite",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://fplteams16.vercel.app",
+      repo: null,
+      brief: "A command centre for Fantasy Premier League managers who want the numbers, not the noise.",
+      body: [
+        "FPL Elite starts with your real team: enter the ID from your Fantasy Premier League URL and the dashboard loads your squad, bank and free transfers. Projections cover the next three gameweeks, with captain and bench decisions scored separately.",
+        "Transfer what-ifs let you test a move before making it. Template share and differentials show where your team is generic, and where it is actually taking a risk."
+      ],
+      points: [
+        "Team import from a public FPL ID",
+        "Three-gameweek projections with captain and bench scoring",
+        "What-if transfers, max XI and squad rating",
+        "Template share, differentials and xP power rankings",
+        "Matchday live, mini-leagues and fixture difficulty"
+      ],
+      stack: ["Next.js", "React", "TypeScript", "FPL API"],
+      note: "Source is private. Uses the public Fantasy Premier League API."
     },
-    {
-      id: 'bytek-store',
-      name: 'Bytek Gaming Store',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Gaming Hardware E-Commerce',
-      status: 'Production Live',
-      logo: 'logos/bytek-logo.png',
-      snapshot: 'projects/bytek-cart-snap.png',
-      liveUrl: 'https://bytek-byte-cart.vercel.app',
-      repoUrl: 'https://github.com/1khvled/bytek-store-cart',
-      description: 'High-performance gaming peripheral and keyboard storefront featuring real-time cart state, rapid-trigger magnetic hardware selection, and localized Algerian delivery checkout.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Store Inventory',
-        value: 'Rapid-Trigger Keyboards · 8K Mice',
-        altValue: 'Free 58-Wilaya Express Delivery',
-        btnText: 'Toggle Shipping'
-      },
-      metrics: [
-        'Rapid-Trigger HE Magnetic Switch Peripherals',
-        'Reactive Cart & Checkout Matrix',
-        'High-Resolution Hardware Catalog',
-        'Localized Express Shipping'
-      ]
+    aicapital: {
+      title: "AI Capital Tracker",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://aicapitaltracker.vercel.app",
+      repo: "https://github.com/1khvled/ai-capital-tracker",
+      brief: "A research desk for the AI build-out, with the method left visible.",
+      body: [
+        "AI Capital Tracker follows the physical build-out of AI: data-centre capex, corporate debt, credit spreads and venture funding. Those inputs feed a documented factor model that produces a 12-month contraction probability instead of a headline.",
+        "Every number can be traced. The site exposes the transaction ledger, company profiles, market data and the method itself, including what the model does not claim to predict."
+      ],
+      points: [
+        "Factor model with a versioned, public methodology",
+        "Ledger of tracked AI-infrastructure spending and debt",
+        "Sensitivity views rather than a single forecast",
+        "Next.js front end with a Node data-refresh pipeline"
+      ],
+      stack: ["Next.js", "React", "Tailwind CSS", "Node.js"],
+      note: "Independent research project. Not investment advice."
     },
-    {
-      id: 'fpl-analytics',
-      name: 'FPL Analytics Dashboard',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Sports Analytics & Quant Form',
-      status: '200 OK Live',
-      logo: 'logos/fpl-logo.svg',
-      snapshot: 'projects/fpl-snap.png',
-      liveUrl: 'https://fplteams16.vercel.app',
-      repoUrl: 'https://github.com/1khvled/fpl-analytics-dashboard',
-      description: 'Advanced Fantasy Premier League team diagnostics, fixture difficulty matrix, xG/xA form ratings, and optimal transfer rotation algorithms.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Algorithm Engine',
-        value: 'Optimal Transfer Rank: Top 0.5%',
-        altValue: 'Fixture Difficulty Index: 1.4 FDR',
-        btnText: 'Toggle FDR Matrix'
-      },
-      metrics: [
-        'Real-time Premier League API Integration',
-        'Expected Goals (xG) & Assists (xA) Math',
-        'Transfer Rotation Optimizer',
-        'Interactive Team Pitch View'
-      ]
+    square: {
+      title: "Square DZ",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://squarealgerie.com",
+      repo: "https://github.com/1khvled/algeria-exchange-rates-api",
+      brief: "Live parallel-market exchange rates for Algiers, published as data other developers can use.",
+      body: [
+        "Square DZ tracks the parallel market at Square Port-Saïd alongside official Banque d'Algérie rates: EUR, USD, GBP, CAD, USDT P2P and gold, with the spread between markets calculated automatically.",
+        "The site is the consumer product. The platform is the API: TypeScript and Python SDKs published to npm and PyPI, plus a browser extension for quick conversions while shopping online."
+      ],
+      points: [
+        "Rate ingestion, normalisation and daily snapshots",
+        "Parallel vs official spread calculations",
+        "TypeScript and Python SDKs on npm and PyPI",
+        "Chrome extension for in-page conversion",
+        "Arabic, French and English interfaces"
+      ],
+      stack: ["Next.js", "TypeScript", "Python", "Chrome extension"],
+      note: "Market data belongs to Square DZ. The SDKs are MIT-licensed."
     },
-    {
-      id: 'koora-clean',
-      name: 'Koora Clean PWA',
-      category: 'web-apps',
-      categoryLabel: 'Web Apps & Portals',
-      tag: 'Streaming Platform & PWA',
-      status: '200 OK Live',
-      logo: 'logos/koora-logo.svg',
-      snapshot: 'projects/kooraclean-snap.png',
-      liveUrl: 'https://koora-clean-amina.vercel.app',
-      repoUrl: 'https://github.com/1khvled/koora-clean',
-      description: 'Ad-free, telemetry-free progressive web app for live football match streaming, featuring zero overlay popups and low-latency HLS multi-bitrate playback.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Stream Telemetry',
-        value: '0 Popups · 1080p60 HLS Stream',
-        altValue: 'Latency: 1.2s · Buffer Health 100%',
-        btnText: 'Toggle Health'
-      },
-      metrics: [
-        'Zero Advertising Overlays',
-        'Adaptive HLS Video Engine',
-        'Full Progressive Web App (PWA) Offline Cache',
-        'Mobile Gesture Controls'
-      ]
+    edn: {
+      title: "EDN Référence",
+      year: "2026",
+      role: "Design & engineering",
+      live: "https://edn-store.vercel.app",
+      repo: "https://github.com/1khvled/edn-store",
+      brief: "A storefront and study platform for French medical revision, built without a framework.",
+      body: [
+        "EDN Référence is a digital store and study platform for French medical students preparing the EDN and ECOS exams. It sells 28 referentials and bundles them with a QCM bank, methodology guides and free sample chapters.",
+        "There is no framework and no CMS. The catalogue is generated from a single JSON file, and the reader, QCM module and checkout flow are hand-written so the site stays fast on a student laptop."
+      ],
+      points: [
+        "Catalogue generated from one JSON data source",
+        "Interactive QCM module with instant correction",
+        "In-browser reader for PDF and Word extracts",
+        "Free sample chapters and methodology guides",
+        "Hand-written HTML, CSS and ES6 with no framework"
+      ],
+      stack: ["HTML", "CSS", "JavaScript", "Static catalogue"],
+      note: ""
     },
-    {
-      id: 'ai-capital',
-      name: 'AI Capital Tracker',
-      category: 'quant-trading',
-      categoryLabel: 'Quant & Trading',
-      tag: 'VC Intelligence',
-      status: 'Production Live',
-      logo: 'logos/square-algerie-logo.png',
-      snapshot: 'projects/aicapitaltracker-snap.png',
-      liveUrl: 'https://aicapitaltracker.vercel.app',
-      repoUrl: 'https://github.com/1khvled/ai-capital-tracker',
-      description: 'Real-time capital flow intelligence platform monitoring global AI startup funding rounds, compute infrastructure investments, and valuation multiples.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Tracked Volume',
-        value: '$48.2B across 412 Deals',
-        altValue: 'Avg Deal Size: $117M (Series B)',
-        btnText: 'Toggle Deal Multiples'
-      },
-      metrics: [
-        'Automated Round Parsing',
-        'GPU Cluster CapEx Modeling',
-        'Fast Search & Filter Index',
-        'Real-time Funding Telemetry'
-      ]
-    },
-    {
-      id: 'square-dz',
-      name: 'Square Live DZ',
-      category: 'quant-trading',
-      categoryLabel: 'Quant & Trading',
-      tag: 'FX Telemetry',
-      status: 'Active Feed',
-      logo: 'logos/square-algerie-logo.png',
-      snapshot: 'projects/squarealgerie-snap.png',
-      liveUrl: 'https://squarealgerie.com',
-      repoUrl: 'https://github.com/1khvled/algeria-exchange-rates-api',
-      description: 'Algeria\'s real-time informal foreign exchange (Square Port Said) rate tracker and volatility monitor for EUR/DZD, USD/DZD, and CAD/DZD.',
-      widgetType: 'currency-ticker',
-      widgetData: {
-        label: 'Square Port Said (Live)',
-        value: '1€ = 248.50 DZD | 1$ = 236.00 DZD',
-        altValue: 'Spread: +12.4% vs Official Bank',
-        btnText: 'Compare Bank Spread'
-      },
-      metrics: [
-        'Sub-minute Price Refresh',
-        'Telegram Bot Alert Channel',
-        'Historical Volatility Engine',
-        'PWA Mobile-Optimized'
-      ]
-    },
-    {
-      id: 'dealscout',
-      name: 'DealScout Engine',
-      category: 'automations',
-      categoryLabel: 'Automations & Bots',
-      tag: 'Autonomous Scraper & Publisher',
-      status: 'Active Automation',
-      logo: 'logos/dealscout-logo.svg',
-      snapshot: 'projects/dealscout-snap.png',
-      liveUrl: 'https://dealscout-green.vercel.app',
-      repoUrl: 'https://github.com/1khvled/dealscout-telegram-deals',
-      description: 'Autonomous multi-channel deal intelligence and price drop scraper tracking hidden coupon discounts and automated multi-channel publishing.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Scraper Pipeline',
-        value: '5-Min Cron · 1,420 Deals Parsed Daily',
-        altValue: 'Telegram Multi-Channel Webhooks Active',
-        btnText: 'Toggle Webhook Status'
-      },
-      metrics: [
-        'Automated Cron Price Monitor',
-        'Telegram Bot Channel Broadcast',
-        'Coupon Stacking Calculator',
-        'Serverless Edge Execution'
-      ]
-    },
-    {
-      id: 'open-opgg',
-      name: 'Open OP.GG Desktop',
-      category: 'automations',
-      categoryLabel: 'Automations & Bots',
-      tag: 'Desktop Client & Automation',
-      status: 'Open Source',
-      logo: 'logos/opgg-logo.svg',
-      snapshot: 'projects/medqcm-snap.png',
-      liveUrl: 'https://github.com/1khvled/open-opgg',
-      repoUrl: 'https://github.com/1khvled/open-opgg',
-      description: 'Lightweight, privacy-first desktop client and automated rune/build importer for League of Legends, interfacing directly with local LCU client endpoints.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'LCU Connection',
-        value: 'Active WebSocket · 0.2s Import',
-        altValue: 'Auto-Accept Match: Ready',
-        btnText: 'Toggle Auto-Accept'
-      },
-      metrics: [
-        'Direct Local LCU Hook',
-        'Zero Ads & Zero Telemetry',
-        'Electron + Tailwind + React',
-        'Sub-15MB Memory Footprint'
-      ]
-    },
-    {
-      id: 'aliexpress-bot',
-      name: 'AliExpress Discount & Coin Suite',
-      category: 'automations',
-      categoryLabel: 'Automations & Bots',
-      tag: 'Scraper & Bot Automation',
-      status: 'Active Autonomous Bot',
-      logo: 'logos/aliexpress-coin-logo.png',
-      snapshot: 'projects/ednstore-snap.png',
-      liveUrl: 'https://github.com/1khvled/aliexpress-coin-bot',
-      repoUrl: 'https://github.com/1khvled/aliexpress-coin-bot',
-      description: 'Autonomous discount finder and daily coin streak claimer automating hidden price reductions and bulk order optimization via headless browser workflows.',
-      widgetType: 'simple-toggle',
-      widgetData: {
-        label: 'Automation Telemetry',
-        value: '124-Day Streak · 18.5% Avg Savings',
-        altValue: 'Stacking: Coins + Store Coupons',
-        btnText: 'Toggle Stacking Rules'
-      },
-      metrics: [
-        'Headless Chromium Automation',
-        'Anti-Detection Fingerprinting',
-        'Telegram Push Notifications',
-        'Zero-Maintenance Cron Fleet'
-      ]
-    }
-  ];
-
-  // ====================================================================
-  // 2. DOM ELEMENTS & CACHED REFERENCES
-  // ====================================================================
-
-  const projectsGrid = document.getElementById('projectsGrid');
-  const orbitDeck = document.getElementById('orbitDeck');
-  const filterButtons = document.querySelectorAll('.filter-pill-btn');
-  const vibeToast = document.getElementById('vibeToast');
-  const dockVibeToggle = document.getElementById('dockVibeToggle');
-  const dockVibeName = document.getElementById('dockVibeName');
-  const vibeMoodButtons = document.getElementById('vibeMoodButtons');
-  const btnCopyEmail = document.getElementById('btnCopyEmail');
-
-  // Modal Dialog
-  const projectTheaterModal = document.getElementById('projectTheaterModal');
-  const btnCloseModal = document.getElementById('btnCloseModal');
-  const modalProjectTitle = document.getElementById('modalProjectTitle');
-  const modalProjectCategory = document.getElementById('modalProjectCategory');
-  const modalProjectLogo = document.getElementById('modalProjectLogo');
-  const modalProjectImage = document.getElementById('modalProjectImage');
-  const modalProjectDesc = document.getElementById('modalProjectDesc');
-  const modalProjectMetrics = document.getElementById('modalProjectMetrics');
-  const modalLiveLink = document.getElementById('modalLiveLink');
-  const modalRepoLink = document.getElementById('modalRepoLink');
-
-  // Active State
-  let currentFilter = 'all';
-  const VIBE_PALETTES = ['obsidian', 'emerald', 'sunset', 'purple'];
-  let currentVibe = localStorage.getItem('user_vibe') || 'obsidian';
-
-  // ====================================================================
-  // 3. TOAST FEEDBACK NOTIFIER
-  // ====================================================================
-
-  let toastTimer = null;
-  function showToast(message) {
-    if (!vibeToast) return;
-    vibeToast.textContent = message;
-    vibeToast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      vibeToast.classList.remove('show');
-    }, 2800);
-  }
-
-  // ====================================================================
-  // 4. THEME & TACTILE VIBE CONTROLLER
-  // ====================================================================
-
-  function applyVibe(vibe) {
-    if (!VIBE_PALETTES.includes(vibe)) vibe = 'obsidian';
-    currentVibe = vibe;
-    document.documentElement.setAttribute('data-vibe', vibe);
-    localStorage.setItem('user_vibe', vibe);
-
-    const prettyNames = {
-      obsidian: 'Obsidian',
-      emerald: 'Emerald',
-      sunset: 'Sunset',
-      purple: 'Amethyst'
-    };
-
-    if (dockVibeName) dockVibeName.textContent = prettyNames[vibe] || 'Obsidian';
-
-    if (vibeMoodButtons) {
-      vibeMoodButtons.querySelectorAll('.btn-mood-tile').forEach(btn => {
-        if (btn.dataset.vibe === vibe) {
-          btn.style.borderColor = 'var(--vibe-accent)';
-          btn.style.background = 'rgba(255, 255, 255, 0.15)';
-        } else {
-          btn.style.borderColor = 'var(--glass-inner-border)';
-          btn.style.background = 'rgba(255, 255, 255, 0.05)';
-        }
-      });
-    }
-  }
-
-  if (dockVibeToggle) {
-    dockVibeToggle.addEventListener('click', () => {
-      const nextIdx = (VIBE_PALETTES.indexOf(currentVibe) + 1) % VIBE_PALETTES.length;
-      const nextVibe = VIBE_PALETTES[nextIdx];
-      applyVibe(nextVibe);
-      showToast(`Palette switched to ${nextVibe.toUpperCase()}`);
-    });
-  }
-
-  if (vibeMoodButtons) {
-    vibeMoodButtons.addEventListener('click', (e) => {
-      const btn = e.target.closest('.btn-mood-tile');
-      if (!btn) return;
-      const vibe = btn.dataset.vibe;
-      applyVibe(vibe);
-      showToast(`Active refraction: ${vibe.toUpperCase()}`);
-    });
-  }
-
-  applyVibe(currentVibe);
-
-  // ====================================================================
-  // 5. CURSOR-TRACKED SPECULAR GLINT & 3D TILT PHYSICS
-  // ====================================================================
-
-  function attachPhysicsToCard(card) {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -4;
-      const rotateY = ((x - centerX) / centerX) * 4;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-    });
-  }
-
-  // ====================================================================
-  // 6. RENDER PROJECT SHOWCASE CARDS (CONCENTRIC GEOMETRY)
-  // ====================================================================
-
-  function renderProjects(filter = 'all') {
-    if (!projectsGrid) return;
-    projectsGrid.innerHTML = '';
-
-    const filtered = filter === 'all'
-      ? PROJECTS_DATA
-      : PROJECTS_DATA.filter(p => p.category === filter);
-
-    filtered.forEach(project => {
-      const card = document.createElement('article');
-      card.className = 'optical-glass-card specular-glint-surface';
-      card.id = `card-${project.id}`;
-
-      let widgetHtml = '';
-      if (project.widgetType === 'pc-builder') {
-        const tier = project.widgetData.tiers[project.widgetData.tierIndex];
-        widgetHtml = `
-          <div class="card-micro-widget" id="widget-${project.id}">
-            <div>
-              <div class="widget-label">DZ-PartPicker Configurator</div>
-              <div class="widget-value" id="val-${project.id}">${tier.name}: ${tier.cost} (${tier.spec})</div>
-            </div>
-            <button type="button" class="widget-interactive-btn" data-action="cycle-tier" data-id="${project.id}">
-              ${project.widgetData.btnText}
-            </button>
-          </div>
-        `;
-      } else if (project.widgetType === 'macro-spread') {
-        widgetHtml = `
-          <div class="card-micro-widget" id="widget-${project.id}">
-            <div>
-              <div class="widget-label">US Treasury 2Y/10Y Spread</div>
-              <div class="widget-value" id="val-${project.id}">${project.widgetData.spread} · ${project.widgetData.regime}</div>
-            </div>
-            <button type="button" class="widget-interactive-btn" data-action="toggle-spread" data-id="${project.id}">
-              ${project.widgetData.btnText}
-            </button>
-          </div>
-        `;
-      } else if (project.widgetData) {
-        widgetHtml = `
-          <div class="card-micro-widget" id="widget-${project.id}">
-            <div>
-              <div class="widget-label">${project.widgetData.label || 'Live Telemetry'}</div>
-              <div class="widget-value" id="val-${project.id}">${project.widgetData.value}</div>
-            </div>
-            <button type="button" class="widget-interactive-btn" data-action="toggle-val" data-id="${project.id}">
-              ${project.widgetData.btnText || 'Toggle'}
-            </button>
-          </div>
-        `;
-      }
-
-      card.innerHTML = `
-        <div class="inner-media-stage" style="cursor: pointer;" data-action="inspect" data-id="${project.id}">
-          <div class="snapshot-top-bar">
-            <span class="glass-mini-tag">
-              <span class="dock-status-dot" style="width: 6px; height: 6px;"></span>
-              <span>${project.status}</span>
-            </span>
-            <span class="glass-mini-tag" style="background: rgba(0,0,0,0.7);">${project.tag}</span>
-          </div>
-          <img
-            src="${project.snapshot}"
-            alt="${project.name} UI Snapshot"
-            class="inner-snapshot-img"
-            loading="lazy"
-            onerror="this.src='logos/opgg-logo.svg'">
-        </div>
-
-        <div class="card-body-content">
-          <div class="card-header-row">
-            <div class="card-logo-wrap">
-              <img
-                src="${project.logo}"
-                alt="${project.name} Logo"
-                class="card-brand-logo"
-                onerror="this.src='${project.logoFallback || 'logos/opgg-logo.svg'}'">
-              <div>
-                <h3 class="card-title">${project.name}</h3>
-                <span class="card-category-tag">${project.categoryLabel}</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="card-description">${project.description}</p>
-
-          ${widgetHtml}
-
-          <div class="card-footer-actions">
-            <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn-glass-primary">
-              <span>Launch Live</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-            </a>
-            <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" class="btn-glass-icon" title="View Source on GitHub">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            </a>
-            <button type="button" class="btn-glass-icon" data-action="inspect" data-id="${project.id}" title="Inspect Craft">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-            </button>
-          </div>
-        </div>
-      `;
-
-      attachPhysicsToCard(card);
-      projectsGrid.appendChild(card);
-    });
-  }
-
-  // ====================================================================
-  // 7. INTERACTIVE MICRO-WIDGET CONTROLLERS
-  // ====================================================================
-
-  if (projectsGrid) {
-    projectsGrid.addEventListener('click', (e) => {
-      const inspectBtn = e.target.closest('[data-action="inspect"]');
-      if (inspectBtn) {
-        const id = inspectBtn.dataset.id;
-        openProjectModal(id);
-        return;
-      }
-
-      const widgetBtn = e.target.closest('.widget-interactive-btn');
-      if (!widgetBtn) return;
-
-      const action = widgetBtn.dataset.action;
-      const id = widgetBtn.dataset.id;
-      const project = PROJECTS_DATA.find(p => p.id === id);
-      if (!project) return;
-
-      const valEl = document.getElementById(`val-${id}`);
-      if (!valEl) return;
-
-      if (action === 'cycle-tier' && project.widgetType === 'pc-builder') {
-        const data = project.widgetData;
-        data.tierIndex = (data.tierIndex + 1) % data.tiers.length;
-        const currentTier = data.tiers[data.tierIndex];
-        valEl.textContent = `${currentTier.name}: ${currentTier.cost} (${currentTier.spec})`;
-        widgetBtn.classList.toggle('active');
-        showToast(`Selected: ${currentTier.name} — ${currentTier.cost}`);
-      } else if (action === 'toggle-spread' && project.widgetType === 'macro-spread') {
-        const data = project.widgetData;
-        const isAlt = widgetBtn.classList.toggle('active');
-        valEl.textContent = isAlt ? data.altSpread : `${data.spread} · ${data.regime}`;
-        showToast(isAlt ? 'Simulated: -25 bps Fed rate cut scenario' : 'Restored: Baseline yield spread');
-      } else if (action === 'toggle-val' && project.widgetData) {
-        const data = project.widgetData;
-        const isAlt = widgetBtn.classList.toggle('active');
-        valEl.textContent = isAlt ? data.altValue : data.value;
-      }
-    });
-  }
-
-  // ====================================================================
-  // 8. CATEGORY FILTERS & ORBIT CHIP DECK
-  // ====================================================================
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      currentFilter = btn.dataset.filter;
-      renderProjects(currentFilter);
-    });
-  });
-
-  if (orbitDeck) {
-    orbitDeck.addEventListener('click', (e) => {
-      const chip = e.target.closest('.orbit-chip');
-      if (!chip) return;
-
-      const projectId = chip.dataset.project;
-      const filter = chip.dataset.filter;
-
-      if (filter === 'all') {
-        const allBtn = document.querySelector('.filter-pill-btn[data-filter="all"]');
-        if (allBtn) allBtn.click();
-        const showcaseEl = document.getElementById('showcase');
-        if (showcaseEl) showcaseEl.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
-
-      if (projectId) {
-        const targetCard = document.getElementById(`card-${projectId}`);
-        if (targetCard) {
-          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          targetCard.style.outline = '2px solid var(--vibe-accent)';
-          targetCard.style.boxShadow = '0 0 35px var(--vibe-accent)';
-          setTimeout(() => {
-            targetCard.style.outline = '';
-            targetCard.style.boxShadow = '';
-          }, 1800);
-        } else {
-          const allBtn = document.querySelector('.filter-pill-btn[data-filter="all"]');
-          if (allBtn) allBtn.click();
-          setTimeout(() => {
-            const cardNow = document.getElementById(`card-${projectId}`);
-            if (cardNow) {
-              cardNow.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              cardNow.style.outline = '2px solid var(--vibe-accent)';
-              setTimeout(() => cardNow.style.outline = '', 1800);
-            }
-          }, 100);
-        }
-      }
-    });
-  }
-
-  // ====================================================================
-  // 9. FRONTIER AI MODEL MATRIX & INTERACTIVE REASONING LAB (LATE 2026)
-  // ====================================================================
-
-  // Micro-tool state handlers inside model cards
-  const modelsGrid = document.getElementById('modelsGrid');
-  if (modelsGrid) {
-    modelsGrid.addEventListener('click', (e) => {
-      const btn = e.target.closest('.widget-interactive-btn');
-      if (!btn) return;
-
-      const action = btn.dataset.action;
-      const target = btn.dataset.target;
-
-      if (action === 'toggle-thinking' && target === 'claude') {
-        const readout = document.getElementById('claudeReadout');
-        const states = [
-          {
-            btn: 'Toggle 64k Extended CoT',
-            text: 'Mode: Standard (0s) · Sub-second execution for rapid UI scaffolding & CSS layout math.',
-            toast: 'Claude Opus 5.5: Standard instant mode'
-          },
-          {
-            btn: 'Toggle Fable 5.1 Deep-Think (128k)',
-            text: '<span style="color:#f59e0b;">Extended CoT (64K):</span> Validating optical physics, concentric radii, and specular glints.',
-            toast: 'Claude Opus 5.5: 64K Extended CoT enabled'
-          },
-          {
-            btn: 'Toggle Standard (0s)',
-            text: '<span style="color:#f59e0b; font-weight:700;">Fable 5.1 Deep-Think (128K):</span> Multi-step architectural compilation, zero regressions, 1M context graph.',
-            toast: 'Claude Fable 5.1: 128K Deep-Thinking active'
-          }
-        ];
-        let idx = parseInt(btn.dataset.thinkIdx || '0', 10);
-        idx = (idx + 1) % states.length;
-        btn.dataset.thinkIdx = idx;
-        btn.textContent = states[idx].btn;
-        readout.innerHTML = states[idx].text;
-        showToast(states[idx].toast);
-      } else if (action === 'step-quant' && target === 'deepseek') {
-        const readout = document.getElementById('deepseekReadout');
-        const steps = [
-          'Step 1: Yield Inversion Telemetry · Analyzing 2Y/10Y spread derivative ∂y/∂t with Causal MoE.',
-          'Step 2: Causal KV Cache Compressed · 94% memory savings; Black-Scholes PDE surface calibrated.',
-          'Step 3: Vectorized CUDA Execution · Order executed with +18.4 bps alpha via 1M open-weights context.'
-        ];
-        let currentStep = parseInt(btn.dataset.step || '0', 10);
-        currentStep = (currentStep + 1) % steps.length;
-        btn.dataset.step = currentStep;
-        readout.innerHTML = `<span style="color:#60a5fa;">DeepSeek-V4.1-Pro CoT:</span> ${steps[currentStep]}`;
-        showToast(`DeepSeek-V4.1-Pro: Step ${currentStep + 1}/3 evaluated`);
-      } else if (action === 'scale-context' && target === 'gemini') {
-        const readout = document.getElementById('geminiReadout');
-        const levels = [
-          {
-            label: 'Argon Low · 300k tokens ingested · Sub-200ms TTFT across entire workspace.',
-            toast: 'Gemini 4 Argon: Low Thinking (Sub-200ms Flash mode)'
-          },
-          {
-            label: 'Argon Medium · 1,200,000 tokens ingested · Cross-referencing 20 repos with deep semantic linking in 340ms.',
-            toast: 'Gemini 4 Argon: Medium Thinking (1.2M context active)'
-          },
-          {
-            label: 'Argon High · Unified 2,000,000+ tokens active · Full Antigravity pairing & multi-repo architecture synthesis.',
-            toast: 'Gemini 4 Argon: High Thinking (Unified 2M+ Context)'
-          }
-        ];
-        let curIdx = parseInt(btn.dataset.argonIdx || '0', 10);
-        curIdx = (curIdx + 1) % levels.length;
-        btn.dataset.argonIdx = curIdx;
-        readout.innerHTML = `<span style="color:#38bdf8;">Gemini 4 Reasoning:</span> ${levels[curIdx].label}`;
-        showToast(levels[curIdx].toast);
-      } else if (action === 'dispatch-swarm' && target === 'muse') {
-        const readout = document.getElementById('museReadout');
-        const isSwarm = btn.classList.toggle('active');
-        if (isSwarm) {
-          btn.textContent = 'Halt Swarm';
-          readout.innerHTML = '<span style="color:#c084fc;">Wonder Swarm Active:</span> Worktree 1: Full-Stack Builder · Worktree 2: Visual Regression QA · VM Browser: Active.';
-          showToast('Muse Wonder: Autonomous personal agent swarm dispatched');
-        } else {
-          btn.textContent = 'Deploy Wonder Swarm';
-          readout.textContent = 'Worktree 1: Full-Stack Builder (Idle) · VM Browser QA: Waiting';
-          showToast('Muse Wonder: Swarm returned to idle');
-        }
-      }
-    });
-  }
-
-  // Interactive Task Router
-  const routerTaskSelector = document.getElementById('routerTaskSelector');
-  const routerTarget = document.getElementById('routerTarget');
-  const routerStrategy = document.getElementById('routerStrategy');
-  const routerVelocity = document.getElementById('routerVelocity');
-
-  const ROUTER_PRESETS = {
-    ui: {
-      model: 'Claude Opus 5.5 & Fable 5.1 (Pinnacle Agentic Reasoning)',
-      color: '#f59e0b',
-      strategy: '128K Token Thinking budget for optical physics, visionOS specular glints & zero regressions.',
-      velocity: 'Pinnacle Craft Multiplier · Flawless Synthesis',
-      highlightId: 'card-model-claude'
-    },
-    quant: {
-      model: 'DeepSeek-V4.1-Pro (Causal Enc-Dec MoE)',
-      color: '#3b82f6',
-      strategy: 'Causal MoE sparse reasoning trace solving Nelson-Siegel yield fitting at 94% KV compression.',
-      velocity: 'Open-Weights 1M Context · Ultra-Low Latency',
-      highlightId: 'card-model-deepseek'
-    },
-    repo: {
-      model: 'Gemini 4 Argon (Unified 2M Context & Antigravity)',
-      color: '#38bdf8',
-      strategy: 'Full 20-repository monorepo cross-referencing without vector chunking. Tunable Argon High thinking.',
-      velocity: 'Native Multimodal · Deep Ecosystem Synergy',
-      highlightId: 'card-model-gemini'
-    },
-    swarm: {
-      model: 'Muse Wonder & Spark 1.3 (Meta Superintelligence Labs)',
-      color: '#c084fc',
-      strategy: 'Autonomous cloud VM execution coordinating multi-agent Git worktree swarms with browser QA.',
-      velocity: 'Sustained Autonomous Execution · Zero Bottleneck',
-      highlightId: 'card-model-muse'
+    opgg: {
+      title: "Open OP.GG",
+      year: "2026",
+      role: "Design & engineering",
+      live: null,
+      repo: "https://github.com/1khvled/open-opgg",
+      brief: "An ad-free, telemetry-free desktop companion for League of Legends.",
+      body: [
+        "Open OP.GG is a clean-room desktop companion for League of Legends: champion tier lists by role and rank, rune builds, counters, ARAM and Arena data, and a live overlay that reads the game client.",
+        "It is built on Electron with a local data layer, so the app opens instantly and keeps working between patches. Rune pages can be exported and lobby actions automated through the League Client API."
+      ],
+      points: [
+        "Champion tiers, builds, counters and mode-specific data",
+        "Live Client Data API integration and in-game HUD",
+        "Rune export and lobby automations through the LCU",
+        "No ads, no telemetry, no third-party trackers",
+        "Packaged as a Windows desktop app"
+      ],
+      stack: ["Electron", "JavaScript", "Node.js", "LCU API"],
+      note: "Independent project. Not affiliated with OP.GG or Riot Games."
     }
   };
 
-  if (routerTaskSelector) {
-    routerTaskSelector.addEventListener('click', (e) => {
-      const btn = e.target.closest('.btn-router-task');
-      if (!btn) return;
+  /* ----------------------------------------------------------------
+     Helpers
+     ---------------------------------------------------------------- */
 
-      routerTaskSelector.querySelectorAll('.btn-router-task').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+  function syncScrollLock() {
+    var anyOpen = document.querySelector("dialog[open]");
+    document.documentElement.classList.toggle("has-dialog", Boolean(anyOpen));
+  }
 
-      const task = btn.dataset.task;
-      const preset = ROUTER_PRESETS[task];
-      if (!preset) return;
+  function externalLink(label, url) {
+    var a = document.createElement("a");
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = label + " ";
+    var mark = document.createElement("span");
+    mark.setAttribute("aria-hidden", "true");
+    mark.textContent = "\u2197";
+    a.appendChild(mark);
+    return a;
+  }
 
-      if (routerTarget) {
-        routerTarget.textContent = preset.model;
-        routerTarget.style.color = preset.color;
-      }
-      if (routerStrategy) routerStrategy.textContent = preset.strategy;
-      if (routerVelocity) routerVelocity.textContent = preset.velocity;
+  /* ----------------------------------------------------------------
+     Local time in Algiers
+     ---------------------------------------------------------------- */
 
-      // Glow the corresponding model card
-      const targetCard = document.getElementById(preset.highlightId);
-      if (targetCard) {
-        targetCard.style.borderColor = preset.color;
-        targetCard.style.boxShadow = `0 0 35px -5px ${preset.color}`;
-        setTimeout(() => {
-          targetCard.style.borderColor = '';
-          targetCard.style.boxShadow = '';
-        }, 1600);
-      }
+  var clocks = Array.prototype.slice.call(document.querySelectorAll("[data-clock]"));
+  var timeFormat = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Africa/Algiers",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  });
 
-      showToast(`Prompt auto-routed to ${preset.model.split(' ')[0]}`);
+  function tick() {
+    var value = timeFormat.format(new Date());
+    clocks.forEach(function (el) {
+      el.textContent = value;
     });
   }
 
-  // ====================================================================
-  // 10. PROJECT THEATER MODAL DIALOG
-  // ====================================================================
+  if (clocks.length) {
+    tick();
+    window.setInterval(tick, 30000);
+  }
 
-  function openProjectModal(id) {
-    const project = PROJECTS_DATA.find(p => p.id === id);
-    if (!project || !projectTheaterModal) return;
+  /* ----------------------------------------------------------------
+     Copy email
+     ---------------------------------------------------------------- */
 
-    if (modalProjectTitle) modalProjectTitle.textContent = project.name;
-    if (modalProjectCategory) modalProjectCategory.textContent = `${project.categoryLabel} · ${project.tag}`;
-    if (modalProjectLogo) modalProjectLogo.src = project.logo;
-    if (modalProjectImage) modalProjectImage.src = project.snapshot;
-    if (modalProjectDesc) modalProjectDesc.textContent = project.description;
+  var copyButton = document.querySelector("[data-copy-email]");
+  var copyStatus = document.querySelector("[data-copy-status]");
+  var copyTimer = 0;
 
-    if (modalProjectMetrics) {
-      modalProjectMetrics.innerHTML = '';
-      project.metrics.forEach(m => {
-        const tag = document.createElement('span');
-        tag.className = 'glass-mini-tag';
-        tag.textContent = m;
-        modalProjectMetrics.appendChild(tag);
+  function legacyCopy(text) {
+    var helper = document.createElement("textarea");
+    helper.value = text;
+    helper.setAttribute("readonly", "");
+    helper.className = "clipboard-helper";
+    document.body.appendChild(helper);
+    helper.select();
+    var ok = false;
+    try {
+      ok = document.execCommand("copy");
+    } catch (e) {
+      ok = false;
+    }
+    helper.remove();
+    return ok;
+  }
+
+  function setCopyState(message) {
+    if (copyStatus) {
+      copyStatus.textContent = message;
+    }
+    if (copyButton) {
+      copyButton.textContent = message === "Copied" ? "Copied" : "Copy address";
+    }
+  }
+
+  if (copyButton) {
+    copyButton.addEventListener("click", function () {
+      var done = function (ok) {
+        setCopyState(ok ? "Copied" : EMAIL);
+        window.clearTimeout(copyTimer);
+        copyTimer = window.setTimeout(function () {
+          setCopyState("");
+        }, 2400);
+      };
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(EMAIL).then(function () {
+          done(true);
+        }, function () {
+          done(legacyCopy(EMAIL));
+        });
+      } else {
+        done(legacyCopy(EMAIL));
+      }
+    });
+  }
+
+  /* ----------------------------------------------------------------
+     Mobile menu
+     ---------------------------------------------------------------- */
+
+  var menu = document.getElementById("menu-dialog");
+  var menuOpen = document.querySelector("[data-menu-open]");
+  var menuClose = document.querySelector("[data-menu-close]");
+
+  if (menu && menuOpen && typeof menu.showModal === "function") {
+    menuOpen.addEventListener("click", function () {
+      menu.showModal();
+      menuOpen.setAttribute("aria-expanded", "true");
+      syncScrollLock();
+    });
+
+    if (menuClose) {
+      menuClose.addEventListener("click", function () {
+        menu.close();
       });
     }
 
-    if (modalLiveLink) modalLiveLink.href = project.liveUrl;
-    if (modalRepoLink) modalRepoLink.href = project.repoUrl;
-
-    projectTheaterModal.showModal();
-  }
-
-  if (btnCloseModal && projectTheaterModal) {
-    btnCloseModal.addEventListener('click', () => {
-      projectTheaterModal.close();
-    });
-
-    projectTheaterModal.addEventListener('click', (e) => {
-      const rect = projectTheaterModal.getBoundingClientRect();
-      const isInDialog = (
-        rect.top <= e.clientY &&
-        e.clientY <= rect.top + rect.height &&
-        rect.left <= e.clientX &&
-        e.clientX <= rect.left + rect.width
-      );
-      if (!isInDialog) {
-        projectTheaterModal.close();
+    menu.addEventListener("click", function (event) {
+      if (event.target === menu) {
+        menu.close();
+      }
+      if (event.target.closest("a")) {
+        menu.close();
       }
     });
-  }
 
-  // ====================================================================
-  // 11. ONE-CLICK EMAIL COPY & UTILITIES
-  // ====================================================================
-
-  if (btnCopyEmail) {
-    btnCopyEmail.addEventListener('click', async () => {
-      const email = '1khvled.dev@gmail.com';
-      try {
-        await navigator.clipboard.writeText(email);
-        showToast('✉ Email copied to clipboard!');
-      } catch (err) {
-        showToast('Email: 1khvled.dev@gmail.com');
-      }
+    menu.addEventListener("close", function () {
+      menuOpen.setAttribute("aria-expanded", "false");
+      syncScrollLock();
     });
+
+    var wide = window.matchMedia("(min-width: 861px)");
+    var closeOnWide = function (event) {
+      if (event.matches && menu.open) {
+        menu.close();
+      }
+    };
+    if (wide.addEventListener) {
+      wide.addEventListener("change", closeOnWide);
+    } else if (wide.addListener) {
+      wide.addListener(closeOnWide);
+    }
   }
 
-  const navLinks = document.querySelectorAll('.dock-item-btn[data-nav]');
-  const trackedSections = ['showcase', 'models-matrix', 'vibe-playground'];
+  /* ----------------------------------------------------------------
+     Case study dialog
+     ---------------------------------------------------------------- */
 
-  window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 200;
-    trackedSections.forEach(secId => {
-      const secEl = document.getElementById(secId);
-      if (!secEl) return;
-      const top = secEl.offsetTop;
-      const height = secEl.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.dataset.nav === secId);
+  var dialog = document.getElementById("case-dialog");
+
+  if (dialog && typeof dialog.showModal === "function") {
+    var fields = {
+      year: dialog.querySelector("[data-case-year]"),
+      role: dialog.querySelector("[data-case-role]"),
+      title: dialog.querySelector("[data-case-title]"),
+      brief: dialog.querySelector("[data-case-brief]"),
+      copy: dialog.querySelector("[data-case-copy]"),
+      stack: dialog.querySelector("[data-case-stack]"),
+      links: dialog.querySelector("[data-case-links]"),
+      note: dialog.querySelector("[data-case-note]")
+    };
+    var closeButton = dialog.querySelector("[data-case-close]");
+    var lastTrigger = null;
+
+    var fill = function (project) {
+      fields.year.textContent = project.year;
+      fields.role.textContent = project.role;
+      fields.title.textContent = project.title;
+      fields.brief.textContent = project.brief;
+
+      fields.copy.replaceChildren();
+      project.body.forEach(function (text) {
+        var p = document.createElement("p");
+        p.textContent = text;
+        fields.copy.appendChild(p);
+      });
+
+      if (project.points && project.points.length) {
+        var ul = document.createElement("ul");
+        project.points.forEach(function (text) {
+          var li = document.createElement("li");
+          li.textContent = text;
+          ul.appendChild(li);
         });
+        fields.copy.appendChild(ul);
+      }
+
+      fields.stack.replaceChildren();
+      project.stack.forEach(function (item) {
+        var li = document.createElement("li");
+        li.textContent = item;
+        fields.stack.appendChild(li);
+      });
+
+      fields.links.replaceChildren();
+      if (project.live) {
+        fields.links.appendChild(externalLink("Live site", project.live));
+      }
+      if (project.repo) {
+        fields.links.appendChild(externalLink("Source on GitHub", project.repo));
+      }
+      if (!project.live && !project.repo) {
+        var none = document.createElement("span");
+        none.textContent = "No public link";
+        fields.links.appendChild(none);
+      }
+
+      fields.note.textContent = project.note || "";
+      fields.note.hidden = !project.note;
+    };
+
+    var openCase = function (id, updateHash) {
+      var project = PROJECTS[id];
+      if (!project) {
+        return;
+      }
+      if (!dialog.open) {
+        lastTrigger = document.activeElement;
+      }
+      fill(project);
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+      syncScrollLock();
+      if (updateHash && window.history.replaceState) {
+        window.history.replaceState(null, "", "#case-" + id);
+      }
+      if (closeButton) {
+        closeButton.focus();
+      }
+    };
+
+    var closeCase = function () {
+      if (dialog.open) {
+        dialog.close();
+      }
+      if (window.location.hash.indexOf("#case-") === 0 && window.history.replaceState) {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    };
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-case]"), function (button) {
+      button.addEventListener("click", function () {
+        openCase(button.getAttribute("data-case"), true);
+      });
+    });
+
+    if (closeButton) {
+      closeButton.addEventListener("click", closeCase);
+    }
+
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) {
+        closeCase();
       }
     });
-  }, { passive: true });
 
-  // ====================================================================
-  // 12. INITIALIZATION ON DOM READY
-  // ====================================================================
+    dialog.addEventListener("close", function () {
+      if (window.location.hash.indexOf("#case-") === 0 && window.history.replaceState) {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+      syncScrollLock();
+      if (lastTrigger && typeof lastTrigger.focus === "function") {
+        lastTrigger.focus();
+      }
+    });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    renderProjects('all');
-    document.querySelectorAll('.specular-glint-surface').forEach(attachPhysicsToCard);
-  });
+    var fromHash = function () {
+      var match = window.location.hash.match(/^#case-([a-z]+)$/);
+      if (match && PROJECTS[match[1]]) {
+        openCase(match[1], false);
+      } else if (dialog.open) {
+        dialog.close();
+      }
+    };
 
+    window.addEventListener("hashchange", fromHash);
+    if (window.location.hash.indexOf("#case-") === 0) {
+      fromHash();
+    }
+  }
+
+  /* ----------------------------------------------------------------
+     Active section in the header
+     ---------------------------------------------------------------- */
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".desk-nav a"));
+  var sectionIds = ["work", "about", "contact"];
+  var sections = sectionIds
+    .map(function (id) {
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  if (navLinks.length && sections.length) {
+    var activeFrame = 0;
+    var setActive = function () {
+      activeFrame = 0;
+      var marker = window.scrollY + 150;
+      var current = "";
+      sections.forEach(function (section) {
+        if (section.offsetTop <= marker) {
+          current = section.id;
+        }
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+        current = "contact";
+      }
+      navLinks.forEach(function (link) {
+        if (link.getAttribute("href") === "#" + current) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+    var requestActive = function () {
+      if (!activeFrame) {
+        activeFrame = window.requestAnimationFrame(setActive);
+      }
+    };
+    window.addEventListener("scroll", requestActive, { passive: true });
+    window.addEventListener("resize", requestActive);
+    setActive();
+  }
 })();
